@@ -3,8 +3,8 @@ import '../styles/home.css';
 import imageUrl from '../assets/images/bg-002.png'
 import Footer from './footer';
 class Home extends React.Component {
-    constructor(){
-      super();
+    constructor(props){
+      super(props);
       this.state={
   
       }

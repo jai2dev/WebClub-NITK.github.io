@@ -3,8 +3,8 @@ import logo from './logo.svg';
 import './App.css';
 import Home from './components/home';
 class App extends React.Component {
-  constructor(){
-    super();
+  constructor(props){
+    super(props);
     this.state={
 
     }

@@ -1,0 +1,23 @@
+.main-image{
+	height:100vh;
+	display: inherit;
+	background-image:linear-gradient(to right, #293b52 0%, #293b52 50%,#293b52 50%,#F8D16C 50%,#f8d16c 100%);
+	width: 100%;
+}
+
+.main-title{
+	font-size: 72px;
+    color: #3b3736;
+    margin-top: 0;
+    font-family: "Playfair";
+    color:#f8d16c;
+    padding:10px;
+    background-image:linear-gradient(to right, rgba(255,255,255,0.2) 0%, rgba(255,255,255,0.2) 80%,rgba(255,255,255,0.2) 80%,transparent 80%,transparent 100%);
+    display: 	inline;
+    line-height: 2;
+}
+.center-flex{
+	display: flex;
+  align-items: center;
+  overflow: hidden;
+}

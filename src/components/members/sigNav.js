@@ -32,7 +32,7 @@ export default function CenteredTabs() {
         centered
       >
         <Tab label="Systems" icon={<MemoryIcon />}  />
-        <Tab label="DSC" icon={< PublicIcon />}/>
+        <Tab label="DSC" icon={<PublicIcon />}/>
         <Tab label="Intelligence" icon={<FingerprintIcon />}/>
         <Tab label="Algorithms" icon={<AccountTreeIcon />}/>
       </Tabs>

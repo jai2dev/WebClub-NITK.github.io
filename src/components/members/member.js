@@ -10,9 +10,8 @@ export default function CenteredTabs() {
   return (
     <div>
         <h1>Members</h1>
-        <SigNav></SigNav>
-        <YearNav></YearNav>
-
+          <SigNav></SigNav>
+          <YearNav></YearNav>
       {membersData.map((value) => {
         return(
           <MemberCard 

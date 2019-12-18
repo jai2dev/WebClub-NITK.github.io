@@ -2,3 +2,9 @@ body{
     padding: 0 150px;
     text-align: center;
 }
+
+@media screen and (max-width: 900px) {
+    body{
+        padding: 0;
+    }
+  }

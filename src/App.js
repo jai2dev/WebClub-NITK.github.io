@@ -1,17 +1,21 @@
-import React, { useState } from 'react';
-import logo from './logo.svg';
+import React from 'react';
+import { BrowserRouter as Router, Route } from "react-router-dom";
 import './App.css';
 import Home from './components/home';
-class App extends React.Component {
-  constructor(props){
-    super(props);
-    this.state={
+import Member from './components/members/member';
+import Footer from './components/footer';
 
-    }
-  }
+class App extends React.Component {
+  
   render(){
     return (
-      <Home />
+      <Router>
+        <div className = "App">
+          <Route exact path='/' component={Home} />
+          <Route exact path='/members' component={Member} />
+          <Footer />
+        </div>
+      </Router>
     );
   }  
 }

@@ -1,0 +1,57 @@
+@import "https://cdnjs.cloudflare.com/ajax/libs/MaterialDesign-Webfont/4.7.95/css/materialdesignicons.min.css";
+
+*, *::after, *::before{
+    box-sizing: border-box;
+}
+
+.card{
+    width: 300px;
+    background-color: rgb(76, 20, 114);
+    text-align: center;
+    padding: 15px;
+    margin: 10px auto;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 0 11px rgba(33,33,33,.2);
+    color: white;
+}
+.card::before{
+    content: "";
+    position: absolute;
+    top: -250px;
+    left: -50px;
+    width: 400px;
+    height: 400px;
+    background-color: blueviolet;
+    border-radius: 50%;
+}
+.card .image{
+    position: relative;
+    margin: 0, auto;
+    z-index: 3;
+}
+.card .image img{
+    width: 70%;
+    border-radius: 50%;
+    border: 5px solid white;
+    filter: blur(0) brightness(1);
+    transition: all 0.3s;
+}
+.image .links{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2.5rem;
+    color: black;
+    opacity: 0;
+    transition: all 0.3s;
+    text-decoration: none;
+}
+.image:hover img{
+    filter: blur(1px) brightness(3);
+}
+.image:hover .links{
+    opacity: 1;
+}

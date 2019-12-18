@@ -3,9 +3,9 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
-import MemberCard from './components/memberCard.js'; //Temporary import
+import Member from './components/member.js';
 
-ReactDOM.render(<MemberCard />, document.getElementById('root')); //For demo
+ReactDOM.render(<Member />, document.getElementById('root')); //For demo
 // ReactDOM.render(<App />, document.getElementById('root'));
 
 

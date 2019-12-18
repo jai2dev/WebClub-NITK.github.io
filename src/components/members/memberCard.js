@@ -1,5 +1,5 @@
 import React from 'react';
-import '../styles/memberCard.css';
+import '../../styles/memberCard.css';
 
 // function memberCard(){
 //     return(

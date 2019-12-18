@@ -1,9 +1,9 @@
 import React,{useState} from 'react';
-import '../styles/member.css';
+import '../../styles/member.css';
 import SigNav from './sigNav.js';
 import YearNav from './yearNav.js';
 import MemberCard from './memberCard.js';
-import membersData from '../assets/data/webclubMembersData'
+import membersData from '../../assets/data/webclubMembersData'
 
 export default function CenteredTabs() {
   

@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
-import Member from './components/member.js';
+import Member from './components/members/member.js';
 
 ReactDOM.render(<Member />, document.getElementById('root')); //For demo
 // ReactDOM.render(<App />, document.getElementById('root'));

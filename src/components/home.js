@@ -3,7 +3,7 @@ import '../styles/home.css';
 import imageUrl from '../assets/images/bg-002.png';
 // import WEClogo from '../assets/images/webclub-logo-orange.png';
 import Footer from './footer';
-import Member from './member';
+
 
 class Home extends React.Component {
     constructor(props){
@@ -23,7 +23,7 @@ class Home extends React.Component {
                     <img className="bg-image" width="700" src={imageUrl} />
                 </div>
             </div>
-            <div >
+            <div >df
               {/* <Member  name="John Doe" role="Club Member" image={WEClogo} website="NA" githuburl="#" linkedinurl="#"/>  */}
             </div>
             <Footer />

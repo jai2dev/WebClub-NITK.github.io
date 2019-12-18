@@ -1,7 +1,10 @@
 import React, { useState } from 'react';
 import '../styles/home.css';
-import imageUrl from '../assets/images/bg-002.png'
+import imageUrl from '../assets/images/bg-002.png';
+// import WEClogo from '../assets/images/webclub-logo-orange.png';
 import Footer from './footer';
+import Member from './member';
+
 class Home extends React.Component {
     constructor(props){
       super(props);
@@ -20,12 +23,10 @@ class Home extends React.Component {
                     <img className="bg-image" width="700" src={imageUrl} />
                 </div>
             </div>
-            <div style={{height:90}}>
-                hello
-            </div>
             <div >
-                <Footer />
+              {/* <Member  name="John Doe" role="Club Member" image={WEClogo} website="NA" githuburl="#" linkedinurl="#"/>  */}
             </div>
+            <Footer />
         </div>
       );
     }  

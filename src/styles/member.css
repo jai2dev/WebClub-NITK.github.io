@@ -1,0 +1,11 @@
+.memberCard{
+    width: 300px;
+    height: 400px;
+    background-color: rgb(209, 231, 231);
+    border-radius: 7px;
+}
+
+.memberCard img{
+    height: 300px;
+}
+

@@ -1,5 +1,6 @@
 @import "https://cdnjs.cloudflare.com/ajax/libs/MaterialDesign-Webfont/4.7.95/css/materialdesignicons.min.css";
 
+
 *, *::after, *::before{
     box-sizing: border-box;
 }
@@ -53,5 +54,9 @@
     filter: blur(1px) brightness(3);
 }
 .image:hover .links{
-    opacity: 1;
+    opacity: 1;   
+}
+
+a{
+    color:black;
 }

@@ -14,7 +14,7 @@ const useStyles = makeStyles({
   },
 });
 
-export default function CenteredTabs() {
+export default function CenteredTabs(props) {
   const classes = useStyles();
   const [value, setValue] = React.useState(0);
 
@@ -30,11 +30,12 @@ export default function CenteredTabs() {
         indicatorColor="primary"
         textColor="primary"
         centered
+        onChange={props.handleInput}
       >
-        <Tab label="Systems" icon={<MemoryIcon />}  />
-        <Tab label="DSC" icon={<PublicIcon />}/>
-        <Tab label="Intelligence" icon={<FingerprintIcon />}/>
-        <Tab label="Algorithms" icon={<AccountTreeIcon />}/>
+        <Tab label="Systems"  data-filter=".Systems" icon={<MemoryIcon />}  />
+        <Tab label="DSC"  data-filter=".DSC" icon={<PublicIcon />}/>
+        <Tab label="Intelligence"  data-filter=".Intelligence" icon={<FingerprintIcon />}/>
+        <Tab label="Algorithms"  data-filter=".Algorithms" icon={<AccountTreeIcon />}/>
       </Tabs>
     </Paper>
   );

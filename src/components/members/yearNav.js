@@ -27,7 +27,7 @@ export default function CenteredTabs() {
         textColor="primary"
         centered
       >
-        <Tab label="All" />
+        <Tab label="All"  data-filter="all" />
         <Tab label="Position" />
         <Tab label="Core" />
       </Tabs>

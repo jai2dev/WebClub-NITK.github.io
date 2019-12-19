@@ -63,7 +63,7 @@ constructor(props) {
 
     render() {
         return (
-            <div className="container">
+            <div className={"con mix " + this.props.classs}>
                 <div className="card" data-aos="flip-left">
                     <div className="image">
                         <img src={this.props.image}></img>

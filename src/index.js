@@ -4,8 +4,11 @@ import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 import Member from './components/members/member.js';
+import Event from './components/Events/Event.js';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+// ReactDOM.render(<App />, document.getElementById('root'));
+ReactDOM.render(<Event />, document.getElementById('root'));
+
 
 
 // If you want your app to work offline and load faster, you can change

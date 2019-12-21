@@ -1,9 +1,11 @@
 import React from 'react';
 import EventCard from './EventCard';
+import YearNavigation from './yearNavigation.js';
 
 const Event = () => {
     return (
     <div>
+        <YearNavigation></YearNavigation>
         <EventCard
             title="Hacktoberfest NITK Meetup 2019"
             date="October-2"

@@ -43,7 +43,7 @@
     filter: blur(0) brightness(1);
     transition: all 0.3s;
 }
-.image .links{
+.card .image .links{
     position: absolute;
     top: 50%;
     left: 50%;
@@ -54,13 +54,13 @@
     transition: all 0.3s;
     text-decoration: none;
 }
-.image:hover img{
+.card .image:hover img{
     filter: blur(1px) brightness(3);
 }
-.image:hover .links{
+.card .image:hover .links{
     opacity: 1;   
 }
 
-a{
+.card .image .links a{
     color:black;
 }

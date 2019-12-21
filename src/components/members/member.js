@@ -49,7 +49,7 @@ class Members extends React.Component {
 
   render(){
     return (
-    <div>
+    <div className="MemberDetails">
         <h1>Members</h1>
         <div class="controls">
           <SigNav></SigNav>

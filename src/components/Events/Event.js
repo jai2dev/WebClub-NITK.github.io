@@ -7,8 +7,6 @@ const Event = () => {
   console.log(eventsData);
   return (
     <div>
-      <Nav sticky="true" transp="false" />
-      <YearNavigation></YearNavigation>
       <div className="container">
         <div className="row">
           {eventsData.map(value => {

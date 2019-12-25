@@ -1,7 +1,7 @@
 .main-image{
 	height:100vh;
 	display: inherit;
-	background-image:linear-gradient(to right, #293b52 0%, #293b52 50%,#293b52 50%,#F8D16C 50%,#f8d16c 100%);
+	background-image:linear-gradient(to right, black 0%, #293b52 50%,#293b52 50%,#F8D16C 50%,blue 100%);
 	width: 100%;
 }
 

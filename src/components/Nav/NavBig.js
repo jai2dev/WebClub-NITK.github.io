@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
+import { Link } from "react-router-dom";
 import imgUrl from "../../assets/images/webclub-logo-blue.png";
 import "../../styles/nav.css";
 
@@ -94,12 +95,18 @@ const Nav = props => {
     divStyle = {
       transition: "2s ease",
       backgroundColor: navBackground ? "white" : "transparent",
-      color: navBackground ? "#1490e4" : "#b3d3f6"
+      color: navBackground ? "#1490e4" : "#b3d3f6",
+      top: "0",
+      position: "fixed",
+      zIndex: "1"
     };
   } else {
     divStyle = {
       backgroundColor: "white",
-      color: "#1490e4"
+      color: "#1490e4",
+      top: "0",
+      position: "fixed",
+      zIndex: "1"
     };
   }
 
@@ -118,10 +125,18 @@ const Nav = props => {
           <h1>WebClub</h1>
         </div>
         <ul>
-          <li>Home</li>
-          <li>Events</li>
-          <li>Team</li>
-          <li>Blog</li>
+          <Link to="/">
+            <li>Home</li>
+          </Link>
+          <Link to="/events">
+            <li>Events</li>
+          </Link>
+          <Link to="/members">
+            <li>Team</li>
+          </Link>
+          <Link to="/">
+            <li>Blog</li>
+          </Link>
         </ul>
       </div>
     </div>

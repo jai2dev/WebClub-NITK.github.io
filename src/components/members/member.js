@@ -1,12 +1,13 @@
-import React,{useState} from 'react';
-import '../../styles/member.css';
-import SigNav from './sigNav.js';
-import YearNav from './yearNav.js';
-import MemberCard from './memberCard.js';
-import membersData from '../../assets/data/webclubMembersData'
+import React, { useState } from "react";
+import "../../styles/member.css";
+import SigNav from "./sigNav.js";
+import YearNav from "./yearNav.js";
+import MemberCard from "./memberCard.js";
+import membersData from "../../assets/data/webclubMembersData";
+import Nav from "../Nav/NavBig";
 
 // export default function CenteredTabs() {
-  
+
 //   return (
 //     <div>
 //         <h1>Members</h1>
@@ -14,7 +15,7 @@ import membersData from '../../assets/data/webclubMembersData'
 //           <YearNav></YearNav>
 //       {membersData.map((value) => {
 //         return(
-//           <MemberCard 
+//           <MemberCard
 //           name={value.name}
 //           role={value.role}
 //           email={value.email}
@@ -28,53 +29,52 @@ import membersData from '../../assets/data/webclubMembersData'
 //   );
 // }
 
-
 class Members extends React.Component {
-  constructor(props){
+  constructor(props) {
     super(props);
-    this.mixitup = function(something){}
-    this.containerEl = document.querySelector('.container');
-    this.mixer = this.mixitup(this.containerEl)
-   
-    this.state={
+    this.mixitup = function(something) {};
+    this.containerEl = document.querySelector(".container");
+    this.mixer = this.mixitup(this.containerEl);
+
+    this.state = {
       members: membersData,
       filter: ""
-    }
+    };
   }
 
-  handleInput = (e) => {
-    this.setState({filter: e.target.value })
-    console.log(e)
-  }
+  handleInput = e => {
+    this.setState({ filter: e.target.value });
+    console.log(e);
+  };
 
-  render(){
+  render() {
     return (
-    <div className="MemberDetails">
-        <h1>Members</h1>
-        <div class="controls">
-          <SigNav></SigNav>
-          <YearNav></YearNav>
-        </div>
-         
-        <div class = "container">
-          {membersData.map((value) => {
-            return(
-              <MemberCard 
-              classs = {value.sig}
-              name={value.name}
-              role={value.role}
-              email={value.email}
-              githuburl={value.githuburl}
-              linkedinurl={value.linkedinurl}
-              image="https://cdn.glitch.com/21943bea-5c73-4cf3-81b5-1b7fd62627ba%2Fpro.jpg?v=1576657391203"
-            />
-            )
-          })}
-        </div>
+      <div>
+        <Nav sticky="true" transp="false" />
+        <div className="MemberDetails">
+          <h1>Members</h1>
+          <div class="controls">
+            <SigNav></SigNav>
+            <YearNav></YearNav>
+          </div>
 
-     
-    </div>
-
+          <div class="container">
+            {membersData.map(value => {
+              return (
+                <MemberCard
+                  classs={value.sig}
+                  name={value.name}
+                  role={value.role}
+                  email={value.email}
+                  githuburl={value.githuburl}
+                  linkedinurl={value.linkedinurl}
+                  image="https://cdn.glitch.com/21943bea-5c73-4cf3-81b5-1b7fd62627ba%2Fpro.jpg?v=1576657391203"
+                />
+              );
+            })}
+          </div>
+        </div>
+        {/* 
 
     // <div>
     // <h1>Hi</h1>
@@ -103,10 +103,10 @@ class Members extends React.Component {
     //         <div class="gap"></div>
     //         <div class="gap"></div>
     //     </div>
-    // </div>
+    // </div> */}
+      </div>
     );
-  }  
+  }
 }
-  
 
 export default Members;

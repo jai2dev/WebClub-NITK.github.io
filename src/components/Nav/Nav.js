@@ -27,7 +27,7 @@ const Nav = props => {
   return navSize ? (
     <SmallNav sticky={props.sticky} />
   ) : (
-    <BigNav sticky={props.sticky} />
+    <BigNav sticky={props.sticky} transp={props.transp} />
   );
 };
 export default Nav;

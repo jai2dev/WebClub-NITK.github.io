@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom";
 import "./App.css";
 import Home from "./components/home";
 import Members from "./components/members/member";
@@ -10,10 +10,10 @@ import "./styles/nav.css";
 class App extends React.Component {
   render() {
     return (
-      <div id="perspective" className="perspective effect-airbnb">
-        <div className="mnav-container">
-          <div className="mnav-wrapper">
-            <Router>
+      <Router>
+        <div id="perspective" className="perspective effect-airbnb">
+          <div className="mnav-container">
+            <div className="mnav-wrapper">
               <div className="App">
                 <Switch>
                   <Route exact path="/" component={Home} />
@@ -22,33 +22,26 @@ class App extends React.Component {
                 </Switch>
                 <Footer />
               </div>
-            </Router>
+            </div>
           </div>
+          <nav className="outer-nav left vertical">
+            <ul>
+              <Link to="/">
+                <li>Home</li>
+              </Link>
+              <Link to="/events">
+                <li>Events</li>
+              </Link>
+              <Link to="/members">
+                <li>Team</li>
+              </Link>
+              <Link to="/">
+                <li>Blog</li>
+              </Link>
+            </ul>
+          </nav>
         </div>
-        <nav className="outer-nav left vertical">
-          <a href="#" className="icon-home">
-            Home
-          </a>
-          <a href="#" className="icon-news">
-            Events
-          </a>
-          <a href="#" className="icon-image">
-            Team
-          </a>
-          <a href="#" className="icon-upload">
-            Blog
-          </a>
-          {/* <a href="#" className="icon-star">
-        Favorites
-      </a>
-      <a href="#" className="icon-mail">
-        Messages
-      </a>
-      <a href="#" className="icon-lock">
-        Security
-      </a> */}
-        </nav>
-      </div>
+      </Router>
     );
   }
 }

@@ -62,7 +62,7 @@ const Nav = props => {
           <Link to="/">Home</Link>
           <Link to="/events">Events</Link>
           <Link to="/members">Team</Link>
-          <a href="#">Blog</a>
+          <a href="/timeline">Timeline</a>
         </div>
       </div>
     </div>

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import '../../styles/timeline.css';
 import TimelineCard from './timelineCard';
+import Nav from '../Nav/Nav';
 
 
 class Timeline extends React.Component {
@@ -12,6 +13,8 @@ class Timeline extends React.Component {
     }
     render(){
       return (
+        <div>
+        <Nav sticky="true" transp="false" />
         <section id="cd-timeline" className="cd-container">
             <TimelineCard
               title={"Rubeus Game Engine"}
@@ -20,6 +23,7 @@ class Timeline extends React.Component {
               link={"home"}
               />
         </section>
+        </div>
       );
     }  
 }

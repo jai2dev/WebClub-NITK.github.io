@@ -5,16 +5,23 @@
 	width: 100%;
 }
 
+.tag-box {
+    margin-left: 90px;
+    text-align: left;
+}
+
+.main-text {
+    color: #b3d3f6;
+}
 .main-title{
 	font-size: 72px;
-    color: #3b3736;
+    color: #0072bc;
     margin-top: 0;
     font-family: "Playfair";
-    color:#f8d16c;
     padding:10px;
     background-image:linear-gradient(to right, rgba(255,255,255,0.2) 0%, rgba(255,255,255,0.2) 80%,rgba(255,255,255,0.2) 80%,transparent 80%,transparent 100%);
     display: 	inline;
-    line-height: 2;
+    line-height: 1.5;
 }
 .center-flex{
 	display: flex;

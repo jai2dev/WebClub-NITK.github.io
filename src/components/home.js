@@ -14,11 +14,11 @@ class Home extends React.Component {
         <Nav sticky="false" transp="true" />
         <div className="row main-image center-flex">
           <div className="col l6">
-            <div className="container" style={{ textAlign: "center" }}>
-              <h1> we are </h1>
+            <div className="container tag-box">
+              <h2 className="main-text"> We Are </h2>
               <h1 className="main-title ">Web Enthusiasts` </h1>
               <h1 className="main-title ">Club </h1>
-              <h1>NITK</h1>
+              <h2 className="main-text">NITK</h2>
             </div>
           </div>
           <div className="col l6">

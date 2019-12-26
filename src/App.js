@@ -5,7 +5,6 @@ import Home from "./components/home";
 import Members from "./components/members/member";
 import Footer from "./components/footer";
 import Events from "./components/Events/Event";
-
 class App extends React.Component {
   render() {
     return (

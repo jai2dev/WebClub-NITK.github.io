@@ -1,7 +1,7 @@
 import React from "react";
 import EventCard from "./EventCard";
 import YearNavigation from "./yearNavigation.js";
-import Nav from "../Nav/NavBig";
+import Nav from "../Nav/Nav";
 
 const Event = () => {
   return (

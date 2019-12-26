@@ -3,7 +3,8 @@ import BigNav from "./NavBig";
 import SmallNav from "./SmallNav";
 const Nav = props => {
   let initialValue;
-  if (window.innerWidth < 600) {
+  const mobileBreakPoint = 600;
+  if (window.innerWidth < mobileBreakPoint) {
     initialValue = true;
   } else {
     initialValue = false;
@@ -13,7 +14,7 @@ const Nav = props => {
   navRef.current = navSize;
   useEffect(() => {
     const handleResize = () => {
-      const show = window.innerWidth < 600;
+      const show = window.innerWidth < mobileBreakPoint;
       if (navRef.current !== show) {
         setnavSize(show);
       }
@@ -25,7 +26,7 @@ const Nav = props => {
   }, []);
 
   return navSize ? (
-    <SmallNav sticky={props.sticky} />
+    <SmallNav sticky={props.sticky} transp={props.transp} />
   ) : (
     <BigNav sticky={props.sticky} transp={props.transp} />
   );

@@ -9,21 +9,14 @@ import Nav from "../Nav/Nav";
 class Members extends React.Component {
   constructor(props) {
     super(props);
-    this.mixitup = function(something) {};
-    this.containerEl = document.querySelector(".container");
-    this.mixer = this.mixitup(this.containerEl);
+    
 
     this.state = {
-      members: membersData,
-      filter: ""
+      
     };
   }
 
-  handleInput = e => {
-    this.setState({ filter: e.target.value });
-    console.log(e);
-  };
-
+  
   render() {
     return (
       <div>

@@ -1,11 +1,10 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import "./App.css";
 import Home from "./components/home";
 import Members from "./components/members/member";
 import Footer from "./components/footer";
 import Events from "./components/Events/Event";
-import Timeline from './components/Timeline/timeline';
+import Timeline from "./components/Timeline/timeline";
 class App extends React.Component {
   render() {
     return (

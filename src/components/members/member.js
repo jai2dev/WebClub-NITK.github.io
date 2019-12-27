@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import "../../styles/member.css";
 import SigNav from "./sigNav.js";
 import YearNav from "./yearNav.js";
@@ -9,14 +9,10 @@ import Nav from "../Nav/Nav";
 class Members extends React.Component {
   constructor(props) {
     super(props);
-    
 
-    this.state = {
-      
-    };
+    this.state = {};
   }
 
-  
   render() {
     return (
       <div>

@@ -1,13 +1,15 @@
 import React from "react";
 import EventCard from "./EventCard";
 import YearNavigation from "./yearNavigation.js";
-import Nav from "../Nav/NavBig";
+import Nav from "../Nav/Nav";
 import eventsData from "../../assets/data/events.json";
+
 const Event = () => {
   console.log(eventsData);
   return (
     <div>
       <Nav sticky="true" transp="false" />
+      <YearNavigation />
       <div className="container">
         <div className="row">
           {eventsData.map(value => {

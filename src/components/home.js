@@ -3,6 +3,7 @@ import "../styles/home.css";
 import imageUrl from "../assets/images/bg-002.png";
 import Nav from "./Nav/Nav";
 import "../styles/global.css";
+import UpcomingEvents from "./upcomingEvents.js";
 class Home extends React.Component {
   constructor(props) {
     super(props);
@@ -25,6 +26,7 @@ class Home extends React.Component {
             <img className="bg-image" width="700" src={imageUrl} />
           </div>
         </div>
+        <UpcomingEvents></UpcomingEvents>
       </div>
     );
   }

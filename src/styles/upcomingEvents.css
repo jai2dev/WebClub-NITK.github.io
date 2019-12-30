@@ -1,0 +1,12 @@
+h1{
+    text-align: center;
+    margin: 10px 0;
+}
+
+.row{
+    display: flex;
+    width: 100vw;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+}

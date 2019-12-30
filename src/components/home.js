@@ -30,25 +30,13 @@ class Home extends React.Component {
         <UpcomingEvents></UpcomingEvents>
       </div>
       <div className="container">
-      <h1>What we do</h1>
-        <div className="row">
-          <div className="col l4">
-            <i class="fa fa-envelope-open" aria-hidden="true"></i>
-            <p>Talks & Workshops</p>
-          </div>
-          <div className="col l4">
-            <i class="fa fa-envelope-open" aria-hidden="true"></i>
-            <p>Hackathons</p>
-          </div>
-          <div className="col l4">
-            <i class="fa fa-envelope-open" aria-hidden="true"></i>
-            <p>Mentorship</p>
-          </div>
-          <div className="col l4">
-            <i class="far fa-file-code"></i>
-            <p>Projects</p>
-          </div>
-         </div>
+        <h1>What we do</h1>
+        <div class="hexCon">
+          <div class="hexagon"></div>
+          <div class="hexagon"></div>
+          <div class="hexagon"></div>
+          <div class="hexagon"></div>
+        </div>
       </div>
       </div>
     );
@@ -56,3 +44,21 @@ class Home extends React.Component {
 }
 
 export default Home;
+
+
+// <div className="col l4">
+//             <i class="fa fa-envelope-open" aria-hidden="true"></i>
+//             <p>Talks & Workshops</p>
+//           </div>
+//           <div className="col l4">
+//             <i class="fa fa-envelope-open" aria-hidden="true"></i>
+//             <p>Hackathons</p>
+//           </div>
+//           <div className="col l4">
+//             <i class="fa fa-envelope-open" aria-hidden="true"></i>
+//             <p>Mentorship</p>
+//           </div>
+//           <div className="col l4">
+//             <i class="far fa-file-code"></i>
+//             <p>Projects</p>
+//           </div>

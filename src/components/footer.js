@@ -12,7 +12,7 @@ class Footer extends React.Component {
       return (
         <div className="page-footer white-text">
             <div className="row">
-                <div className="col l7" style={{marginTop:20,marginLeft:100,marginBottom:30}}>
+                <div className="col l7" >
                     <div className="footer-text">Contact Us</div>
                     <div className="footer-text-content"> Ground floor, Institute Computer Centre, <br />IIT Roorkee, Roorkee, Uttrakhand, India- 247667</div>
                     <div className="footer-links c-secondary">
@@ -25,7 +25,7 @@ class Footer extends React.Component {
                         <a href="https://twitter.com/img_iitr"><i className="fa fa-twitter" aria-hidden="true"></i></a>
                     </div>
                 </div>
-                <div className="col l5">
+                <div className="col l5 ">
                     <div className="footer-text">About</div>
                     <div className="footer-text-content"> Ground floor, Institute Computer Centre, IIT Roorkee, Roorkee, Uttrakhand, India- 247667</div>
                 </div>

@@ -51,7 +51,7 @@ const Menu = ({ open }) => {
       <Link to="/">Home</Link>
       <Link to="/events">Events</Link>
       <Link to="/members">Team</Link>
-      <a href="/timeline">Timeline</a>
+      <Link to="/timeline">Timeline</Link>
     </StyledMenu>
   );
 };

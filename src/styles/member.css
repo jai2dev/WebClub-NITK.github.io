@@ -1,13 +1,13 @@
-.MemberDetails{
-    padding: 0 150px;
-    text-align: center;
+.MemberDetails {
+  padding: 0 150px;
+  text-align: center;
 }
 
-@media screen and (max-width: 900px) {
-    .MemberDetails{
-        padding: 0;
-    }
+@media screen and (max-width: 600px) {
+  .MemberDetails {
+    padding: 0;
   }
+}
 
 /*
 html,

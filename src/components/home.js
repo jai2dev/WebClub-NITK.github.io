@@ -11,6 +11,7 @@ class Home extends React.Component {
   render() {
     return (
       <div>
+      <div>
         <Nav sticky="false" transp="true" />
         <div className="row main-image center-flex">
           <div className="col l6">
@@ -25,6 +26,28 @@ class Home extends React.Component {
             <img className="bg-image" width="700" src={imageUrl} />
           </div>
         </div>
+      </div>
+      <div className="container">
+      <h1>What we do</h1>
+        <div className="row">
+          <div className="col l4">
+            <i class="fa fa-envelope-open" aria-hidden="true"></i>
+            <p>Talks & Workshops</p>
+          </div>
+          <div className="col l4">
+            <i class="fa fa-envelope-open" aria-hidden="true"></i>
+            <p>Hackathons</p>
+          </div>
+          <div className="col l4">
+            <i class="fa fa-envelope-open" aria-hidden="true"></i>
+            <p>Mentorship</p>
+          </div>
+          <div className="col l4">
+            <i class="far fa-file-code"></i>
+            <p>Projects</p>
+          </div>
+         </div>
+      </div>
       </div>
     );
   }

@@ -9,11 +9,6 @@ html * {
     -moz-box-sizing: border-box;
     box-sizing: border-box;
   }
-  body {
-    font-size: 100%;
-    font-family: "droid serif", serif;
-    background-color: #b3d3f6;
-  }
   a {
     color: #52c5c2;
     text-decoration: none;

@@ -1,8 +1,12 @@
 .page-footer{
     background-color: #0e1b2c;
-    right:0;
-    left:0;
-    bottom:0px;
+    height: 300px;
+}
+.footer-resp{
+    /* text-align: center; */
+    margin-left: 250px;
+    margin-right: 20px;
+
 }
 .footer-text{
     font-size: 24px;
@@ -41,3 +45,29 @@ transition: color 0.2s;
 .footer-social a i:hover{
 color: #f8d16c;
 }
+
+
+
+
+
+
+@media(max-width: 768px){
+    .row{
+        flex-direction: column;
+    }
+    .page-footer{
+        background-color: #0e1b2c;
+        height: 500px;
+    }
+    .footer-resp{
+      /* text-align: center; */
+      margin-left: 30px;
+      margin-right: 40px;
+
+    }
+    .main-image{
+      background-image: none!important;
+      background-color: #293b52;
+    }
+
+  }

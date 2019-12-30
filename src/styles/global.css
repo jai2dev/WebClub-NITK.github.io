@@ -5,3 +5,9 @@
 .container{
     margin: 10;
 }
+
+body {
+    font-size: 100%;
+    font-family: "droid serif", serif;
+    background-color:  rgb(4, 138, 191);
+  }

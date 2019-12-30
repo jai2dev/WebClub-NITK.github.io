@@ -18,7 +18,6 @@ class Members extends React.Component {
       <div>
         <Nav sticky="true" transp="false" />
         <div className="MemberDetails">
-          <h1>Members</h1>
           <div class="controls">
             <SigNav></SigNav>
             <YearNav></YearNav>

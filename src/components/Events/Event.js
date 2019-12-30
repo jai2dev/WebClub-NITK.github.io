@@ -3,13 +3,17 @@ import EventCard from "./EventCard";
 import YearNavigation from "./yearNavigation.js";
 import Nav from "../Nav/Nav";
 import eventsData from "../../assets/data/events.json";
+import '../../styles/events.css';
 
 const Event = () => {
   console.log(eventsData);
   return (
     <div>
       <Nav sticky="true" transp="false" />
-      <YearNavigation />
+      <div className = "events controls">
+        <YearNavigation />
+      </div>
+      
       <div className="container">
         <div className="row">
           {eventsData.map(value => {

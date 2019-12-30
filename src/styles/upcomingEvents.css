@@ -1,12 +1,11 @@
-h1{
-    text-align: center;
-    margin: 10px 0;
+.container{
+    margin-top: 40px;
+    right: 0%;
+    left: 0%;
 }
 
-.row{
-    display: flex;
-    width: 100vw;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 50px;
+@media(max-width: 768px){
+    .container{
+        margin:10px;
+    }
 }

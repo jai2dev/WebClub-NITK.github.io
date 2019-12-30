@@ -4,6 +4,7 @@ import imageUrl from "../assets/images/bg-002.png";
 import Nav from "./Nav/Nav";
 import "../styles/global.css";
 import UpcomingEvents from "./upcomingEvents.js";
+import { textAlign } from "@material-ui/system";
 class Home extends React.Component {
   constructor(props) {
     super(props);
@@ -16,7 +17,7 @@ class Home extends React.Component {
         <div className="row main-image center-flex">
           <div className="col l6">
             <div className="container" style={{marginLeft:100}}>
-              <h1> we are </h1>
+              <h1 className="main-text"> we are </h1>
               <h1 className="main-title ">Web Enthusiasts` </h1>
               <h1 className="main-title ">Club </h1>
               <h2 className="main-text">NITK</h2>

@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/web-club-new-website/static/css/main.e99c782b.chunk.css",
+    "main.css": "/web-club-new-website/static/css/main.c985adf7.chunk.css",
     "main.js": "/web-club-new-website/static/js/main.73785d47.chunk.js",
     "main.js.map": "/web-club-new-website/static/js/main.73785d47.chunk.js.map",
     "runtime-main.js": "/web-club-new-website/static/js/runtime-main.7c511917.js",
@@ -9,10 +9,10 @@
     "static/js/2.c01f9b5b.chunk.js": "/web-club-new-website/static/js/2.c01f9b5b.chunk.js",
     "static/js/2.c01f9b5b.chunk.js.map": "/web-club-new-website/static/js/2.c01f9b5b.chunk.js.map",
     "index.html": "/web-club-new-website/index.html",
-    "precache-manifest.fde2179b52c2c7fb575c69a2a3b0d3ac.js": "/web-club-new-website/precache-manifest.fde2179b52c2c7fb575c69a2a3b0d3ac.js",
+    "precache-manifest.89bdec6d84649beee1880dc285bae0d1.js": "/web-club-new-website/precache-manifest.89bdec6d84649beee1880dc285bae0d1.js",
     "service-worker.js": "/web-club-new-website/service-worker.js",
     "static/css/2.52455666.chunk.css.map": "/web-club-new-website/static/css/2.52455666.chunk.css.map",
-    "static/css/main.e99c782b.chunk.css.map": "/web-club-new-website/static/css/main.e99c782b.chunk.css.map",
+    "static/css/main.c985adf7.chunk.css.map": "/web-club-new-website/static/css/main.c985adf7.chunk.css.map",
     "static/js/2.c01f9b5b.chunk.js.LICENSE": "/web-club-new-website/static/js/2.c01f9b5b.chunk.js.LICENSE",
     "static/media/bg-002.png": "/web-club-new-website/static/media/bg-002.10c4b1d6.png",
     "static/media/cd-icon-picture.svg": "/web-club-new-website/static/media/cd-icon-picture.f62517f9.svg",
@@ -28,7 +28,7 @@
     "static/js/runtime-main.7c511917.js",
     "static/css/2.52455666.chunk.css",
     "static/js/2.c01f9b5b.chunk.js",
-    "static/css/main.e99c782b.chunk.css",
+    "static/css/main.c985adf7.chunk.css",
     "static/js/main.73785d47.chunk.js"
   ]
 }

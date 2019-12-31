@@ -1,27 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "aac0430c2e72d58ad214b8757b5316cd",
+    "revision": "3f7ef246d715e3b5ca5b208a23b7d9ed",
     "url": "/web-club-new-website/index.html"
   },
   {
-    "revision": "b35e65fc213ca7f59420",
+    "revision": "e85a37c500ece5ecbe23",
     "url": "/web-club-new-website/static/css/2.52455666.chunk.css"
   },
   {
-    "revision": "b98841e91fddb92c4da6",
-    "url": "/web-club-new-website/static/css/main.f447053d.chunk.css"
+    "revision": "37b66df662230214f7bd",
+    "url": "/web-club-new-website/static/css/main.d9cc623d.chunk.css"
   },
   {
-    "revision": "b35e65fc213ca7f59420",
-    "url": "/web-club-new-website/static/js/2.a1f80881.chunk.js"
+    "revision": "e85a37c500ece5ecbe23",
+    "url": "/web-club-new-website/static/js/2.d17592b8.chunk.js"
   },
   {
     "revision": "374a015f9bd7dbb4f757a46f1c6a7946",
-    "url": "/web-club-new-website/static/js/2.a1f80881.chunk.js.LICENSE"
+    "url": "/web-club-new-website/static/js/2.d17592b8.chunk.js.LICENSE"
   },
   {
-    "revision": "b98841e91fddb92c4da6",
-    "url": "/web-club-new-website/static/js/main.6bc392ef.chunk.js"
+    "revision": "37b66df662230214f7bd",
+    "url": "/web-club-new-website/static/js/main.aff16100.chunk.js"
   },
   {
     "revision": "c0ef498a322bdba5313d",
@@ -34,6 +34,18 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "f62517f9edcb5798374490ffd43fa516",
     "url": "/web-club-new-website/static/media/cd-icon-picture.f62517f9.svg"
+  },
+  {
+    "revision": "55cad477ec83d4dff1422a818cd7fa83",
+    "url": "/web-club-new-website/static/media/hackathon.55cad477.svg"
+  },
+  {
+    "revision": "9fd8562bba42b2193f047a9c1a180821",
+    "url": "/web-club-new-website/static/media/mentorship.9fd8562b.svg"
+  },
+  {
+    "revision": "aa24918d36e78a1a8fb2ffc7644d7595",
+    "url": "/web-club-new-website/static/media/projects.aa24918d.svg"
   },
   {
     "revision": "04eb8fc57f27498e5ae37523e3bfb2c7",
@@ -50,6 +62,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "3de88b2a4c53e055c99e65868db59410",
     "url": "/web-club-new-website/static/media/rocket.3de88b2a.png"
+  },
+  {
+    "revision": "3c41304bf39f3e92bc5da9f0b9a81b5b",
+    "url": "/web-club-new-website/static/media/talks.3c41304b.svg"
   },
   {
     "revision": "f5444ece6d7f4b94bec86172acc78bc9",

@@ -27,16 +27,15 @@ class Home extends React.Component {
           <div className="main-image center-flex">
             <div className="title-container">
               <h1 className="main-text"> we are </h1>
-              <h1 className="main-title ">Web Enthusiasts` </h1>
+              <h1 className="main-title ">Web </h1>
+              <h1 className="main-title ">Enthusiasts` </h1>
               <h1 className="main-title ">Club </h1>
               <h2 className="main-text">NITK</h2>
-            </div>
-
+            </div>  
             <img className="bg-image" width="700" src={imageUrl} />
           </div>
           <UpcomingEvents></UpcomingEvents>
         </div>
-        <UpcomingEvents></UpcomingEvents>
       </div>
       <WhatWeDo></WhatWeDo>
       

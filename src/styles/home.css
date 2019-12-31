@@ -22,10 +22,8 @@
     color: rgb(4, 138, 191);
     margin-top: 0;
     font-family: "Playfair";
-    padding: 10px;
-    background-image: linear-gradient(to right, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.2) 80%, rgba(255, 255, 255, 0.2) 80%, transparent 80%, transparent 100%);
-    display: block;
-    line-height: 1.5;
+    padding: 1px;
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0.2) 50%);
 }
 
 .center-flex {
@@ -35,14 +33,16 @@
 }
 
 .title-container {
-    margin-left: 50px;
+    margin-left: 100px;
 }
 
 
 .hexCon {
     display: flex;
 }
-
+.bg-image{
+    margin-left: 20%;
+}
 @media(max-width: 768px) {
     .main-title {
         font-size: 40px;
@@ -52,11 +52,18 @@
     }
     .main-image {
         height: 50vh;
-        display: inherit;
-        background-image: linear-gradient(to right, black 100%);
+        background-color: black;
         width: 100%;
     }
     .title-container {
         margin: 100px;
+    }
+    .bg-image{
+        display: none;
+    }
+    .center-flex {
+        display: flex;
+        align-items: center;
+        overflow: hidden;
     }
 }

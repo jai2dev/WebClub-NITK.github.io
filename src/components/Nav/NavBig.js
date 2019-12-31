@@ -17,7 +17,7 @@ const Nav = props => {
   // Code to handle scroll event
   useEffect(() => {
     const handleScroll = () => {
-      const show = window.scrollY > 670;
+      const show = window.scrollY > window.innerHeight;
       if (navRef.current !== show) {
         setNavBackground(show);
       }
@@ -56,7 +56,7 @@ const Nav = props => {
       <div className="nav-container">
         <div className="clubLogo">
           <span className="logo" style={{ backgroundImage: imageUrl }} />
-          <h1 style={{marginTop:10}}>WebClub</h1>
+          <h1 style={{ marginTop: 10 }}>WebClub</h1>
         </div>
         <div className="links">
           <Link to="/">Home</Link>

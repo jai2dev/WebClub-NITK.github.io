@@ -20,6 +20,7 @@ class Home extends React.Component {
     console.log(this.props.deviceType);
     return (
       <div>
+      <div>
         <div>
           <Nav sticky="false" transp="true" />
           <div className="main-image center-flex">
@@ -34,7 +35,6 @@ class Home extends React.Component {
           </div>
           <UpcomingEvents></UpcomingEvents>
         </div>
-<<<<<<< HEAD
         <UpcomingEvents></UpcomingEvents>
       </div>
       <div className="container">
@@ -57,18 +57,9 @@ class Home extends React.Component {
             <h2>Hackathons</h2>
           </div>
          
-=======
-        <div className="container">
-          <h1>What we do</h1>
-          <div class="hexCon">
-            <div class="hexagon"></div>
-            <div class="hexagon"></div>
-            <div class="hexagon"></div>
-            <div class="hexagon"></div>
-          </div>
->>>>>>> c4bc202e7ce79773aa7e538d06367f8a7c896021
         </div>
       </div>
+    </div>
     );
   }
 }

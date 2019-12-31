@@ -19,7 +19,7 @@ class Footer extends React.Component {
                             <div className="footer-text-content"> NITK, Surathkal, Karnataka, India- 575025</div>
                             <div className="footer-links c-secondary">
                                 <p><i className="fa fa-envelope-o" aria-hidden="true"></i> <span className="f-link">webclub@nitk.edu.in</span></p>
-                                <p><i className="fa fa-phone" aria-hidden="true"></i> <span className="f-link">01332 284 521</span></p>
+                                {/* <p><i className="fa fa-phone" aria-hidden="true"></i> <span className="f-link">01332 284 521</span></p> */}
                             </div>
                             <div className="footer-social">
                                 <a href="https://www.facebook.com/web.club.nitk/"><i className="fa fa-facebook" aria-hidden="true"></i></a>

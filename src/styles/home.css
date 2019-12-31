@@ -54,9 +54,13 @@
         height: 50vh;
         background-color: black;
         width: 100%;
+        background-image: unset;
     }
     .title-container {
-        margin: 100px;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      margin: 0;
     }
     .bg-image{
         display: none;

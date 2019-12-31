@@ -57,7 +57,7 @@ class UpcomingEvents extends React.Component {
 
             {eventsData.map(value => {
               return (
-                <div style={{margin:100}}>
+                <div style={{margin:100,marginLeft:35}}>
                   <EventCard
                     title={value.title}
                     date={value.date}
@@ -80,5 +80,3 @@ class UpcomingEvents extends React.Component {
 
 
 export default UpcomingEvents;
-
-

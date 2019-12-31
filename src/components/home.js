@@ -34,10 +34,11 @@ class Home extends React.Component {
             </div>  
             <img className="bg-image" width="700" src={imageUrl} />
           </div>
-          <UpcomingEvents></UpcomingEvents>
         </div>
       </div>
       <WhatWeDo></WhatWeDo>
+      <hr />
+      <UpcomingEvents></UpcomingEvents>
       
     </div>
     );

@@ -33,7 +33,7 @@ class UpcomingEvents extends React.Component {
     };
     return (
       <div>
-        <h1>Upcoming Events</h1>
+        <h1 className="heading-upcomingEvents">Upcoming Events</h1>
 
         <div >
           <Carousel

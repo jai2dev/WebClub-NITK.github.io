@@ -53,9 +53,7 @@ color: #f8d16c;
 
 
 @media(max-width: 768px){
-    .row{
-        flex-direction: column;
-    }
+
     .page-footer{
         background-color: #0e1b2c;
         height: 500px;

@@ -1,8 +1,8 @@
-.main-image{
-	height:100vh;
-	display: inherit;
-	background-image:linear-gradient(to right, black 50%,black 50%, rgb(4, 138, 191) 50%,#0072bc 50%);
-	width: 100%;
+.main-image {
+    height: 100vh;
+    display: inherit;
+    background-image: linear-gradient(to right, black 50%, #0072bc 50%);
+    width: 100%;
 }
 
 .tag-box {
@@ -13,24 +13,27 @@
 .main-text {
     color: #b3d3f6;
 }
-.main-title{
-	font-size: 72px;
-    color:  rgb(4, 138, 191);
+
+.main-title {
+    font-size: 72px;
+    color: rgb(4, 138, 191);
     margin-top: 0;
     font-family: "Playfair";
-    padding:10px;
-    background-image:linear-gradient(to right, rgba(255,255,255,0.2) 0%, rgba(255,255,255,0.2) 80%,rgba(255,255,255,0.2) 80%,transparent 80%,transparent 100%);
-    display: 	inline;
+    padding: 10px;
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.2) 80%, rgba(255, 255, 255, 0.2) 80%, transparent 80%, transparent 100%);
+    display: inline;
     line-height: 1.5;
 }
-.center-flex{
-	display: flex;
-  align-items: center;
-  overflow: hidden;
+
+.center-flex {
+    display: flex;
+    align-items: center;
+    overflow: hidden;
 }
 
-
-
+.title-container {
+    margin-left: 50px;
+}
 
 .hexagon {
     position: relative;
@@ -39,31 +42,44 @@
     background: black;
     margin: 28.87px auto;
     transform: scale(1);
-  }
+}
 
-  .hexagon::before,
+.hexagon::before,
 .hexagon::after {
-  content: "";
-  position: absolute;
-  border-left: 50px solid transparent;
-  border-right: 50px solid transparent;
+    content: "";
+    position: absolute;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
 }
 
 .hexagon::before {
     bottom: 100%;
     border-bottom: 28.87px solid black;
-  }
+}
 
-  .hexagon::after {
+.hexagon::after {
     top: 100%;
     border-top: 28.87px solid black;
-  }
+}
 
+.hexCon {
+    display: flex;
+}
 
-
-
-
-  
-  .hexCon{
-      display: flex;
-  }
+@media(max-width: 768px) {
+    .main-title {
+        font-size: 40px;
+        color: rgb(4, 138, 191);
+        font-family: "Playfair";
+        background-image: linear-gradient(to right, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.2) 80%, rgba(255, 255, 255, 0.2) 80%, transparent 80%, transparent 100%);
+    }
+    .main-image {
+        height: 50vh;
+        display: inherit;
+        background-image: linear-gradient(to right, black 100%);
+        width: 100%;
+    }
+    .title-container {
+        margin: 100px;
+    }
+}

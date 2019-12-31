@@ -13,7 +13,7 @@ class Footer extends React.Component {
         <div className="white-text page-footer">
             {/* <div className="page-footer"> */}
                 <div className="row">
-                    <div classNames="col l7 " >
+                    <div classNames="col-sm-l7 " >
                         <div className="footer-resp">
                             <div className="footer-text">Contact Us</div>
                             <div className="footer-text-content"> NITK, Surathkal, Karnataka, India- 575025</div>
@@ -28,14 +28,13 @@ class Footer extends React.Component {
                             </div>
                             </div>
                         </div>
-                    <div className="col l5 ">
+                    <div className="col-sm-l5 ">
                         <div className="footer-resp">
                             <div className="footer-text">About</div>
                             <div className="footer-text-content"> A group of passionate computer science students helping the community of NITK</div>
                         </div>    
                     </div>
                 </div>
-            {/* </div> */}
         </div>
       );
     }  

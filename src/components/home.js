@@ -5,6 +5,7 @@ import Nav from "./Nav/Nav";
 import "../styles/global.css";
 import UpcomingEvents from "./upcomingEvents.js";
 import { textAlign } from "@material-ui/system";
+import Helmet from 'react-helmet';
 class Home extends React.Component {
   constructor(props) {
     super(props);
@@ -14,6 +15,9 @@ class Home extends React.Component {
     console.log(this.props.deviceType);
     return (
       <div>
+        <Helmet>
+          <title>Web Club NITK</title>
+        </Helmet>
         <div>
           <Nav sticky="false" transp="true" />
           <div className="main-image center-flex">
@@ -43,21 +47,3 @@ class Home extends React.Component {
 }
 
 export default Home;
-
-
-// <div className="col l4">
-//             <i class="fa fa-envelope-open" aria-hidden="true"></i>
-//             <p>Talks & Workshops</p>
-//           </div>
-//           <div className="col l4">
-//             <i class="fa fa-envelope-open" aria-hidden="true"></i>
-//             <p>Hackathons</p>
-//           </div>
-//           <div className="col l4">
-//             <i class="fa fa-envelope-open" aria-hidden="true"></i>
-//             <p>Mentorship</p>
-//           </div>
-//           <div className="col l4">
-//             <i class="far fa-file-code"></i>
-//             <p>Projects</p>
-//           </div>

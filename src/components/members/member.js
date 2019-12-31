@@ -5,7 +5,7 @@ import YearNav from "./yearNav.js";
 import MemberCard from "./memberCard.js";
 import membersData from "../../assets/data/webclubMembersData";
 import Nav from "../Nav/Nav";
-
+import Helmet from 'react-helmet';
 class Members extends React.Component {
   constructor(props) {
     super(props);
@@ -16,6 +16,9 @@ class Members extends React.Component {
   render() {
     return (
       <div>
+        <Helmet>
+          <title>Team - Web Club NITK</title>
+        </Helmet>
         <Nav sticky="true" transp="false" />
         <div className="MemberDetails">
           <div class="controls">

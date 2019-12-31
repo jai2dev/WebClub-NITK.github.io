@@ -17,7 +17,7 @@ const Nav = props => {
   // Code to handle scroll event
   useEffect(() => {
     const handleScroll = () => {
-      const show = window.scrollY > window.innerHeight;
+      const show = window.scrollY > window.innerHeight - 250;
       if (navRef.current !== show) {
         setNavBackground(show);
       }

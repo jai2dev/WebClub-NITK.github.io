@@ -123,7 +123,7 @@ const MobileNav = props => {
   // Code to handle scroll event
   useEffect(() => {
     const handleScroll = () => {
-      const show = window.scrollY > window.innerHeight;
+      const show = window.scrollY > window.innerHeight - 150;
       if (navRef.current !== show) {
         setNavBackground(show);
       }

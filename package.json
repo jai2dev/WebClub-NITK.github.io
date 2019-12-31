@@ -2,7 +2,7 @@
   "name": "webclubwebsite",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://WebClub-NITK.github.io/web-club-new-website",
+  "homepage": "http://WebClub-NITK.github.io/new",
   "dependencies": {
     "@material-ui/core": "^4.8.0",
     "@material-ui/icons": "^4.5.1",

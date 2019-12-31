@@ -1,27 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "f586ebf3feba5b0abe06361002efd1b2",
+    "revision": "da750bd2a5d7144e230dc51741301251",
     "url": "/web-club-new-website/index.html"
   },
   {
-    "revision": "e85a37c500ece5ecbe23",
+    "revision": "03a6c8abd646b75347e3",
     "url": "/web-club-new-website/static/css/2.52455666.chunk.css"
   },
   {
-    "revision": "b3288d12c2ba2e175ce0",
-    "url": "/web-club-new-website/static/css/main.0c1784d2.chunk.css"
+    "revision": "5e4e11ea508ef7393c66",
+    "url": "/web-club-new-website/static/css/main.e99c782b.chunk.css"
   },
   {
-    "revision": "e85a37c500ece5ecbe23",
-    "url": "/web-club-new-website/static/js/2.d17592b8.chunk.js"
+    "revision": "03a6c8abd646b75347e3",
+    "url": "/web-club-new-website/static/js/2.c01f9b5b.chunk.js"
   },
   {
     "revision": "374a015f9bd7dbb4f757a46f1c6a7946",
-    "url": "/web-club-new-website/static/js/2.d17592b8.chunk.js.LICENSE"
+    "url": "/web-club-new-website/static/js/2.c01f9b5b.chunk.js.LICENSE"
   },
   {
-    "revision": "b3288d12c2ba2e175ce0",
-    "url": "/web-club-new-website/static/js/main.aff16100.chunk.js"
+    "revision": "5e4e11ea508ef7393c66",
+    "url": "/web-club-new-website/static/js/main.73785d47.chunk.js"
   },
   {
     "revision": "c0ef498a322bdba5313d",

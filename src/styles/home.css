@@ -1,8 +1,11 @@
-.main-image {
-    height: 100vh;
-    display: inherit;
-    background-image: linear-gradient(to right, black 50%, #0072bc 50%);
-    width: 100%;
+@import "https://cdnjs.cloudflare.com/ajax/libs/MaterialDesign-Webfont/4.7.95/css/materialdesignicons.min.css";
+
+
+.main-image{
+	height:100vh;
+	display: inherit;
+	background-image:linear-gradient(to right, black 50%,black 50%, rgb(4, 138, 191) 50%,#0072bc 50%);
+	width: 100%;
 }
 
 .tag-box {
@@ -25,6 +28,19 @@
     line-height: 1.5;
 }
 
+.container{
+  width: 100vw;
+}
+
+.wrap h2{
+  text-align: center;
+}
+
+.hexCon{
+  display: flex;
+  flex-flow: row;
+  justify-content: space-around;
+}
 .center-flex {
     display: flex;
     align-items: center;
@@ -60,7 +76,25 @@
 .hexagon::after {
     top: 100%;
     border-top: 28.87px solid black;
+  }
+
+.hexagon img{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.5);
+  color: white;
+  filter: invert(100%);
 }
+
+.hexagon img .talk{
+  transform: translate(-50%, -50%) scale(1);
+}
+  
+  .hexCon{
+      display: flex;
+  }
+
 
 .hexCon {
     display: flex;

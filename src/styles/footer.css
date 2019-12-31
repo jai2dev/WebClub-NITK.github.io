@@ -1,6 +1,7 @@
 .page-footer{
     background-color: #0e1b2c;
     height: 300px;
+    overflow: hidden;
 }
 .footer-resp{
     /* text-align: center; */

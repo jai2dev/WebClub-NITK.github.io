@@ -23,7 +23,6 @@
     margin-top: 0;
     font-family: "Playfair";
     padding: 1px;
-    background-image: linear-gradient(to right, rgba(255, 255, 255, 0.2) 50%);
 }
 
 .center-flex {
@@ -48,7 +47,6 @@
         font-size: 40px;
         color: rgb(4, 138, 191);
         font-family: "Playfair";
-        background-image: linear-gradient(to right, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.2) 80%, rgba(255, 255, 255, 0.2) 80%, transparent 80%, transparent 100%);
     }
     .main-image {
         height: 50vh;
@@ -69,5 +67,6 @@
         display: flex;
         align-items: center;
         overflow: hidden;
+        height: 100vh;
     }
 }

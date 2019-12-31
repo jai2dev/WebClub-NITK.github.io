@@ -2,6 +2,7 @@
     background-color: #0e1b2c;
     height: 300px;
     overflow: hidden;
+    margin-top: 50px;
 }
 .footer-resp{
     /* text-align: center; */
@@ -23,12 +24,8 @@
 .footer-links{
     margin:24px 0;
 }
-.footer-text-content{
-color:  #ddd;
-line-height: 1.75;
-}
 .c-secondary{
-    color:#f8d16c!important;
+    color:#0072bc important;
 }
 .f-link{
 margin-left: 12px;
@@ -44,7 +41,7 @@ text-align:center;
 transition: color 0.2s;
 }
 .footer-social a i:hover{
-color: #f8d16c;
+color: #0072bc;
 }
 
 

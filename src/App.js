@@ -9,7 +9,6 @@ class App extends React.Component {
   render() {
     return (
       <Router>
-        <div >
           <Switch>
             <Route exact path="/" component={Home} />
             <Route exact path="/members" component={Members} />
@@ -17,7 +16,6 @@ class App extends React.Component {
             <Route exact path="/timeline" component={Timeline} />
           </Switch>
           <Footer />
-        </div>
       </Router>
     );
   }

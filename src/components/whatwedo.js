@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import '../styles/whatwedo.css';
-import '../styles/global.css';
 import projects from "../assets/images/projects.svg"
 import mentorship from "../assets/images/mentorship.svg"
 import hackathon from "../assets/images/hackathon.svg"
@@ -15,28 +14,24 @@ class WhatWeDo extends React.Component {
     }
     render(){
       return (
-        <div className="container">
-        <h1>What we do</h1>
-        <div class="hexCon">
-          <div class = "wrap">
+        <div className="row">
+          <div className="col-sm-l3" style={{margin:10}}>
             <div class="hexagon"><img src={mentorship} alt="Picture"></img></div>
             <h2>Mentorship</h2>
           </div>
-          <div class = "wrap">
+          <div className="col-sm-l3" style={{margin:10}}>
             <div class="hexagon"><img src={projects} id = "projects" alt="Picture"></img></div>
             <h2>Projects</h2>
           </div>
-          <div class = "wrap">
+          <div className="col-sm-l3" style={{margin:10}}>
             <div class="hexagon"><img src={talks} alt="Picture" class="talk"></img></div>
             <h2>Talks</h2>
           </div>
-          <div class = "wrap">
+          <div className="col-sm-l3" style={{margin:10}}>
             <div class="hexagon"><img src={hackathon} alt="Picture"></img></div>
             <h2>Hackathons</h2>
-          </div>
-         
+          </div>          
         </div>
-      </div>
       );
     }  
 }

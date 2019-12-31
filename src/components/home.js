@@ -5,6 +5,12 @@ import Nav from "./Nav/Nav";
 import "../styles/global.css";
 import UpcomingEvents from "./upcomingEvents.js";
 import { textAlign } from "@material-ui/system";
+import projects from "../assets/images/projects.svg"
+import mentorship from "../assets/images/mentorship.svg"
+import hackathon from "../assets/images/hackathon.svg"
+import talks from "../assets/images/talks.svg"
+
+
 class Home extends React.Component {
   constructor(props) {
     super(props);
@@ -33,10 +39,23 @@ class Home extends React.Component {
       <div className="container">
         <h1>What we do</h1>
         <div class="hexCon">
-          <div class="hexagon"></div>
-          <div class="hexagon"></div>
-          <div class="hexagon"></div>
-          <div class="hexagon"></div>
+          <div class = "wrap">
+            <div class="hexagon"><img src={mentorship} alt="Picture"></img></div>
+            <h2>Mentorship</h2>
+          </div>
+          <div class = "wrap">
+            <div class="hexagon"><img src={projects} id = "projects" alt="Picture"></img></div>
+            <h2>Projects</h2>
+          </div>
+          <div class = "wrap">
+            <div class="hexagon"><img src={talks} alt="Picture" class="talk"></img></div>
+            <h2>Talks</h2>
+          </div>
+          <div class = "wrap">
+            <div class="hexagon"><img src={hackathon} alt="Picture"></img></div>
+            <h2>Hackathons</h2>
+          </div>
+         
         </div>
       </div>
       </div>

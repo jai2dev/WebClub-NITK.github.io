@@ -1,3 +1,6 @@
+@import "https://cdnjs.cloudflare.com/ajax/libs/MaterialDesign-Webfont/4.7.95/css/materialdesignicons.min.css";
+
+
 .main-image{
 	height:100vh;
 	display: inherit;
@@ -30,7 +33,19 @@
 }
 
 
+.container{
+  width: 100vw;
+}
 
+.wrap h2{
+  text-align: center;
+}
+
+.hexCon{
+  display: flex;
+  flex-flow: row;
+  justify-content: space-around;
+}
 
 .hexagon {
     position: relative;
@@ -59,10 +74,18 @@
     border-top: 28.87px solid black;
   }
 
+.hexagon img{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.5);
+  color: white;
+  filter: invert(100%);
+}
 
-
-
-
+.hexagon img .talk{
+  transform: translate(-50%, -50%) scale(1);
+}
   
   .hexCon{
       display: flex;

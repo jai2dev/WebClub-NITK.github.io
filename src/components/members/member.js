@@ -28,17 +28,44 @@ class Members extends React.Component {
 
           <div class="container">
             {membersData.map(value => {
-              return (
-                <MemberCard
-                  classs={value.sig}
-                  name={value.name}
-                  role={value.role}
-                  email={value.email}
-                  githuburl={value.githuburl}
-                  linkedinurl={value.linkedinurl}
-                  image="https://cdn.glitch.com/21943bea-5c73-4cf3-81b5-1b7fd62627ba%2Fpro.jpg?v=1576657391203"
-                />
-              );
+              if(value.role != "Club Member"){
+                return (
+                  <MemberCard
+                    classs={value.sig + " Core"}
+                    name={value.name}
+                    role={value.role}
+                    email={value.email}
+                    githuburl={value.githuburl}
+                    linkedinurl={value.linkedinurl}
+                    image="https://cdn.glitch.com/21943bea-5c73-4cf3-81b5-1b7fd62627ba%2Fpro.jpg?v=1576657391203"
+                  />
+                );
+              }else if(value.role == "Alumni"){
+                return (
+                  <MemberCard
+                    classs={value.sig + " Alumni"}
+                    name={value.name}
+                    role={value.role}
+                    email={value.email}
+                    githuburl={value.githuburl}
+                    linkedinurl={value.linkedinurl}
+                    image="https://cdn.glitch.com/21943bea-5c73-4cf3-81b5-1b7fd62627ba%2Fpro.jpg?v=1576657391203"
+                  />
+                );
+              }else{
+                return (
+                  <MemberCard
+                    classs={value.sig}
+                    name={value.name}
+                    role={value.role}
+                    email={value.email}
+                    githuburl={value.githuburl}
+                    linkedinurl={value.linkedinurl}
+                    image="https://cdn.glitch.com/21943bea-5c73-4cf3-81b5-1b7fd62627ba%2Fpro.jpg?v=1576657391203"
+                  />
+                );
+              }
+              
             })}
           </div>
         </div>

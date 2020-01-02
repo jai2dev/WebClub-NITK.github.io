@@ -28,8 +28,8 @@ export default function CenteredTabs() {
         centered
       >
         <Tab label="All"  data-filter="all" />
-        <Tab label="Position" />
-        <Tab label="Core" />
+        <Tab label="Core" data-filter=".Core" />
+        <Tab label="Alumni" data-filter=".Alumni" />
       </Tabs>
     </Paper>
   );

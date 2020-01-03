@@ -21,18 +21,36 @@ const Event = () => {
         <div className="container">
           <div className="row">
             {eventsData.map(value => {
-              return (
-                <div style={{ margin: 10 }}>
-                  <EventCard
-                    title={value.title}
-                    date={value.date}
-                    time={value.time}
-                    venue={value.venue}
-                    image={value.image}
-                    description={value.description}
-                  />
-                </div>
-              );
+              if(value.status == 0){
+                return (
+                  <div style={{ margin: 10 }}>
+                    <EventCard
+                      classs={"past"}
+                      title={value.title}
+                      date={value.date}
+                      time={value.time}
+                      venue={value.venue}
+                      image={value.image}
+                      description={value.description}
+                    />
+                  </div>
+                );
+              }else{
+                return (
+                  <div style={{ margin: 10 }}>
+                    <EventCard
+                      classs={"upcoming"}
+                      title={value.title}
+                      date={value.date}
+                      time={value.time}
+                      venue={value.venue}
+                      image={value.image}
+                      description={value.description}
+                    />
+                  </div>
+                );
+              }
+              
             })}
           </div>
         </div>

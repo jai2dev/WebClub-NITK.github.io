@@ -72,8 +72,8 @@ export default function CenteredTabs(props) {
         centered
         onChange={props.handleInput}
       >
-        <Tab label="Past Events"  data-filter="all" icon={<DateRangeIcon />}  />
-        <Tab label="Upcoming Events"   icon={<EventAvailableIcon />}/>
+        <Tab label="Past Events"  data-filter=".past" icon={<DateRangeIcon />}  />
+        <Tab label="Upcoming Events" data-filter=".upcoming"  icon={<EventAvailableIcon />}/>
       </Tabs>
     </Paper>
   );

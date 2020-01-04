@@ -29,31 +29,27 @@ const Event = () => {
           {eventsData.map(value => {
             if (value.status == 0) {
               return (
-                <div style={{ marginBottom: 20 }}>
-                  <EventCard
-                    classs={"past"}
-                    title={value.title}
-                    date={value.date}
-                    time={value.time}
-                    venue={value.venue}
-                    image={value.image}
-                    description={value.description}
-                  />
-                </div>
+                <EventCard
+                  classs={"past"}
+                  title={value.title}
+                  date={value.date}
+                  time={value.time}
+                  venue={value.venue}
+                  image={value.image}
+                  description={value.description}
+                />
               );
             } else {
               return (
-                <div style={{ marginBottom: 20 }}>
-                  <EventCard
-                    classs={"upcoming"}
-                    title={value.title}
-                    date={value.date}
-                    time={value.time}
-                    venue={value.venue}
-                    image={value.image}
-                    description={value.description}
-                  />
-                </div>
+                <EventCard
+                  classs={"upcoming"}
+                  title={value.title}
+                  date={value.date}
+                  time={value.time}
+                  venue={value.venue}
+                  image={value.image}
+                  description={value.description}
+                />
               );
             }
           })}

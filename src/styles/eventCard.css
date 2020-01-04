@@ -110,6 +110,11 @@
   text-align: left;
 }
 
+.past,
+.upcoming {
+  margin-bottom: 20px;
+}
+
 @media screen and (max-width: 600px) {
   .EventCard {
     width: 300px;

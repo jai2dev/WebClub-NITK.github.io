@@ -1,15 +1,21 @@
+.EventDetails {
+  padding: 0 150px;
+  text-align: center;
+}
+
 .events {
-    padding: 0 150px;
+    padding: 1rem;
     text-align: center;
-    margin-top: 15px;
   }
-  /* .controls {
-      padding: 1rem;
-      font-size: 0.1px;
-  } */
   
-  @media screen and (max-width: 600px) {
-    .events {
+  @media screen and (max-width: 1000px) {
+    .EventDetails{
       padding: 0;
     }
   }
+
+  @media screen and (max-width: 500px) {
+      .events{
+          padding: 0px;
+      }
+    }

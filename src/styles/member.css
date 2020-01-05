@@ -7,11 +7,17 @@
     font-size: 0.1px;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 1000px) {
   .MemberDetails {
     padding: 0;
   }
 }
+
+@media screen and (max-width: 500px) {
+    .controls{
+        padding: 0;
+    }
+  }
 
 /*
 html,

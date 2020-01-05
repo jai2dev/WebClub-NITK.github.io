@@ -21,6 +21,7 @@ const Event = () => {
       </Helmet>
       <div>
         <Nav sticky="true" transp="false" />
+        <div className="EventDetails">
         <div className="events controls">
           <YearNavigation />
         </div>
@@ -53,6 +54,7 @@ const Event = () => {
               );
             }
           })}
+        </div>
         </div>
       </div>
     </div>

@@ -5,17 +5,35 @@ import Nav from "../Nav/Nav";
 import eventsData from "../../assets/data/events.json";
 import "../../styles/events.css";
 import Helmet from "react-helmet";
-const Event = () => {
-  console.log(eventsData);
+import mixitup from 'mixitup';
 
-  const styles = {
-    display: "flex",
-    flexDirection: "row",
-    flexWrap: "wrap",
-    justifyContent: "space-around"
-  };
-  return (
-    <div>
+
+class Event extends React.Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {};
+  }
+
+  componentDidMount(){
+    var containerEl = document.querySelector('.container');
+    var mixer = mixitup(containerEl);
+  }
+
+  
+
+  render() {
+
+    const styles = {
+      display: "flex",
+      flexDirection: "row",
+      flexWrap: "wrap",
+      justifyContent: "space-around"
+    };
+    return (
+      
+
+      <div>
       <Helmet>
         <title>Events - Web Club NITK</title>
       </Helmet>
@@ -58,7 +76,10 @@ const Event = () => {
         </div>
       </div>
     </div>
-  );
-};
+    );
+  }
+}
+
+
 
 export default Event;

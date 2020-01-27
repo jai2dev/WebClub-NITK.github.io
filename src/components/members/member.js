@@ -6,11 +6,19 @@ import MemberCard from "./memberCard.js";
 import membersData from "../../assets/data/webclubMembersData";
 import Nav from "../Nav/Nav";
 import Helmet from 'react-helmet';
+import mixitup from 'mixitup'
+
+
 class Members extends React.Component {
   constructor(props) {
     super(props);
 
     this.state = {};
+  }
+
+  componentDidMount(){
+    var containerEl = document.querySelector('.container');
+    var mixer = mixitup(containerEl);
   }
 
   render() {

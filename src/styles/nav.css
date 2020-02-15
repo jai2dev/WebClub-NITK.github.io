@@ -42,10 +42,36 @@
   font-size: 18px;
   font-weight: 500;
   text-decoration: none;
+  transition: all 0.3s;
+  padding: 5px 10px;
+  border-radius: 5px;
+  margin: 5px;
+  overflow: hidden;
+  position: relative;
+  color: #1490e4
 }
-.nav a:hover {
-  text-shadow: 2px 2px 4px #00000048;
-  font-size: 19px;
+.nav .nav-container .links a::before{
+  content:" ";
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  width: 0%;
+  height: 0;
+  background-color: #1490e4;
+  transition: all 0.5s;
+  border-radius: 50%;
+  z-index: -1;
+  transform: translate(-50%,-50%);
+}
+
+.nav .nav-container .links a:hover::before{
+  width: 300%;
+  height:300%;
+}
+.nav .nav-container .links a:hover {
+  /* text-shadow: 2px 2px 4px #00000048; */
+  color: white;
+  /* background-color: #1490e4; */
 }
 .nav-sticky {
   top: 0;

@@ -16,7 +16,7 @@ class Event extends React.Component {
   }
 
   componentDidMount(){
-    var containerEl = document.querySelector('.container');
+    var containerEl = document.querySelector('.eventsContainer');
     var mixer = mixitup(containerEl);
   }
 
@@ -44,7 +44,7 @@ class Event extends React.Component {
           <YearNavigation />
         </div>
 
-        <div className="container" style={styles}>
+        <div className="eventsContainer" style={styles}>
           {eventsData.map(value => {
             if (value.status == 0) {
               return (

@@ -25,6 +25,12 @@
     }
 }
 
+@media screen and (max-width: 400px){
+    .memberContainer{
+        margin: 0;
+    }
+}
+
 /*
 html,
 body {

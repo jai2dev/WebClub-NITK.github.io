@@ -17,7 +17,7 @@ class Members extends React.Component {
   }
 
   componentDidMount(){
-    var containerEl = document.querySelector('.container');
+    var containerEl = document.querySelector('.memberContainer');
     var mixer = mixitup(containerEl);
   }
 
@@ -34,7 +34,7 @@ class Members extends React.Component {
             <YearNav></YearNav>
           </div>
 
-          <div class="container">
+          <div class="memberContainer">
             {membersData.map(value => {
               if(value.role != "Club Member"){
                 return (

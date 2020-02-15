@@ -140,6 +140,12 @@ html * {
     background: #f0ca45;
   }
   @media only screen and (min-width: 1170px) {
+    .bounce-in {
+      visibility: visible;
+      -webkit-animation: cd-bounce-1 0.6s;
+      -moz-animation: cd-bounce-1 0.6s;
+      animation: cd-bounce-1 0.6s;
+    }
     .cd-timeline-img {
       width: 60px;
       height: 60px;
@@ -286,6 +292,9 @@ html * {
     }
   }
   @media only screen and (min-width: 1170px) {
+    .is-hidden{
+      visibility: hidden;
+    }
     .cd-timeline-content {
       margin-left: 0;
       padding: 1.6em;
@@ -326,10 +335,10 @@ html * {
       right: 122%;
       text-align: right;
     }
-    .cssanimations .cd-timeline-content.is-hidden {
+    .cd-timeline-content.is-hidden {
       visibility: hidden;
     }
-    .cssanimations .cd-timeline-content.bounce-in {
+    .cd-timeline-content.bounce-in {
       visibility: visible;
       -webkit-animation: cd-bounce-2 0.6s;
       -moz-animation: cd-bounce-2 0.6s;
@@ -337,7 +346,6 @@ html * {
     }
   }
   @media only screen and (min-width: 1170px) {
-    .cssanimations
       .cd-timeline-block:nth-child(even)
       .cd-timeline-content.bounce-in {
       -webkit-animation: cd-bounce-2-inverse 0.6s;

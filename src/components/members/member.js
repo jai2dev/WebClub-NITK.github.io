@@ -7,13 +7,37 @@ import membersData from "../../assets/data/webclubMembersData";
 import Nav from "../Nav/Nav";
 import Helmet from 'react-helmet';
 import mixitup from 'mixitup'
-
+import { membersWorkSheetId } from './../../environment';
 
 class Members extends React.Component {
   constructor(props) {
     super(props);
 
-    this.state = {};
+    this.state = {
+      membersData:[]
+    };
+    this.getData();
+  }
+
+  async getData(){
+    var json = await fetch('https://spreadsheets.google.com/feeds/list/'+membersWorkSheetId+'/od6/public/values?alt=json')
+    json = await json.json()
+    var finalArray=[];
+    var key,value;
+    //parse the json obtained from google sheets.
+    json.feed.entry.map(entry=>{
+        json={}
+        entry.content['$t'].split(',').map(obj=>{
+            key = obj.split(':')[0].toString()
+            key = key.trim();
+            value = obj.split(':')[1].toString()
+            value = value.trim();
+            json[key]=value
+        })
+        
+        finalArray.push(json);
+    })
+    this.setState({membersData:finalArray});
   }
 
   componentDidMount(){
@@ -35,7 +59,7 @@ class Members extends React.Component {
           </div>
 
           <div class="memberContainer">
-            {membersData.map(value => {
+            {this.state.membersData.map(value => {
               if(value.role != "Club Member"){
                 return (
                   <MemberCard

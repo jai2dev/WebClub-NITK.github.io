@@ -6,13 +6,40 @@ import eventsData from "../../assets/data/events.json";
 import "../../styles/events.css";
 import Helmet from "react-helmet";
 import mixitup from 'mixitup';
+import { eventsWorkSheetId } from './../../environment';
 
 
 class Event extends React.Component {
   constructor(props) {
     super(props);
 
-    this.state = {};
+    this.state = {
+      eventsData:[]
+    };
+    this.getData();
+  }
+
+  async getData(){
+    var json = await fetch('https://spreadsheets.google.com/feeds/list/'+eventsWorkSheetId+'/od6/public/values?alt=json')
+    json = await json.json()
+    var finalArray=[];
+    var key,value;
+    //parse the json obtained from google sheets.
+    json.feed.entry.map(entry=>{
+        json={}
+        entry.content['$t'].split(',').map(obj=>{
+            key = obj.split(':')[0].toString()
+            key = key.trim();
+            value = obj.split(':')[1].toString()
+            value = value.trim();
+            json[key]=value
+        })
+        
+        finalArray.push(json);
+        
+    })
+    console.log(finalArray);
+    this.setState({eventsData:finalArray});
   }
 
   componentDidMount(){
@@ -45,7 +72,7 @@ class Event extends React.Component {
         </div>
 
         <div className="eventsContainer" style={styles}>
-          {eventsData.map(value => {
+          {this.state.eventsData.map(value => {
             if (value.status == 0) {
               return (
                 <EventCard

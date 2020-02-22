@@ -7,6 +7,7 @@ import "../../styles/events.css";
 import Helmet from "react-helmet";
 import mixitup from 'mixitup';
 import { eventsWorkSheetId } from './../../environment';
+import SpreadSheetApi from '../../_services/spreadSheetApi';
 
 
 class Event extends React.Component {
@@ -20,25 +21,7 @@ class Event extends React.Component {
   }
 
   async getData(){
-    var json = await fetch('https://spreadsheets.google.com/feeds/list/'+eventsWorkSheetId+'/od6/public/values?alt=json')
-    json = await json.json()
-    var finalArray=[];
-    var key,value;
-    //parse the json obtained from google sheets.
-    json.feed.entry.map(entry=>{
-        json={}
-        entry.content['$t'].split(',').map(obj=>{
-            key = obj.split(':')[0].toString()
-            key = key.trim();
-            value = obj.split(':')[1].toString()
-            value = value.trim();
-            json[key]=value
-        })
-        
-        finalArray.push(json);
-        
-    })
-    console.log(finalArray);
+    var finalArray = await SpreadSheetApi.getWorkSheetData(eventsWorkSheetId);
     this.setState({eventsData:finalArray});
   }
 

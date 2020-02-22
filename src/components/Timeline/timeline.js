@@ -6,6 +6,7 @@ import Helmet from 'react-helmet';
 import data from '../../assets/data/timeline.json';
 import $ from 'jquery'
 import { timelineWorkSheetId } from './../../environment';
+import SpreadSheetApi from '../../_services/spreadSheetApi';
 
 
 class Timeline extends React.Component {
@@ -18,25 +19,7 @@ class Timeline extends React.Component {
   }
 
   async getData(){
-    var json = await fetch('https://spreadsheets.google.com/feeds/list/'+timelineWorkSheetId+'/od6/public/values?alt=json')
-    json = await json.json()
-    var finalArray=[];
-    var key,value;
-    //parse the json obtained from google sheets.
-    json.feed.entry.map(entry=>{
-        json={}
-        entry.content['$t'].split(',').map(obj=>{
-            key = obj.split(':')[0].toString()
-            key = key.trim();
-            value = obj.split(':')[1].toString()
-            value = value.trim();
-            json[key]=value
-        })
-        
-        finalArray.push(json);
-        
-    })
-    console.log(finalArray);
+    var finalArray = await SpreadSheetApi.getWorkSheetData(timelineWorkSheetId);
     this.setState({data:finalArray});
   }
 
@@ -108,12 +91,4 @@ class Timeline extends React.Component {
   
 export default Timeline;
 
-
-
-// <TimelineCard
-//               title={"Rubeus Game Engine"}
-//               body={"A cross-platform 2D game engine written for beginner programmers to realise their ideas fast and seemlessly."}
-//               date={"December, 2018"}
-//               link={"home"}
-//               />
 

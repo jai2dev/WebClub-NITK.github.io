@@ -8,6 +8,9 @@ import Helmet from "react-helmet";
 import mixitup from 'mixitup';
 import { eventsWorkSheetId } from './../../environment';
 import SpreadSheetApi from '../../_services/spreadSheetApi';
+import Loader from 'react-loader-spinner'
+import "../../styles/global.css";
+
 
 
 class Event extends React.Component {
@@ -15,24 +18,40 @@ class Event extends React.Component {
     super(props);
 
     this.state = {
-      eventsData:[]
+      eventsData: [],
+      visible: true
     };
     this.getData();
   }
 
-  async getData(){
+  async getData() {
     var finalArray = await SpreadSheetApi.getWorkSheetData(eventsWorkSheetId);
-    this.setState({eventsData:finalArray});
+    this.setState({ eventsData: finalArray });
+    this.setState({ visible: false });
   }
 
-  componentDidMount(){
-    var containerEl = document.querySelector('.eventsContainer');
-    var mixer = mixitup(containerEl);
+  componentDidMount() {
+    if (!this.state.visible) {
+      var containerEl = document.querySelector('.eventsContainer');
+      var mixer = mixitup(containerEl);
+    }
   }
 
-  
+
 
   render() {
+    if (this.state.visible) {
+      return (
+        <div className="loader">
+          <Loader
+            type="TailSpin"
+            color="#00BFFF"
+            height={100}
+            width={100}
+          />
+        </div>
+      )
+    }
 
     const styles = {
       display: "flex",
@@ -40,53 +59,58 @@ class Event extends React.Component {
       flexWrap: "wrap",
       justifyContent: "space-around"
     };
-    return (
-      
 
-      <div>
-      <Helmet>
-        <title>Events - Web Club NITK</title>
-      </Helmet>
-      <div>
-        <Nav sticky="true" transp="false" />
-        <div className="EventDetails">
-        <div className="events controls">
-          <YearNavigation />
-        </div>
+    if (!this.state.visible)
+      return (
 
-        <div className="eventsContainer" style={styles}>
-          {this.state.eventsData.map(value => {
-            if (value.status == 0) {
-              return (
-                <EventCard
-                  classs={"past"}
-                  title={value.title}
-                  date={value.date}
-                  time={value.time}
-                  venue={value.venue}
-                  image={value.image}
-                  description={value.description}
-                />
-              );
-            } else {
-              return (
-                <EventCard
-                  classs={"upcoming"}
-                  title={value.title}
-                  date={value.date}
-                  time={value.time}
-                  venue={value.venue}
-                  image={value.image}
-                  description={value.description}
-                />
-              );
-            }
-          })}
+
+        <div>
+          <Helmet>
+            <title>Events - Web Club NITK</title>
+          </Helmet>
+          <div>
+            <Nav sticky="true" transp="false" />
+            <div className="EventDetails">
+              <div className="events controls">
+                <YearNavigation />
+              </div>
+
+              <div className="eventsContainer" style={styles}>
+                {this.state.eventsData.map(value => {
+                  if (value.status == 0) {
+                    return (
+                      <EventCard
+                        classs={"past"}
+                        title={value.title}
+                        date={value.date}
+                        time={value.time}
+                        venue={value.venue}
+                        image={value.image}
+                        description={value.description}
+                      />
+                    );
+                  } else {
+                    return (
+                      <EventCard
+                        classs={"upcoming"}
+                        title={value.title}
+                        date={value.date}
+                        time={value.time}
+                        venue={value.venue}
+                        image={value.image}
+                        description={value.description}
+                      />
+                    );
+                  }
+                })}
+              </div>
+            </div>
+          </div>
         </div>
-        </div>
-      </div>
-    </div>
-    );
+      );
+
+
+
   }
 }
 

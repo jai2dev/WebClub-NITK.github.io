@@ -5,9 +5,19 @@
 .container{
     margin: 10;
 }
-
+.loader{
+    text-align: center;
+    margin: 30em;
+}
 body {
     font-size: 100%;
     font-family: "droid serif", serif;
     background-color:  #b3d3f6;
-  }
+}
+
+@media (max-width:1024px){
+	.loader{
+        text-align: center;
+        margin: 10em;
+    }
+}

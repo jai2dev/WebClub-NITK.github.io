@@ -1,5 +1,6 @@
 import React from "react";
 import "../../styles/member.css";
+import "../../styles/global.css";
 import SigNav from "./sigNav.js";
 import YearNav from "./yearNav.js";
 import MemberCard from "./memberCard.js";
@@ -9,29 +10,52 @@ import Helmet from 'react-helmet';
 import mixitup from 'mixitup'
 import { membersWorkSheetId } from './../../environment';
 import SpreadSheetApi from '../../_services/spreadSheetApi';
+import Loader from 'react-loader-spinner'
+import { StylesProvider } from "@material-ui/core";
 class Members extends React.Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      membersData:[]
+      membersData: [],
+      visible: true
     };
     this.getData();
   }
 
-  async getData(){
+  async getData() {
     var finalArray = await SpreadSheetApi.getWorkSheetData(membersWorkSheetId);
-    this.setState({membersData:finalArray});
+    this.setState({ membersData: finalArray });
+    this.setState({visible:false});
   }
 
-  componentDidMount(){
-    var containerEl = document.querySelector('.memberContainer');
-    var mixer = mixitup(containerEl);
+  componentDidMount() {
+    if(!this.state.visible){
+      var containerEl = document.querySelector('.memberContainer');
+      var mixer = mixitup(containerEl);
+    }
   }
 
   render() {
+    if (this.state.visible) {
+      return (
+        <div className="loader">
+        <Loader
+          type="TailSpin"
+          color="#00BFFF"
+          height={100}
+          width={100}
+        />
+        </div>
+      )
+    }
+  
+    if(!this.state.visible)
     return (
+
       <div>
+
+
         <Helmet>
           <title>Team - Web Club NITK</title>
         </Helmet>
@@ -44,7 +68,7 @@ class Members extends React.Component {
 
           <div class="memberContainer">
             {this.state.membersData.map(value => {
-              if(value.role != "Club Member"){
+              if (value.role != "Club Member") {
                 return (
                   <MemberCard
                     classs={value.sig + " Core"}
@@ -56,7 +80,7 @@ class Members extends React.Component {
                     image="https://cdn.glitch.com/21943bea-5c73-4cf3-81b5-1b7fd62627ba%2Fpro.jpg?v=1576657391203"
                   />
                 );
-              }else if(value.role == "Alumni"){
+              } else if (value.role == "Alumni") {
                 return (
                   <MemberCard
                     classs={value.sig + " Alumni"}
@@ -68,7 +92,7 @@ class Members extends React.Component {
                     image="https://cdn.glitch.com/21943bea-5c73-4cf3-81b5-1b7fd62627ba%2Fpro.jpg?v=1576657391203"
                   />
                 );
-              }else{
+              } else {
                 return (
                   <MemberCard
                     classs={value.sig}
@@ -81,13 +105,15 @@ class Members extends React.Component {
                   />
                 );
               }
-              
+
             })}
           </div>
         </div>
       </div>
     );
   }
+
+
 }
 
 export default Members;

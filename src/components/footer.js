@@ -17,6 +17,7 @@ class Footer extends React.Component {
                         <div className="footer-resp">
                             <div className="footer-text">Contact Us</div>
                             <div className="footer-text-content"> NITK, Surathkal, Karnataka, India- 575025</div>
+                            <div className="footer-text-content"> Faculty Advisor - Professor Sowmya Kamath S. </div>
                             <div className="footer-links c-secondary">
                                 <p><i className="fa fa-envelope-o" aria-hidden="true"></i> <span className="f-link"><a href="mailto:webclub@nitk.edu.in">webclub@nitk.edu.in</a></span></p>
                                 {/* <p><i className="fa fa-phone" aria-hidden="true"></i> <span className="f-link">01332 284 521</span></p> */}

@@ -3,12 +3,10 @@ class SpreadSheetApi{
         var url = 'https://spreadsheets.google.com/feeds/list/'+workSheetId+'/od6/public/values?alt=json';
         var json = await fetch(url);
         json = await json.json()
-        console.log(json);
         var finalArray=[];
         var key,value;
         json.feed.entry.map(entry=>{
             json={}
-            console.log(entry)
             entry.content['$t'].split(',').map(obj=>{
                 key = obj.split(':')[0].toString()
                 key = key.trim();

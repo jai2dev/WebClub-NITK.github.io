@@ -28,14 +28,16 @@ class Event extends React.Component {
     var finalArray = await SpreadSheetApi.getWorkSheetData(eventsWorkSheetId);
     this.setState({ eventsData: finalArray });
     this.setState({ visible: false });
+    var containerEl = document.querySelector('.eventsContainer');
+    var mixer = mixitup(containerEl);
   }
 
-  componentDidMount() {
-    if (!this.state.visible) {
-      var containerEl = document.querySelector('.eventsContainer');
-      var mixer = mixitup(containerEl);
-    }
-  }
+  // componentDidMount() {
+  //   if (!this.state.visible) {
+  //     var containerEl = document.querySelector('.eventsContainer');
+  //     var mixer = mixitup(containerEl);
+  //   }
+  // }
 
 
 

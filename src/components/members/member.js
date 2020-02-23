@@ -27,14 +27,16 @@ class Members extends React.Component {
     var finalArray = await SpreadSheetApi.getWorkSheetData(membersWorkSheetId);
     this.setState({ membersData: finalArray });
     this.setState({visible:false});
+    var containerEl = document.querySelector('.memberContainer');
+    var mixer = mixitup(containerEl);
   }
 
-  componentDidMount() {
-    if(!this.state.visible){
-      var containerEl = document.querySelector('.memberContainer');
-      var mixer = mixitup(containerEl);
-    }
-  }
+  // componentDidMount() {
+  //   if(!this.state.visible){
+  //     var containerEl = document.querySelector('.memberContainer');
+  //     var mixer = mixitup(containerEl);
+  //   }
+  // }
 
   render() {
     if (this.state.visible) {

@@ -17,7 +17,7 @@ const Nav = props => {
   // Code to handle scroll event
   useEffect(() => {
     const handleScroll = () => {
-      const show = window.scrollY > window.innerHeight - 250;
+      const show = window.scrollY > window.innerHeight - 700;
       if (navRef.current !== show) {
         setNavBackground(show);
       }
@@ -38,7 +38,7 @@ const Nav = props => {
     };
   } else {
     divStyle = {
-      transition: "2s ease",
+      transition: "0.5s ease",
       backgroundColor: navBackground ? "white" : "transparent",
       color: navBackground ? "#1490e4" : "#b3d3f6"
     };

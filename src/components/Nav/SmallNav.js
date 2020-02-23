@@ -9,7 +9,7 @@ const StyledMenu = styled.nav`
   flex-direction: column;
   z-index: 1;
   justify-content: center;
-  background: #effffa;
+  background: #1490e4;
   transform: ${({ open }) => (open ? "translateX(0)" : "translateX(-100%)")};
   height: 100vh;
   text-align: left;
@@ -29,18 +29,18 @@ const StyledMenu = styled.nav`
     padding: 2rem 0;
     font-weight: bold;
     letter-spacing: 0.5rem;
-    color: #0d0c1d;
+    color: white;
     text-decoration: none;
     transition: color 0.3s linear;
 
     @media (max-width: 576px) {
-      font-size: 1.5rem;
+      font-size: 2.5rem;
       text-align: left;
       margin-left: 25%;
     }
 
     &:hover {
-      color: #343078;
+      color: #b3d3f6;
     }
   }
 `;
@@ -78,7 +78,7 @@ const StyledBurger = styled.button`
   div {
     width: 2rem;
     height: 0.25rem;
-    background: ${({ open }) => (open ? "#0D0C1D" : "#1490e4")};
+    background: ${({ open }) => (open ? "white" : "#1490e4")};
     border-radius: 10px;
     transition: all 0.3s linear;
     position: relative;
@@ -90,7 +90,7 @@ const StyledBurger = styled.button`
 
     :nth-child(2) {
       opacity: ${({ open }) => (open ? "0" : "1")};
-      transform: ${({ open }) => (open ? "translateX(20px)" : "translateX(0)")};
+      transform: ${({ open }) => (open ? "translateX(0px)" : "translateX(0)")};
     }
 
     :nth-child(3) {

@@ -33,13 +33,24 @@
     border-radius: 50%;
 }
 .card .image{
-    position: relative;
-    margin: 0, auto;
-}
-.card .image img{
+    height: 187.6px;
     width: 70%;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0, auto;
     border-radius: 50%;
     border: 5px solid white;
+    overflow: hidden;
+}
+.card .image img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     filter: blur(0) brightness(1);
     transition: all 0.3s;
 }

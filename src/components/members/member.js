@@ -12,6 +12,9 @@ import { membersWorkSheetId } from './../../environment';
 import SpreadSheetApi from '../../_services/spreadSheetApi';
 import Loader from 'react-loader-spinner'
 import { StylesProvider } from "@material-ui/core";
+import axios from 'axios'
+import defaultPic from '../../assets/images/default.jpg'
+
 class Members extends React.Component {
   constructor(props) {
     super(props);
@@ -25,6 +28,17 @@ class Members extends React.Component {
 
   async getData() {
     var finalArray = await SpreadSheetApi.getWorkSheetData(membersWorkSheetId);
+    finalArray.map(async (val) => {
+      let img = "https://raw.githubusercontent.com/EthanFunk2020/Exp/master/Web%20Club%20Members_%20Profile%20Photos/"+val.id+ ".jpg"
+      try{
+        await axios.get(img)
+      }catch(err){
+        img = defaultPic
+      }
+
+      val.imageURL = img
+      this.setState({ membersData: finalArray });
+    })
     this.setState({ membersData: finalArray });
     this.setState({visible:false});
     var containerEl = document.querySelector('.memberContainer');
@@ -69,7 +83,7 @@ class Members extends React.Component {
           </div>
 
           <div class="memberContainer">
-            {this.state.membersData.map(value => {
+            {this.state.membersData.map((value) => {
               if (value.role != "Club Member") {
                 return (
                   <MemberCard
@@ -79,7 +93,7 @@ class Members extends React.Component {
                     email={value.email}
                     githuburl={value.githuburl}
                     linkedinurl={value.linkedinurl}
-                    image="https://cdn.glitch.com/21943bea-5c73-4cf3-81b5-1b7fd62627ba%2Fpro.jpg?v=1576657391203"
+                    image={value.imageURL}
                   />
                 );
               } else if (value.role == "Alumni") {
@@ -91,7 +105,7 @@ class Members extends React.Component {
                     email={value.email}
                     githuburl={value.githuburl}
                     linkedinurl={value.linkedinurl}
-                    image="https://cdn.glitch.com/21943bea-5c73-4cf3-81b5-1b7fd62627ba%2Fpro.jpg?v=1576657391203"
+                    image={value.imageURL}
                   />
                 );
               } else {
@@ -103,7 +117,7 @@ class Members extends React.Component {
                     email={value.email}
                     githuburl={value.githuburl}
                     linkedinurl={value.linkedinurl}
-                    image="https://cdn.glitch.com/21943bea-5c73-4cf3-81b5-1b7fd62627ba%2Fpro.jpg?v=1576657391203"
+                    image={value.imageURL}
                   />
                 );
               }

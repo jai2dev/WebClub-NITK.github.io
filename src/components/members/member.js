@@ -40,7 +40,7 @@ class Members extends React.Component {
           console.log(response);
           break
         } catch (err) {
-          img = '/default.jpg'
+          img = defaultPic
         }
       }
 

@@ -8,7 +8,7 @@ import membersData from "../../assets/data/webclubMembersData";
 import Nav from "../Nav/Nav";
 import Helmet from 'react-helmet';
 import mixitup from 'mixitup'
-import { membersWorkSheetId } from './../../environment';
+import { membersWorkSheetId, profileImagesRepositoryURL } from './../../environment';
 import SpreadSheetApi from '../../_services/spreadSheetApi';
 import Loader from 'react-loader-spinner'
 import { StylesProvider } from "@material-ui/core";
@@ -28,12 +28,20 @@ class Members extends React.Component {
 
   async getData() {
     var finalArray = await SpreadSheetApi.getWorkSheetData(membersWorkSheetId);
+    let extensions = ['jpg', 'jpeg', 'png', 'JPG', 'JPEG', 'PNG']
+
     finalArray.map(async (val) => {
-      let img = "https://raw.githubusercontent.com/EthanFunk2020/Exp/master/Web%20Club%20Members_%20Profile%20Photos/"+val.id+ ".jpg"
-      try{
-        await axios.get(img)
-      }catch(err){
-        img = defaultPic
+      let img
+
+      for (let extension of extensions) {
+        try {
+          img = `${profileImagesRepositoryURL}${val.id}.${extension}`
+          let response = await axios.get(img);
+          console.log(response);
+          break
+        } catch (err) {
+          img = '/default.jpg'
+        }
       }
 
       val.imageURL = img

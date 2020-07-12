@@ -4,7 +4,8 @@ import Paper from '@material-ui/core/Paper';
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 import EventAvailableIcon from '@material-ui/icons/EventAvailable';
-import DateRangeIcon from '@material-ui/icons/DateRange';
+import EventIcon from '@material-ui/icons/Event';
+import CollectionsBookmarkIcon from '@material-ui/icons/CollectionsBookmark';
 
 const useStyles = makeStyles({
   root: {
@@ -29,8 +30,9 @@ export default function CenteredTabs() {
         textColor="primary"
         centered
       >
-        <Tab label="Past Events"  data-filter=".past" icon={<DateRangeIcon />}  />
-        <Tab label="Upcoming Events" data-filter=".upcoming"  icon={<EventAvailableIcon />}/>
+        <Tab label="All" data-filter = "all" icon={<CollectionsBookmarkIcon />}/>
+        <Tab label="Past Events"  data-filter=".past" icon={<EventAvailableIcon />}  />
+        <Tab label="Upcoming Events" data-filter=".upcoming"  icon={<EventIcon />}/>
       </Tabs>
     </Paper>
   );

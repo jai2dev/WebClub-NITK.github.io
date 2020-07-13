@@ -1,0 +1,14 @@
+name: Deploy
+
+on: [push, pull_request]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: install dependencies
+        run: npm install
+      - name: build react project
+        run: npm run build
+      - name: deploy
+        run: npm run deploy

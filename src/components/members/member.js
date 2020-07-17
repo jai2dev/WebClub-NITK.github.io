@@ -37,7 +37,6 @@ class Members extends React.Component {
         try {
           img = `${profileImagesRepositoryURL}${val.id}.${extension}`
           let response = await axios.get(img);
-          console.log(response);
           break
         } catch (err) {
           img = defaultPic

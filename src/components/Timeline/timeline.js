@@ -23,6 +23,7 @@ class Timeline extends React.Component {
 
   async getData() {
     var finalArray = await SpreadSheetApi.getWorkSheetData(timelineWorkSheetId);
+    finalArray.reverse()
     this.setState({ data: finalArray });
     this.setState({visible:false});
   }

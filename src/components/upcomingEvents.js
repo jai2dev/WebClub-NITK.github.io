@@ -4,14 +4,24 @@ import '../styles/global.css';
 import EventCard from './Events/EventCard.js';
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-import eventsData from "../assets/data/events.json";
+// import eventsData from "../assets/data/events.json";
+import { eventsWorkSheetId } from './../environment';
+import SpreadSheetApi from './../_services/spreadSheetApi';
 
 class UpcomingEvents extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {
 
-    }
+    this.state = {
+      eventsData: [],
+    };
+    this.getData();
+  }
+
+  async getData() {
+    var finalArray = await SpreadSheetApi.getWorkSheetData(eventsWorkSheetId);
+    finalArray = finalArray.filter((event) => event.status == '1')
+    this.setState({ eventsData: finalArray });
   }
   render() {
     const responsive = {
@@ -55,7 +65,7 @@ class UpcomingEvents extends React.Component {
             itemClass="carousel-item-padding-40-px"
           >
 
-            {eventsData.map(value => {
+            {this.state.eventsData.map(value => {
               return (
                 <div style={{margin:100,marginLeft:35}}>
                   <EventCard

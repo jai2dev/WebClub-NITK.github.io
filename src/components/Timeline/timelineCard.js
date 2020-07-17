@@ -20,7 +20,7 @@ class TimelineCard extends React.Component {
             <div className="cd-timeline-content">
                 <h2><img src={ rocket } width="50" style={{ marginBottom : "-15px"}}></img>{this.props.title}</h2>
                 <p>{this.props.body}</p>
-                <a href={this.props.link} className="cd-read-more" target="_blank">Read more</a>
+                {this.props.link ? <a href={this.props.link} className="cd-read-more" target="_blank">Read more</a> : ''}
                 <span className="cd-date">{this.props.date}</span>
             </div>
         </div>    

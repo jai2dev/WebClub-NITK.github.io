@@ -1,47 +1,115 @@
-import React, { useState } from 'react';
-import '../styles/footer.css';
-import '../styles/global.css';
-class Footer extends React.Component {
-    constructor(props){
-      super(props);
-      this.state={
-  
-      }
-    }
-    render(){
-      return (
-        <div className="white-text page-footer">
-            {/* <div className="page-footer"> */}
-                <div className="row">
-                    <div classNames="col-sm-l7 " >
-                        <div className="footer-resp">
-                            <div className="footer-text">Contact Us</div>
-                            <div className="footer-text-content"> NITK, Surathkal, Karnataka, India- 575025</div>
-                            <div className="footer-text-content"> Faculty Advisor - Professor Sowmya Kamath S. </div>
-                            <div className="footer-links c-secondary">
-                                <p><i className="fa fa-envelope-o" aria-hidden="true"></i> <span className="f-link"><a href="mailto:webclub@nitk.edu.in">webclub@nitk.edu.in</a></span></p>
-                                {/* <p><i className="fa fa-phone" aria-hidden="true"></i> <span className="f-link">01332 284 521</span></p> */}
-                            </div>
-                            <div className="footer-social">
-                                <a href="https://www.facebook.com/web.club.nitk/"><i className="fa fa-facebook" aria-hidden="true"></i></a>
-                                <a href="https://github.com/WebClub-NITK"><i className="fa fa-github" aria-hidden="true"></i></a>
-                                <a href="https://www.linkedin.com/school/web-enthusiasts-club-nitk/"><i className="fa fa-linkedin" aria-hidden="true"></i></a>
-                            </div>
-                            </div>
-                        </div>
-                    <div className="col-sm-l5 ">
-                        <div className="footer-resp">
-                            <div className="footer-text">About</div>
-                            <div className="footer-text-content"> A group of passionate computer science students helping the community of NITK</div>
-                        </div>    
-                    </div>
-                </div>
-        </div>
-      );
-    }  
-}
-    
-  
-export default Footer;
-  
+import React from "react";
+import "../styles/global.css";
 
+export default function footer() {
+  return (
+    <div className="white-text">
+      <footer
+        class="page-footer font-small pt-4"
+        style={{ backgroundColor: "#1d2f47" }}
+      >
+        <div
+          class="container text-center text-md-left"
+          style={{ maxWidth: "1200px", margin: "0 auto" }}
+        >
+          <div class="row">
+            <div class="col-md-6 mx-auto">
+              <h5 class="font-weight-bold text-uppercase mt-3 mb-4">
+                Contact Us
+              </h5>
+              <p>
+                <i class="fa fa-home mr-3"></i> NITK, Surathkal, Karnataka,
+                India- 575025
+              </p>
+              <p>
+                <i class="fa fa-envelope mr-3"></i>{" "}
+                <span class="f-link">
+                  <a
+                    href="mailto:webclub@nitk.edu.in"
+                    style={{ color: "#52c5c2", textDecoration: "none" }}
+                  >
+                    webclub@nitk.edu.in
+                  </a>
+                </span>
+              </p>
+              <p>Faculty Advisor: Professor Sowmya Kamath S</p>
+            </div>
+
+            <hr class="clearfix w-100 d-md-none" />
+
+            <div class="col-md-6 mx-auto">
+              <h5 class="font-weight-bold text-uppercase mt-3 mb-4">
+                About Us
+              </h5>
+              <p>
+                A group of passionate computer science students helping the
+                community of NITK
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <hr />
+
+        {/* <ul class="list-unstyled list-inline text-center">
+          <li class="list-inline-item">
+            <a
+              class="btn-floating btn-fb mx-1"
+              href="https://www.facebook.com/web.club.nitk/"
+            >
+              <i class="fa fa-facebook-f"> </i>
+            </a>
+          </li>
+          <li class="list-inline-item">
+            <a
+              class="btn-floating btn-li mx-1"
+              href="https://www.linkedin.com/school/web-enthusiasts-club-nitk/"
+            >
+              <i class="fa fa-linkedin"> </i>
+            </a>
+          </li>
+          <li class="list-inline-item">
+            <a
+              class="btn-floating btn-github mx-1"
+              href="https://www.github.com/WebClub-NITK"
+            >
+              <i class="fa fa-github"></i>
+            </a>
+          </li>
+          <li class="list-inline-item">
+            <a
+              class="btn-floating btn-dribbble mx-1"
+              href="https://www.instagram.com/wecnitk/"
+            >
+              <i class="fa fa-instagram"> </i>
+            </a>
+          </li>
+        </ul>
+        <hr /> */}
+        <div class="row pb-3">
+          <div class="col-md-12">
+            <div class="mb-5 text-center">
+              <a class="fb-ic" href="https://www.facebook.com/web.club.nitk/">
+                <i class="fa fa-facebook fa-lg white-text mr-4"> </i>
+              </a>
+              <a
+                class="li-ic"
+                href="https://www.linkedin.com/school/web-enthusiasts-club-nitk/"
+              >
+                <i class="fa fa-linkedin fa-lg white-text mr-4"> </i>
+              </a>
+              <a class="ins-ic" href="https://www.instagram.com/wecnitk/">
+                <i class="fa fa-instagram fa-lg white-text mr-4"> </i>
+              </a>
+              <a class="pin-ic" href="https://www.github.com/WebClub-NITK">
+                <i class="fa fa-github fa-lg white-text"> </i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  );
+}
+
+// export default Footer;

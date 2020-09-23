@@ -48,10 +48,10 @@
   margin: 5px;
   overflow: hidden;
   position: relative;
-  color: #1490e4
+  color: #1490e4;
 }
-.nav .nav-container .links a::before{
-  content:" ";
+.nav .nav-container .links a::before {
+  content: " ";
   position: absolute;
   top: 0%;
   left: 0%;
@@ -61,12 +61,12 @@
   transition: all 0.5s;
   border-radius: 50%;
   z-index: -1;
-  transform: translate(-50%,-50%);
+  transform: translate(-50%, -50%);
 }
 
-.nav .nav-container .links a:hover::before{
+.nav .nav-container .links a:hover::before {
   width: 300%;
-  height:300%;
+  height: 300%;
 }
 .nav .nav-container .links a:hover {
   /* text-shadow: 2px 2px 4px #00000048; */

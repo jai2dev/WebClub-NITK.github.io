@@ -24,7 +24,7 @@ const StyledMenu = styled.nav`
   }
 
   a {
-    font-size: 2rem;
+    font-size: 1.5rem;
     text-transform: uppercase;
     padding: 2rem 0;
     font-weight: bold;
@@ -32,12 +32,8 @@ const StyledMenu = styled.nav`
     color: white;
     text-decoration: none;
     transition: color 0.3s linear;
-
-    @media (max-width: 576px) {
-      font-size: 2.5rem;
-      text-align: left;
-      margin-left: 25%;
-    }
+    text-align: left;
+    margin-left: 15%;
 
     &:hover {
       color: #b3d3f6;
@@ -109,9 +105,9 @@ const Burger = ({ open, setOpen }) => {
   );
 };
 
-const MobileNav = props => {
+const MobileNav = (props) => {
   function classList(...classes) {
-    return classes.filter(item => !!item).join(" ");
+    return classes.filter((item) => !!item).join(" ");
   }
   const imageUrl = `url(${imgUrl})`;
   const [open, setOpen] = React.useState(false);
@@ -136,12 +132,12 @@ const MobileNav = props => {
   let styles;
   if (props.transp === "false") {
     styles = {
-      background: "white"
+      background: "white",
     };
   } else {
     styles = {
       transition: "2s ease",
-      backgroundColor: navBackground ? "white" : "transparent"
+      backgroundColor: navBackground ? "white" : "transparent",
     };
   }
   return (

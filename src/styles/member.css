@@ -3,8 +3,8 @@
   text-align: center;
 }
 .controls {
-    padding: 1rem;
-    font-size: 0.1px;
+  padding: 1rem;
+  font-size: 0.1px;
 }
 
 @media screen and (max-width: 1000px) {
@@ -14,21 +14,21 @@
 }
 
 @media screen and (max-width: 500px) {
-    .controls{
-        padding: 0;
-    }
+  .controls {
+    padding: 0;
   }
-
-@media (min-width: 576px){
-    .container {
-    max-width: 100vw;
-    }
 }
 
-@media screen and (max-width: 400px){
-    .memberContainer{
-        margin: 0;
-    }
+@media (max-width: 576px) {
+  .container {
+    max-width: 100vw;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .memberContainer {
+    margin: 0;
+  }
 }
 
 /*

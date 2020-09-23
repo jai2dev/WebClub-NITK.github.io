@@ -1,12 +1,12 @@
-import React, { useState } from 'react';
-import '../styles/upcomingEvents.css';
-import '../styles/global.css';
-import EventCard from './Events/EventCard.js';
+import React, { useState } from "react";
+// import "../styles/upcomingEvents.css";
+import "../styles/global.css";
+import EventCard from "./Events/EventCard.js";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 // import eventsData from "../assets/data/events.json";
-import { eventsWorkSheetId } from './../environment';
-import SpreadSheetApi from './../_services/spreadSheetApi';
+import { eventsWorkSheetId } from "./../environment";
+import SpreadSheetApi from "./../_services/spreadSheetApi";
 
 class UpcomingEvents extends React.Component {
   constructor(props) {
@@ -20,7 +20,7 @@ class UpcomingEvents extends React.Component {
 
   async getData() {
     var finalArray = await SpreadSheetApi.getWorkSheetData(eventsWorkSheetId);
-    finalArray = finalArray.filter((event) => event.status == '1')
+    finalArray = finalArray.filter((event) => event.status == "1");
     this.setState({ eventsData: finalArray });
   }
   render() {
@@ -43,9 +43,9 @@ class UpcomingEvents extends React.Component {
     };
     return (
       <div>
-        <h1 className="heading-upcomingEvents">Upcoming Events</h1>
+        <h1 className="heading">Upcoming Events</h1>
 
-        <div >
+        <div>
           <Carousel
             swipeable={true}
             draggable={true}
@@ -64,10 +64,9 @@ class UpcomingEvents extends React.Component {
             dotListClass="custom-dot-list-style"
             itemClass="carousel-item-padding-40-px"
           >
-
-            {this.state.eventsData.map(value => {
+            {this.state.eventsData.map((value) => {
               return (
-                <div style={{margin:100,marginLeft:35}}>
+                <div style={{ margin: 100, marginLeft: 35 }}>
                   <EventCard
                     title={value.title}
                     date={value.date}
@@ -79,14 +78,11 @@ class UpcomingEvents extends React.Component {
                 </div>
               );
             })}
-
           </Carousel>
-
         </div>
       </div>
     );
   }
 }
-
 
 export default UpcomingEvents;

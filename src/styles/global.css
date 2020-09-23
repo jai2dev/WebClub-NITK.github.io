@@ -2,6 +2,12 @@
   color: white;
 }
 
+.heading {
+  text-align: center;
+  margin: 20px;
+  margin-bottom: 50px;
+}
+
 .container {
   margin: 10;
 }

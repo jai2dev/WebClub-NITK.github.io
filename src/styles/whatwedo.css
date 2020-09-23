@@ -1,84 +1,31 @@
-.container-whatwedo{
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  margin: auto;
-
+#whatwedo {
+  margin: 50px auto;
 }
-.heading-whatwedo{
-  text-align:center;
-  padding-top: 20px;
-}
-.hexagon {
-    position: relative;
-    width: 300px;
-    height: 173.21px;
-    background: black;
-    margin: 86.6px auto;
-    transform: scale(1);
+.whatwedo-block {
+  padding: 30px;
+  height: 270px;
+  background: #242930;
 }
 
-.hexagon::before,
-.hexagon::after {
-    content: "";
-    position: absolute;
-    border-left: 150px solid transparent;
-    border-right: 150px solid transparent;
+.whatwedo-block:hover .icon-box svg {
+  color: #afbac4;
 }
 
-.hexagon::before {
-    bottom: 100%;
-   border-bottom: 86.6px solid black;
+.whatwedo-block:hover .content {
+  color: #afbac4;
 }
 
-.hexagon::after {
-    top: 100%;
-    border-top: 86.6px solid black;
-  }
-
-.hexagon img{
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) scale(0.5);
-  color: white;
-  filter: invert(100%);
+.whatwedo-block .icon-box svg {
+  height: 150px;
+  color: #707274;
+  transition: color 0.3s ease-in-out;
 }
 
-.hexagon img .talk{
-  transform: translate(-50%, -50%) scale(1);
+.whatwedo-block .icon-box {
+  margin-bottom: 30px;
 }
-  
-  .hexCon{
-      display: flex;
-  }
-
-@media(max-width: 768px){
-    .hexagon {
-        position: relative;
-        width: 100px;
-        height: 57.74px;
-        background: black;
-        margin: 28.87px auto;
-        transform: scale(1);
-    }
-    
-    .hexagon::before,
-    .hexagon::after {
-        content: "";
-        position: absolute;
-        border-left: 50px solid transparent;
-        border-right: 50px solid transparent;
-    }
-    
-    .hexagon::before {
-        bottom: 100%;
-       border-bottom: 28.87px solid black;
-    }
-    
-    .hexagon::after {
-        top: 100%;
-        border-top: 28.87px solid black;
-      }
+.whatwedo-block .content {
+  font-size: 14px;
+  color: #929597;
+  transition: color 0.3s ease-in-out;
 }

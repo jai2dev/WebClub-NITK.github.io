@@ -1,51 +1,35 @@
 import React from "react";
 import "../styles/whatwedo.css";
-import projects from "../assets/images/projects.svg";
-import mentorship from "../assets/images/mentorship.svg";
-import hackathon from "../assets/images/hackathon.svg";
-import talks from "../assets/images/talks.svg";
+import { ReactComponent as Talks } from "../assets/images/talks thin.svg";
+import { ReactComponent as Hackathons } from "../assets/images/hackathon thin.svg";
+import { ReactComponent as Projects } from "../assets/images/projects thin.svg";
+import { ReactComponent as Mentorships } from "../assets/images/mentorship thin.svg";
 
-class WhatWeDo extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {};
-  }
-  render() {
-    return (
-      <div>
-        <h1 className="heading-whatwedo">What we do</h1>
-
-        <div className="container">
-          <div className="row container-whatwedo">
-            <div className="col-sm" style={{ margin: 10 }}>
-              <div class="hexagon">
-                <img src={mentorship} alt="Picture"></img>
-              </div>
-              <h2 className="heading-whatwedo">Mentorship</h2>
-            </div>
-            <div className="col-sm" style={{ margin: 10 }}>
-              <div class="hexagon">
-                <img src={projects} id="projects" alt="Picture"></img>
-              </div>
-              <h2 className="heading-whatwedo">Projects</h2>
-            </div>
-            <div className="col-sm" style={{ margin: 10 }}>
-              <div class="hexagon">
-                <img src={talks} alt="Picture" class="talk"></img>
-              </div>
-              <h2 className="heading-whatwedo">Talks</h2>
-            </div>
-            <div className="col-sm" style={{ margin: 10 }}>
-              <div class="hexagon">
-                <img src={hackathon} alt="Picture"></img>
-              </div>
-              <h2 className="heading-whatwedo">Hackathons</h2>
-            </div>
-          </div>
+function Card({ svg, text }) {
+  return (
+    <div className="col-xl-3 col-md-6 text-center mb-4">
+      <div className="whatwedo-block text-white">
+        <div className="icon-box">{svg}</div>
+        <div className="content text-center">
+          <h3>{text}</h3>
         </div>
       </div>
-    );
-  }
+    </div>
+  );
 }
 
-export default WhatWeDo;
+export default function WhatWeDo() {
+  return (
+    <section id="whatwedo">
+      <h1 className="heading">What we do</h1>
+      <div className="container">
+        <div className="row justify-content-center">
+          <Card svg={<Hackathons />} text="Hackathons" />
+          <Card svg={<Projects />} text="Projects" />
+          <Card svg={<Talks />} text="Talks" />
+          <Card svg={<Mentorships />} text="Mentorships" />
+        </div>
+      </div>
+    </section>
+  );
+}

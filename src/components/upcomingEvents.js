@@ -1,6 +1,6 @@
-import React, { useState } from "react";
+import React from "react";
 // import "../styles/upcomingEvents.css";
-import "../styles/global.css";
+// import "../styles/global.css";
 import EventCard from "./Events/EventCard.js";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
@@ -20,7 +20,7 @@ class UpcomingEvents extends React.Component {
 
   async getData() {
     var finalArray = await SpreadSheetApi.getWorkSheetData(eventsWorkSheetId);
-    finalArray = finalArray.filter((event) => event.status == "1");
+    finalArray = finalArray.filter((event) => event.status === "1");
     this.setState({ eventsData: finalArray });
   }
   render() {

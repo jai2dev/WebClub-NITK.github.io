@@ -1,9 +1,5 @@
-@import url("https://fonts.googleapis.com/css?family=Montserrat:500,600&display=swap");
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap");
+
 .nav {
   font-family: "Montserrat", sans-serif;
   height: 60px;
@@ -48,7 +44,7 @@
   margin: 5px;
   overflow: hidden;
   position: relative;
-  color: #1490e4;
+  /* color: #1490e4; */
 }
 .nav .nav-container .links a::before {
   content: " ";
@@ -70,7 +66,7 @@
 }
 .nav .nav-container .links a:hover {
   /* text-shadow: 2px 2px 4px #00000048; */
-  color: white;
+  color: white !important;
   /* background-color: #1490e4; */
 }
 .nav-sticky {

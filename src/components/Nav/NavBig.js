@@ -3,10 +3,10 @@ import { Link } from "react-router-dom";
 import imgUrl from "../../assets/images/webclub-logo-blue.png";
 import "../../styles/nav.css";
 
-const Nav = props => {
+const Nav = (props) => {
   // Helper function  to combine classes
   function classList(...classes) {
-    return classes.filter(item => !!item).join(" ");
+    return classes.filter((item) => !!item).join(" ");
   }
 
   const imageUrl = `url(${imgUrl})`;
@@ -34,13 +34,25 @@ const Nav = props => {
   if (props.transp === "false") {
     divStyle = {
       background: "white",
-      color: "#1490e4"
+      color: "#1490e4",
     };
   } else {
     divStyle = {
       transition: "0.5s ease",
       backgroundColor: navBackground ? "white" : "transparent",
-      color: navBackground ? "#1490e4" : "#b3d3f6"
+      color: navBackground ? "#1490e4" : "#b3d3f6",
+    };
+  }
+
+  let linkStyle;
+  if (props.transp === "false") {
+    linkStyle = {
+      color: "#1490e4",
+    };
+  } else {
+    linkStyle = {
+      transition: "0.5s ease",
+      color: navBackground ? "#1490e4" : "#b3d3f6",
     };
   }
 
@@ -59,10 +71,18 @@ const Nav = props => {
           <h1 style={{ marginTop: 10 }}>WebClub</h1>
         </div>
         <div className="links">
-          <Link to="/">Home</Link>
-          <Link to="/events">Events</Link>
-          <Link to="/members">Team</Link>
-          <Link to="/timeline">Timeline</Link>
+          <Link to="/" style={linkStyle}>
+            Home
+          </Link>
+          <Link to="/events" style={linkStyle}>
+            Events
+          </Link>
+          <Link to="/members" style={linkStyle}>
+            Team
+          </Link>
+          <Link to="/timeline" style={linkStyle}>
+            Timeline
+          </Link>
         </div>
       </div>
     </div>

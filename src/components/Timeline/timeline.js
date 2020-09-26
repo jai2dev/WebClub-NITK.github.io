@@ -1,34 +1,31 @@
-import React, { useState } from 'react';
-import '../../styles/timeline.css';
-import TimelineCard from './timelineCard';
-import Nav from '../Nav/Nav';
-import Helmet from 'react-helmet';
-import data from '../../assets/data/timeline.json';
-import $ from 'jquery'
-import { timelineWorkSheetId } from './../../environment';
-import SpreadSheetApi from '../../_services/spreadSheetApi';
-import Loader from 'react-loader-spinner'
-import "../../styles/global.css";
-
+import React from "react";
+import "../../styles/timeline.css";
+import TimelineCard from "./timelineCard";
+import Nav from "../Nav/Nav";
+import Helmet from "react-helmet";
+// import data from "../../assets/data/timeline.json";
+import $ from "jquery";
+import { timelineWorkSheetId } from "./../../environment";
+import SpreadSheetApi from "../../_services/spreadSheetApi";
+import Loader from "react-loader-spinner";
+// import "../../styles/global.css";
 
 class Timeline extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       data: [],
-      visible:true
-    }
+      visible: true,
+    };
     this.getData();
   }
 
   async getData() {
     var finalArray = await SpreadSheetApi.getWorkSheetData(timelineWorkSheetId);
-    finalArray.reverse()
+    finalArray.reverse();
     this.setState({ data: finalArray });
-    this.setState({visible:false});
+    this.setState({ visible: false });
   }
-
-
 
   componentDidMount() {
     var timelineBlocks = $(".cd-timeline-block"),
@@ -37,11 +34,11 @@ class Timeline extends React.Component {
     $(window).on("scroll", function () {
       !window.requestAnimationFrame
         ? setTimeout(function () {
-          showBlocks(timelineBlocks, offset);
-        }, 100)
+            showBlocks(timelineBlocks, offset);
+          }, 100)
         : window.requestAnimationFrame(function () {
-          showBlocks(timelineBlocks, offset);
-        });
+            showBlocks(timelineBlocks, offset);
+          });
     });
     function hideBlocks(blocks, offset) {
       blocks.each(function () {
@@ -56,9 +53,7 @@ class Timeline extends React.Component {
       blocks.each(function () {
         $(this).offset().top <=
           $(window).scrollTop() + $(window).height() * offset &&
-          $(this)
-            .find(".cd-timeline-img")
-            .hasClass("is-hidden") &&
+          $(this).find(".cd-timeline-img").hasClass("is-hidden") &&
           $(this)
             .find(".cd-timeline-img, .cd-timeline-content")
             .removeClass("is-hidden")
@@ -68,45 +63,40 @@ class Timeline extends React.Component {
   }
 
   render() {
+    let content;
     if (this.state.visible) {
-      return (
+      content = (
         <div className="loader">
-          <Loader
-            type="TailSpin"
-            color="#00BFFF"
-            height={100}
-            width={100}
-          />
-        </div>
-      )
-    }
-    if (!this.state.visible)
-      return (
-        <div>
-          <Helmet>
-            <title>Timeline - Web Club NITK</title>
-          </Helmet>
-          <Nav sticky="true" transp="false" />
-          <section id="cd-timeline" className="cd-container">
-            {this.state.data.map(value => {
-              return (
-                <TimelineCard
-                  title={value.title}
-                  body={value.description}
-                  date={value.date}
-                  link={value.link}
-                />
-              )
-            })}
-
-          </section>
+          <Loader type="TailSpin" color="#00BFFF" height={100} width={100} />
         </div>
       );
+    } else {
+      content = (
+        <section id="cd-timeline" className="cd-container">
+          {this.state.data.map((value) => {
+            return (
+              <TimelineCard
+                title={value.title}
+                body={value.description}
+                date={value.date}
+                link={value.link}
+              />
+            );
+          })}
+        </section>
+      );
+    }
+
+    return (
+      <div>
+        <Helmet>
+          <title>Timeline - Web Club NITK</title>
+        </Helmet>
+        <Nav sticky="true" transp="false" />
+        {content}
+      </div>
+    );
   }
 }
 
-
-
 export default Timeline;
-
-

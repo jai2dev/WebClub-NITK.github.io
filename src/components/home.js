@@ -1,8 +1,8 @@
-import React, { useState } from "react";
+import React from "react";
 import "../styles/home.css";
 import imageUrl from "../assets/images/bg-002.png";
 import Nav from "./Nav/Nav";
-import "../styles/global.css";
+// import "../styles/global.css";
 import UpcomingEvents from "./upcomingEvents.js";
 import Helmet from "react-helmet";
 import WhatWeDo from "./whatwedo.js";
@@ -34,9 +34,9 @@ class Home extends React.Component {
             </div>
           </div>
         </div>
-        <WhatWeDo></WhatWeDo>
+        <WhatWeDo />
         <hr />
-        <UpcomingEvents></UpcomingEvents>
+        <UpcomingEvents />
       </div>
     );
   }

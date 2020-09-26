@@ -1,9 +1,9 @@
 import React, { useEffect, useRef, useState } from "react";
 import BigNav from "./NavBig";
 import SmallNav from "./SmallNav";
-const Nav = props => {
+const Nav = (props) => {
   let initialValue;
-  const mobileBreakPoint = 600;
+  const mobileBreakPoint = 768;
   if (window.innerWidth < mobileBreakPoint) {
     initialValue = true;
   } else {

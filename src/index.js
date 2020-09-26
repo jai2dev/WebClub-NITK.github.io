@@ -3,8 +3,8 @@ import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App";
 import * as serviceWorker from "./serviceWorker";
-import Member from "./components/members/member.js";
-import Event from "./components/Events/Event.js";
+// import Member from "./components/members/member.js";
+// import Event from "./components/Events/Event.js";
 // import Timeline from "./components/timeline.js";
 
 ReactDOM.render(<App />, document.getElementById("root"));

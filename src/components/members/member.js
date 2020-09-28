@@ -1,22 +1,19 @@
 import React from "react";
-import "../../styles/member.css";
-// import "../../styles/global.css";
+import Helmet from "react-helmet";
+import Loader from "react-loader-spinner";
+import axios from "axios";
+import mixitup from "mixitup";
 import SigNav from "./sigNav.js";
 import YearNav from "./yearNav.js";
 import MemberCard from "./memberCard.js";
-// import membersData from "../../assets/data/webclubMembersData";
 import Nav from "../Nav/Nav";
-import Helmet from "react-helmet";
-import mixitup from "mixitup";
+import SpreadSheetApi from "../../_services/spreadSheetApi";
+import defaultPic from "../../assets/images/default.jpg";
+import "../../styles/member.css";
 import {
   membersWorkSheetId,
   profileImagesRepositoryURL,
 } from "./../../environment";
-import SpreadSheetApi from "../../_services/spreadSheetApi";
-import Loader from "react-loader-spinner";
-// import { StylesProvider } from "@material-ui/core";
-import axios from "axios";
-// import defaultPic from "../../assets/images/default.jpg";
 
 class Members extends React.Component {
   constructor(props) {
@@ -39,11 +36,11 @@ class Members extends React.Component {
       for (let extension of extensions) {
         try {
           img = `${profileImagesRepositoryURL}${val.id}.${extension}`;
+          // eslint-disable-next-line
           let response = await axios.get(img);
           break;
         } catch (err) {
-          // img = defaultPic;
-          img = false;
+          img = defaultPic;
         }
       }
 
@@ -53,6 +50,7 @@ class Members extends React.Component {
     this.setState({ membersData: finalArray });
     this.setState({ visible: false });
     var containerEl = document.querySelector(".memberContainer");
+    // eslint-disable-next-line
     var mixer = mixitup(containerEl);
   }
 
@@ -68,8 +66,8 @@ class Members extends React.Component {
       content = (
         <div className="MemberDetails">
           <div class="controls">
-            <SigNav></SigNav>
-            <YearNav></YearNav>
+            <SigNav />
+            <YearNav />
           </div>
 
           <div class="memberContainer">
@@ -84,6 +82,7 @@ class Members extends React.Component {
                     githuburl={value.githuburl}
                     linkedinurl={value.linkedinurl}
                     image={value.imageURL}
+                    key={value.name}
                   />
                 );
               } else if (value.role === "Alumni") {
@@ -96,6 +95,7 @@ class Members extends React.Component {
                     githuburl={value.githuburl}
                     linkedinurl={value.linkedinurl}
                     image={value.imageURL}
+                    key={value.name}
                   />
                 );
               } else {
@@ -108,6 +108,7 @@ class Members extends React.Component {
                     githuburl={value.githuburl}
                     linkedinurl={value.linkedinurl}
                     image={value.imageURL}
+                    key={value.name}
                   />
                 );
               }

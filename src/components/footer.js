@@ -1,4 +1,13 @@
 import React from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faFacebookF,
+  faGithub,
+  faInstagram,
+  faLinkedinIn,
+} from "@fortawesome/free-brands-svg-icons";
+import { faHome, faEnvelope } from "@fortawesome/free-solid-svg-icons";
+import "../styles/footer.css";
 
 export default function footer() {
   return (
@@ -13,11 +22,11 @@ export default function footer() {
               Contact Us
             </h5>
             <p>
-              <i className="fa fa-home mr-3"></i> NITK, Surathkal, Karnataka,
-              India- 575025
+              <FontAwesomeIcon icon={faHome} className="mr-3" />
+              NITK, Surathkal, Karnataka, India- 575025
             </p>
             <p>
-              <i className="fa fa-envelope mr-3"></i>{" "}
+              <FontAwesomeIcon icon={faEnvelope} className="mr-3" />{" "}
               <span className="f-link">
                 <a
                   href="mailto:webclub@nitk.edu.in"
@@ -47,23 +56,33 @@ export default function footer() {
         <div className="row pb-3">
           <div className="col-md-12">
             <div className="mb-5 text-center">
-              <a
-                className="fb-ic"
-                href="https://www.facebook.com/web.club.nitk/"
-              >
-                <i className="fa fa-facebook fa-lg white-text mr-4"> </i>
+              <a href="https://www.facebook.com/web.club.nitk/">
+                <FontAwesomeIcon
+                  icon={faFacebookF}
+                  size="lg"
+                  className="mr-4 footer-link"
+                />
               </a>
-              <a
-                className="li-ic"
-                href="https://www.linkedin.com/school/web-enthusiasts-club-nitk/"
-              >
-                <i className="fa fa-linkedin fa-lg white-text mr-4"> </i>
+              <a href="https://www.linkedin.com/school/web-enthusiasts-club-nitk/">
+                <FontAwesomeIcon
+                  icon={faLinkedinIn}
+                  size="lg"
+                  className="mr-4 footer-link"
+                />
               </a>
-              <a className="ins-ic" href="https://www.instagram.com/wecnitk/">
-                <i className="fa fa-instagram fa-lg white-text mr-4"> </i>
+              <a href="https://www.instagram.com/wecnitk/">
+                <FontAwesomeIcon
+                  icon={faInstagram}
+                  size="lg"
+                  className="mr-4 footer-link"
+                />
               </a>
-              <a className="pin-ic" href="https://www.github.com/WebClub-NITK">
-                <i className="fa fa-github fa-lg white-text"> </i>
+              <a href="https://www.github.com/WebClub-NITK">
+                <FontAwesomeIcon
+                  icon={faGithub}
+                  size="lg"
+                  className="footer-link"
+                />
               </a>
             </div>
           </div>
@@ -72,5 +91,3 @@ export default function footer() {
     </footer>
   );
 }
-
-// export default Footer;

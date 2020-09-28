@@ -10,11 +10,11 @@ class SpreadSheetApi {
     var key, value;
     json.feed.entry.forEach((entry) => {
       json = {};
-      entry.content["$t"].split(",").map((obj) => {
+      entry.content["$t"].split(",").forEach((obj) => {
         key = obj.split(":")[0].toString();
         key = key.trim();
         value = "";
-        obj.split(":").map((obj, i) => {
+        obj.split(":").forEach((obj, i) => {
           if (
             i === 1 &&
             (obj.toString().trim() === "https" ||

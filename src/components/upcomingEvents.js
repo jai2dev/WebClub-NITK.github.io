@@ -1,10 +1,8 @@
 import React from "react";
 // import "../styles/upcomingEvents.css";
-// import "../styles/global.css";
 import EventCard from "./Events/EventCard.js";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-// import eventsData from "../assets/data/events.json";
 import { eventsWorkSheetId } from "./../environment";
 import SpreadSheetApi from "./../_services/spreadSheetApi";
 
@@ -66,7 +64,7 @@ class UpcomingEvents extends React.Component {
           >
             {this.state.eventsData.map((value) => {
               return (
-                <div style={{ margin: 100, marginLeft: 35 }}>
+                <div style={{ margin: 100, marginLeft: 35 }} key={value.title}>
                   <EventCard
                     title={value.title}
                     date={value.date}

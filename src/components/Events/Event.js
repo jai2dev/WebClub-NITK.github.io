@@ -27,6 +27,7 @@ class Event extends React.Component {
     this.setState({ eventsData: finalArray });
     this.setState({ visible: false });
     var containerEl = document.querySelector(".eventsContainer");
+    // eslint-disable-next-line
     var mixer = mixitup(containerEl);
   }
 
@@ -60,7 +61,7 @@ class Event extends React.Component {
 
           <div className="eventsContainer" style={styles}>
             {this.state.eventsData.map((value) => {
-              if (value.status === 0) {
+              if (value.status === "0") {
                 return (
                   <EventCard
                     classs={"past"}
@@ -70,6 +71,7 @@ class Event extends React.Component {
                     venue={value.venue}
                     image={value.image}
                     description={value.description}
+                    key={value.title}
                   />
                 );
               } else {
@@ -82,6 +84,7 @@ class Event extends React.Component {
                     venue={value.venue}
                     image={value.image}
                     description={value.description}
+                    key={value.title}
                   />
                 );
               }

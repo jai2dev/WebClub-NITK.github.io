@@ -3,12 +3,10 @@ import "../../styles/timeline.css";
 import TimelineCard from "./timelineCard";
 import Nav from "../Nav/Nav";
 import Helmet from "react-helmet";
-// import data from "../../assets/data/timeline.json";
 import $ from "jquery";
 import { timelineWorkSheetId } from "./../../environment";
 import SpreadSheetApi from "../../_services/spreadSheetApi";
 import Loader from "react-loader-spinner";
-// import "../../styles/global.css";
 
 class Timeline extends React.Component {
   constructor(props) {
@@ -80,6 +78,7 @@ class Timeline extends React.Component {
                 body={value.description}
                 date={value.date}
                 link={value.link}
+                key={value.title}
               />
             );
           })}

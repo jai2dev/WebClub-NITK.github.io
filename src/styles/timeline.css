@@ -1,7 +1,7 @@
 .cd-timeline-block a {
   color: #52c5c2;
   text-decoration: none;
-  font-family: open sans, sans-serif;
+  /* font-family: open sans, sans-serif; */
 }
 .cd-timeline-block a:hover {
   color: #639e9d;
@@ -11,8 +11,9 @@
 }
 
 .cd-timeline-block h2 {
-  font-family: open sans, sans-serif;
+  /* font-family: open sans, sans-serif; */
   font-weight: 700;
+  font-size: 20px;
 }
 .cd-container {
   width: 90%;
@@ -38,6 +39,17 @@
   font-size: 18px;
   font-size: 1.125rem;
 }
+
+.cd-timeline-title {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.cd-timeline-title img {
+  align-self: flex-start;
+}
+
 @media only screen and (min-width: 1170px) {
   .cd-timeline-block header {
     height: 300px;
@@ -267,16 +279,13 @@
 }
 @media only screen and (min-width: 768px) {
   .cd-timeline-content h2 {
-    font-size: 20px;
     font-size: 1.25rem;
   }
   .cd-timeline-content p {
-    font-size: 16px;
     font-size: 1rem;
   }
   .cd-timeline-content .cd-read-more,
   .cd-timeline-content .cd-date {
-    font-size: 14px;
     font-size: 0.875rem;
   }
 }

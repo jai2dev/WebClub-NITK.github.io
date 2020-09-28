@@ -12,20 +12,26 @@ class TimelineCard extends React.Component {
     return (
       <div className="cd-timeline-block">
         <div className="cd-timeline-img cd-picture">
-          <img src={cover} alt="Picture"></img>
+          <img src={cover} alt=""></img>
         </div>
         <div className="cd-timeline-content">
-          <h2>
+          <h2 className="cd-timeline-title">
             <img
               src={rocket}
               width="50"
               style={{ marginBottom: "-15px" }}
+              alt=""
             ></img>
             {this.props.title}
           </h2>
           <p>{this.props.body}</p>
           {this.props.link ? (
-            <a href={this.props.link} className="cd-read-more" target="_blank">
+            <a
+              href={this.props.link}
+              className="cd-read-more"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               Read more
             </a>
           ) : (
@@ -39,16 +45,3 @@ class TimelineCard extends React.Component {
 }
 
 export default TimelineCard;
-
-//JSX for a timeline card with just the title and body
-
-// <div className="cd-timeline-block">
-// <div className="cd-timeline-img cd-picture">
-// <img src={cover} alt="Picture"></img>
-// </div>
-// <div className="cd-timeline-content">
-// <h2>{this.props.title}</h2>
-// <p>{this.props.body}</p>
-// <span className="cd-date">{this.props.date}</span>
-// </div>
-// </div>

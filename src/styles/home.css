@@ -1,72 +1,70 @@
-@import "https://cdnjs.cloudflare.com/ajax/libs/MaterialDesign-Webfont/4.7.95/css/materialdesignicons.min.css";
+/* @import "https://cdnjs.cloudflare.com/ajax/libs/MaterialDesign-Webfont/4.7.95/css/materialdesignicons.min.css"; */
 
-
-.main-image{
-	height:100vh;
-	display: inherit;
-	background-image:linear-gradient(to right, black 50%,black 50%, rgb(4, 138, 191) 50%,#0072bc 50%);
-	width: 100%;
-}
-
-.tag-box {
-    margin-left: 90px;
-    text-align: left;
+.main-image {
+  height: 100vh;
+  display: inherit;
+  background-image: linear-gradient(
+    to right,
+    black 50%,
+    black 50%,
+    rgb(4, 138, 191) 50%,
+    #0072bc 50%
+  );
+  width: 100%;
 }
 
 .main-text {
-    color: #b3d3f6;
+  color: #b3d3f6;
+  text-transform: capitalize;
+  font-size: clamp(2rem, 3vw, 3rem);
+}
+
+h1.main-text {
+  font-weight: 400;
 }
 
 .main-title {
-    font-size: 72px;
-    color: rgb(4, 138, 191);
-    margin-top: 0;
-    font-family: "Playfair";
-    padding: 1px;
+  font-size: clamp(3rem, 5vw, 5rem);
+  text-transform: capitalize;
+  color: rgb(4, 138, 191);
+  margin-top: 0;
+  font-weight: 900;
+  padding: 1px;
 }
 
 .center-flex {
-    display: flex;
-    align-items: center;
-    overflow: hidden;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
 }
 
 .title-container {
-    margin-left: 100px;
+  margin-left: 100px;
 }
 
-
-.hexCon {
+.bg-image {
+  margin-left: 20%;
+}
+@media (max-width: 768px) {
+  .main-image {
+    height: 50vh;
+    background-color: black;
+    width: 100%;
+    background-image: unset;
+  }
+  .title-container {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0;
+  }
+  .bg-image {
+    display: none;
+  }
+  .center-flex {
     display: flex;
-}
-.bg-image{
-    margin-left: 20%;
-}
-@media(max-width: 768px) {
-    .main-title {
-        font-size: 40px;
-        color: rgb(4, 138, 191);
-        font-family: "Playfair";
-    }
-    .main-image {
-        height: 50vh;
-        background-color: black;
-        width: 100%;
-        background-image: unset;
-    }
-    .title-container {
-      position: absolute;
-      left: 50%;
-      transform: translateX(-50%);
-      margin: 0;
-    }
-    .bg-image{
-        display: none;
-    }
-    .center-flex {
-        display: flex;
-        align-items: center;
-        overflow: hidden;
-        height: 100vh;
-    }
+    align-items: center;
+    overflow: hidden;
+    height: 100vh;
+  }
 }

@@ -1,27 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "6ef9e06cbf6f9f3100f575525a01f082",
+    "revision": "85cc655480dcb5bd7c32fe59d0916b19",
     "url": "/new/index.html"
   },
   {
-    "revision": "d6886071716e0548923d",
+    "revision": "e6bfc9087750bb63f38a",
     "url": "/new/static/css/2.381000e5.chunk.css"
   },
   {
-    "revision": "3817193bb5d682cf7782",
-    "url": "/new/static/css/main.0916c67f.chunk.css"
+    "revision": "e932dd13ad4c141ab64c",
+    "url": "/new/static/css/main.e6db80bb.chunk.css"
   },
   {
-    "revision": "d6886071716e0548923d",
-    "url": "/new/static/js/2.ed88eeb3.chunk.js"
+    "revision": "e6bfc9087750bb63f38a",
+    "url": "/new/static/js/2.07b24418.chunk.js"
   },
   {
     "revision": "a10124da64cdca7d052ddee007c9b65e",
-    "url": "/new/static/js/2.ed88eeb3.chunk.js.LICENSE"
+    "url": "/new/static/js/2.07b24418.chunk.js.LICENSE"
   },
   {
-    "revision": "3817193bb5d682cf7782",
-    "url": "/new/static/js/main.df54ecf1.chunk.js"
+    "revision": "e932dd13ad4c141ab64c",
+    "url": "/new/static/js/main.3e82878d.chunk.js"
   },
   {
     "revision": "79886c2d9b61ed281aa9",
@@ -32,24 +32,24 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/new/static/media/bg-002.10c4b1d6.png"
   },
   {
-    "revision": "f62517f9edcb5798374490ffd43fa516",
-    "url": "/new/static/media/cd-icon-picture.f62517f9.svg"
+    "revision": "6c56aecf85c6261047a8d073272b5a90",
+    "url": "/new/static/media/cd-icon-picture.6c56aecf.svg"
   },
   {
     "revision": "39eb0bbf2cc33ba02f53f8585004f820",
     "url": "/new/static/media/default.39eb0bbf.jpg"
   },
   {
-    "revision": "55cad477ec83d4dff1422a818cd7fa83",
-    "url": "/new/static/media/hackathon.55cad477.svg"
+    "revision": "cb3b05a145401556dd3a4e7008f1cc2c",
+    "url": "/new/static/media/hackathon thin.cb3b05a1.svg"
   },
   {
-    "revision": "9fd8562bba42b2193f047a9c1a180821",
-    "url": "/new/static/media/mentorship.9fd8562b.svg"
+    "revision": "cf70e25da1641a6788cdadeb39864c25",
+    "url": "/new/static/media/mentorship thin.cf70e25d.svg"
   },
   {
-    "revision": "aa24918d36e78a1a8fb2ffc7644d7595",
-    "url": "/new/static/media/projects.aa24918d.svg"
+    "revision": "5290095924fe3553f58f85d59b0d2c52",
+    "url": "/new/static/media/projects thin.52900959.svg"
   },
   {
     "revision": "04eb8fc57f27498e5ae37523e3bfb2c7",
@@ -68,8 +68,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/new/static/media/rocket.3de88b2a.png"
   },
   {
-    "revision": "3c41304bf39f3e92bc5da9f0b9a81b5b",
-    "url": "/new/static/media/talks.3c41304b.svg"
+    "revision": "98ac2265c1ec6533e50568c520725d7e",
+    "url": "/new/static/media/talks thin.98ac2265.svg"
   },
   {
     "revision": "f5444ece6d7f4b94bec86172acc78bc9",

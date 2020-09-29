@@ -17,6 +17,7 @@
   color: #b3d3f6;
   text-transform: capitalize;
   font-size: clamp(2rem, 3vw, 3rem);
+  text-shadow: 1px 2px 5px #000;
 }
 
 h1.main-text {
@@ -26,10 +27,11 @@ h1.main-text {
 .main-title {
   font-size: clamp(3rem, 5vw, 5rem);
   text-transform: capitalize;
-  color: rgb(4, 138, 191);
+  color: #1490e4;
   margin-top: 0;
   font-weight: 900;
   padding: 1px;
+  text-shadow: 1px 2px 5px #000;
 }
 
 .center-flex {

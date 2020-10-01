@@ -72,12 +72,13 @@ class Members extends React.Component {
 
           <div class="memberContainer">
             {this.state.membersData.map((value) => {
-              if (value.role !== "Club Member") {
+              // if the role includes the term Alumni then render the card in Alumni section
+              if(value.role.includes("Alumni")) {
                 return (
                   <MemberCard
-                    classs={value.sig + " Core"}
+                    classs={"Alumni"}
                     name={value.name}
-                    role={value.role}
+                    role={value.role.replace("Alumni", '')}
                     email={value.email}
                     githuburl={value.githuburl}
                     linkedinurl={value.linkedinurl}
@@ -85,10 +86,11 @@ class Members extends React.Component {
                     key={value.name}
                   />
                 );
-              } else if (value.role === "Alumni") {
+              } else if (value.role !== "Club Member") {
+                // if the role is not Club Member then render the card in Core section
                 return (
                   <MemberCard
-                    classs={value.sig + " Alumni"}
+                    classs={value.sig + " Core"}
                     name={value.name}
                     role={value.role}
                     email={value.email}

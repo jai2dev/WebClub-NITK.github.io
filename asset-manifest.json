@@ -1,35 +1,35 @@
 {
   "files": {
-    "main.css": "/new/static/css/main.3c140627.chunk.css",
-    "main.js": "/new/static/js/main.3b3346cd.chunk.js",
-    "main.js.map": "/new/static/js/main.3b3346cd.chunk.js.map",
+    "main.css": "/new/static/css/main.992f9d8e.chunk.css",
+    "main.js": "/new/static/js/main.b6d0f9c3.chunk.js",
+    "main.js.map": "/new/static/js/main.b6d0f9c3.chunk.js.map",
     "runtime-main.js": "/new/static/js/runtime-main.659176c3.js",
     "runtime-main.js.map": "/new/static/js/runtime-main.659176c3.js.map",
     "static/css/2.381000e5.chunk.css": "/new/static/css/2.381000e5.chunk.css",
     "static/js/2.07b24418.chunk.js": "/new/static/js/2.07b24418.chunk.js",
     "static/js/2.07b24418.chunk.js.map": "/new/static/js/2.07b24418.chunk.js.map",
     "index.html": "/new/index.html",
-    "precache-manifest.a662401aa53f0043ebb8c98e22d89861.js": "/new/precache-manifest.a662401aa53f0043ebb8c98e22d89861.js",
+    "precache-manifest.13fbff9d60e1a836c7ece7e8cabcedc2.js": "/new/precache-manifest.13fbff9d60e1a836c7ece7e8cabcedc2.js",
     "service-worker.js": "/new/service-worker.js",
     "static/css/2.381000e5.chunk.css.map": "/new/static/css/2.381000e5.chunk.css.map",
-    "static/css/main.3c140627.chunk.css.map": "/new/static/css/main.3c140627.chunk.css.map",
+    "static/css/main.992f9d8e.chunk.css.map": "/new/static/css/main.992f9d8e.chunk.css.map",
     "static/js/2.07b24418.chunk.js.LICENSE": "/new/static/js/2.07b24418.chunk.js.LICENSE",
     "static/media/bg-002.png": "/new/static/media/bg-002.10c4b1d6.png",
     "static/media/cd-icon-picture.svg": "/new/static/media/cd-icon-picture.f62517f9.svg",
     "static/media/default.jpg": "/new/static/media/default.39eb0bbf.jpg",
-    "static/media/hackathon thin.cb3b05a1.svg": "/new/static/media/hackathon thin.cb3b05a1.svg",
-    "static/media/mentorship thin.cf70e25d.svg": "/new/static/media/mentorship thin.cf70e25d.svg",
-    "static/media/projects thin.52900959.svg": "/new/static/media/projects thin.52900959.svg",
+    "static/media/hackathon thin.7e383473.svg": "/new/static/media/hackathon thin.7e383473.svg",
+    "static/media/mentorship thin.c6ce064d.svg": "/new/static/media/mentorship thin.c6ce064d.svg",
+    "static/media/projects thin.29a4fbc8.svg": "/new/static/media/projects thin.29a4fbc8.svg",
     "static/media/styles.css": "/new/static/media/revicons.2feb69cc.eot",
     "static/media/rocket.png": "/new/static/media/rocket.3de88b2a.png",
-    "static/media/talks thin.98ac2265.svg": "/new/static/media/talks thin.98ac2265.svg",
+    "static/media/talks thin.753ddad8.svg": "/new/static/media/talks thin.753ddad8.svg",
     "static/media/webclub-logo-blue.png": "/new/static/media/webclub-logo-blue.f5444ece.png"
   },
   "entrypoints": [
     "static/js/runtime-main.659176c3.js",
     "static/css/2.381000e5.chunk.css",
     "static/js/2.07b24418.chunk.js",
-    "static/css/main.3c140627.chunk.css",
-    "static/js/main.3b3346cd.chunk.js"
+    "static/css/main.992f9d8e.chunk.css",
+    "static/js/main.b6d0f9c3.chunk.js"
   ]
 }

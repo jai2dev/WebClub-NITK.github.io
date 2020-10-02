@@ -1,7 +1,7 @@
 import React from "react";
 import Helmet from "react-helmet";
 import Loader from "react-loader-spinner";
-import axios from "axios";
+// import axios from "axios";
 import mixitup from "mixitup";
 import SigNav from "./sigNav.js";
 import YearNav from "./yearNav.js";
@@ -12,7 +12,7 @@ import defaultPic from "../../assets/images/default.jpg";
 import "../../styles/member.css";
 import {
   membersWorkSheetId,
-  profileImagesRepositoryURL,
+  // profileImagesRepositoryURL,
 } from "./../../environment";
 
 const lazyLoad = target => {
@@ -61,7 +61,7 @@ class Members extends React.Component {
 
 
     // use the below code to load images from another github repository
-    
+
     // finalArray.forEach(async (val) => {
     //   let img;
 

@@ -70,19 +70,22 @@ class Timeline extends React.Component {
       );
     } else {
       content = (
-        <section id="cd-timeline" className="cd-container">
-          {this.state.data.map((value) => {
-            return (
-              <TimelineCard
-                title={value.title}
-                body={value.description}
-                date={value.date}
-                link={value.link}
-                key={value.title}
-              />
-            );
-          })}
-        </section>
+        <>
+          <h1 className="heading">Timeline</h1>
+          <section id="cd-timeline" className="cd-container">
+            {this.state.data.map((value) => {
+              return (
+                <TimelineCard
+                  title={value.title}
+                  body={value.description}
+                  date={value.date}
+                  link={value.link}
+                  key={value.title}
+                />
+              );
+            })}
+          </section>
+        </>
       );
     }
 

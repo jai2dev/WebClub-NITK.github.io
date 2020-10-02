@@ -5,6 +5,7 @@ import Nav from "./Nav/Nav";
 import UpcomingEvents from "./upcomingEvents.js";
 import Helmet from "react-helmet";
 import WhatWeDo from "./whatwedo.js";
+import SIG from "./sig";
 
 class Home extends React.Component {
   constructor(props) {
@@ -37,6 +38,8 @@ class Home extends React.Component {
           </div>
         </div>
         <WhatWeDo />
+        <hr />
+        <SIG />
         <hr />
         <UpcomingEvents />
       </div>

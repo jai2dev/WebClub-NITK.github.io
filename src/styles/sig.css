@@ -1,0 +1,24 @@
+.sigs {
+  padding: 0;
+}
+
+.sig-img {
+  min-height: 300px;
+  background-size: cover; /* <------ */
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.sig-details {
+  background-color: white;
+  padding: 30px 30px !important;
+}
+
+.sig-details h2 {
+  font-weight: 700;
+}
+
+.sig-details p {
+  font-weight: 400;
+  font-size: 1.1rem;
+}

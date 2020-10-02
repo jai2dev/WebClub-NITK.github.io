@@ -10,7 +10,7 @@ function MemberCard(props) {
     <div className={"con mix " + props.classs}>
       <div className="card" data-aos="flip-left">
         <div className="image">
-          <img src={props.image || defaultPic} alt={props.name} />
+          <img data-lazy={props.image || defaultPic} alt={props.name} />
           <div className="links">
             <a href={props.githuburl}>
               <FontAwesomeIcon icon={faGithub} />

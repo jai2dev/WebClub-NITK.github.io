@@ -15,6 +15,24 @@ import {
   profileImagesRepositoryURL,
 } from "./../../environment";
 
+const lazyLoad = target => {
+  const io = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+
+      if (entry.isIntersecting) {
+        const img = entry.target.getElementsByTagName('img')[0];
+        const src = img.getAttribute('data-lazy');
+
+        img.setAttribute('src', src);
+
+        observer.disconnect();
+      }
+    });
+  });
+
+  io.observe(target)
+};
+
 class Members extends React.Component {
   constructor(props) {
     super(props);
@@ -30,28 +48,52 @@ class Members extends React.Component {
     var finalArray = await SpreadSheetApi.getWorkSheetData(membersWorkSheetId);
     let extensions = ["jpg", "jpeg", "png", "JPG", "JPEG", "PNG"];
 
-    finalArray.forEach(async (val) => {
-      let img;
-
+    finalArray.forEach((val) => {
       for (let extension of extensions) {
-        try {
-          img = `${profileImagesRepositoryURL}${val.id}.${extension}`;
-          // eslint-disable-next-line
-          let response = await axios.get(img);
+        try{
+          val.imageURL = require(`../../assets/images/profile-pics/${val.id}.${extension}`)
           break;
-        } catch (err) {
-          img = defaultPic;
+        } catch(err) {
+          val.imageURL = defaultPic;
         }
       }
+    })
 
-      val.imageURL = img;
-      this.setState({ membersData: finalArray });
-    });
+
+    // use the below code to load images from another github repository
+    
+    // finalArray.forEach(async (val) => {
+    //   let img;
+
+    //   for (let extension of extensions) {
+    //     try {
+    //       img = `${profileImagesRepositoryURL}${val.id}.${extension}`;
+    //       // eslint-disable-next-line
+    //       // let response = await axios.get(img);
+    //       if(imageExists(img)) {
+    //         break;
+    //       }
+    //     } catch (err) {
+    //       img = defaultPic;
+    //     }
+    //   }
+
+    //   val.imageURL = img;
+    //   this.setState({ membersData: finalArray });
+    // });
+
+
     this.setState({ membersData: finalArray });
     this.setState({ visible: false });
+    const targets = document.querySelectorAll('.image');
+    targets.forEach(lazyLoad);
     var containerEl = document.querySelector(".memberContainer");
     // eslint-disable-next-line
     var mixer = mixitup(containerEl);
+  mixer.filter('.Current')
+    .then(function(state) {
+        console.log(state.activeFilter.selector); // to filter the current members after loading
+    });
   }
 
   render() {
@@ -90,7 +132,7 @@ class Members extends React.Component {
                 // if the role is not Club Member then render the card in Core section
                 return (
                   <MemberCard
-                    classs={value.sig + " Core"}
+                    classs={value.sig + " Core Current"}
                     name={value.name}
                     role={value.role}
                     email={value.email}
@@ -103,7 +145,7 @@ class Members extends React.Component {
               } else {
                 return (
                   <MemberCard
-                    classs={value.sig}
+                    classs={value.sig + " Current"}
                     name={value.name}
                     role={value.role}
                     email={value.email}

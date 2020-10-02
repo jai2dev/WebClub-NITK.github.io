@@ -1,27 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "60199a351a8bb6e961edebb4842f3e70",
+    "revision": "e0bc9657196cb152f0706db4f8432d58",
     "url": "/new/index.html"
   },
   {
-    "revision": "fd31a47dbc6568d1d339",
+    "revision": "b17561371ddab13692ba",
     "url": "/new/static/css/2.381000e5.chunk.css"
   },
   {
-    "revision": "235cb4477a63bd2f2c7f",
-    "url": "/new/static/css/main.3c140627.chunk.css"
+    "revision": "77bf7e60feb4f3de319b",
+    "url": "/new/static/css/main.931b8711.chunk.css"
   },
   {
-    "revision": "fd31a47dbc6568d1d339",
-    "url": "/new/static/js/2.0ed2849a.chunk.js"
+    "revision": "b17561371ddab13692ba",
+    "url": "/new/static/js/2.e5276a33.chunk.js"
   },
   {
     "revision": "a10124da64cdca7d052ddee007c9b65e",
-    "url": "/new/static/js/2.0ed2849a.chunk.js.LICENSE"
+    "url": "/new/static/js/2.e5276a33.chunk.js.LICENSE"
   },
   {
-    "revision": "235cb4477a63bd2f2c7f",
-    "url": "/new/static/js/main.b534b032.chunk.js"
+    "revision": "77bf7e60feb4f3de319b",
+    "url": "/new/static/js/main.1b32306b.chunk.js"
   },
   {
     "revision": "79886c2d9b61ed281aa9",
@@ -260,6 +260,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/new/static/media/18IT202.79f7deb4.jpeg"
   },
   {
+    "revision": "0b87ff3e5ca53572793106e24bf75d35",
+    "url": "/new/static/media/algo.0b87ff3e.png"
+  },
+  {
     "revision": "10c4b1d63df69e987a28bfca152e4213",
     "url": "/new/static/media/bg-002.10c4b1d6.png"
   },
@@ -272,8 +276,16 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/new/static/media/default.39eb0bbf.jpg"
   },
   {
+    "revision": "f2732e6eb1c368e17fc7b6a5f274ee74",
+    "url": "/new/static/media/dev.f2732e6e.jpg"
+  },
+  {
     "revision": "cb3b05a145401556dd3a4e7008f1cc2c",
     "url": "/new/static/media/hackathon thin.cb3b05a1.svg"
+  },
+  {
+    "revision": "f099642fc6b23741f197854f6c6eb019",
+    "url": "/new/static/media/intelligence.f099642f.png"
   },
   {
     "revision": "cf70e25da1641a6788cdadeb39864c25",
@@ -302,6 +314,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "6bda8891ded43fdc335638a84b6547c6",
     "url": "/new/static/media/sap.6bda8891.jpg"
+  },
+  {
+    "revision": "86cbe9e5407fb5dce1a82a4eac84f9df",
+    "url": "/new/static/media/systems.86cbe9e5.png"
   },
   {
     "revision": "98ac2265c1ec6533e50568c520725d7e",

@@ -35,7 +35,7 @@ export default function SIG() {
             style={{ backgroundImage: `url(${devImg})` }}
           ></div>
           <div class="sig-details col-lg-6 order-lg-1  showcase-text">
-            <h2>Developer Student Clubs</h2>
+            <h2>Development Group (DSC)</h2>
             <p class="lead mb-0">
               We focus on helping students bridge the gap between theory and
               practice in software development. Students grow their knowledge in

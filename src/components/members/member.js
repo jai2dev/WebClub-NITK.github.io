@@ -3,8 +3,7 @@ import Helmet from "react-helmet";
 import Loader from "react-loader-spinner";
 // import axios from "axios";
 import mixitup from "mixitup";
-import SigNav from "./sigNav.js";
-import YearNav from "./yearNav.js";
+import Navbar from "./navbar.js"; 
 import MemberCard from "./memberCard.js";
 import Nav from "../Nav/Nav";
 import SpreadSheetApi from "../../_services/spreadSheetApi";
@@ -108,8 +107,7 @@ class Members extends React.Component {
       content = (
         <div className="MemberDetails">
           <div class="controls">
-            <SigNav />
-            <YearNav />
+            <Navbar />
           </div>
 
           <div class="memberContainer">

@@ -118,7 +118,7 @@ class Members extends React.Component {
                   <MemberCard
                     classs={"Alumni"}
                     name={value.name}
-                    role={value.role.replace("Alumni", '')}
+                    role={value.role.replace(" Alumni", ", Class of " + value.classof)}
                     email={value.email}
                     githuburl={value.githuburl}
                     linkedinurl={value.linkedinurl}

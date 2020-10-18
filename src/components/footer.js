@@ -29,10 +29,10 @@ export default function footer() {
               <FontAwesomeIcon icon={faEnvelope} className="mr-3" />{" "}
               <span className="f-link">
                 <a
-                  href="mailto:webclub@nitk.edu.in"
+                  href="mailto:web_enthusiasts_club@nitk.edu.in"
                   style={{ color: "#52c5c2", textDecoration: "none" }}
                 >
-                  webclub@nitk.edu.in
+                  web_enthusiasts_club@nitk.edu.in
                 </a>
               </span>
             </p>

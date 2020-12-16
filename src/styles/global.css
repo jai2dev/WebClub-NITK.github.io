@@ -1,40 +1,35 @@
 body {
-  font-size: 100%;
-  font-family: "Montserrat", sans-serif;
-  background-color: #b3d3f6;
+    font-size: 100%;
+    font-family: "Montserrat", sans-serif;
+    background-color: #b3d3f6;
 }
 
 body,
 #wrapper {
-  min-height: 100vh;
+    min-height: 100vh;
 }
 
 h1 {
-  font-weight: 700;
+    font-weight: 700;
 }
 
 .white-text {
-  color: white;
+    color: white;
 }
 
 .heading {
-  text-align: center;
-  margin: 20px;
-  margin-bottom: 50px;
+    text-align: center;
+    margin: 20px;
+    margin-bottom: 50px;
 }
 
 .container {
-  margin: 10;
+    margin: 10;
 }
 
 .loader {
-  text-align: center;
-  margin: 30em;
-}
-
-@media (max-width: 1024px) {
-  .loader {
-    text-align: center;
-    margin: 10em;
-  }
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 70vh;
 }

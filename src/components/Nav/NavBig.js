@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import imgUrl from "../../assets/images/webclub-logo-blue.png";
 import "../../styles/nav.css";
 
@@ -9,6 +9,7 @@ const Nav = (props) => {
     return classes.filter((item) => !!item).join(" ");
   }
 
+  const history = useHistory();
   const imageUrl = `url(${imgUrl})`;
   const [navBackground, setNavBackground] = useState(false);
   const navRef = useRef();
@@ -66,7 +67,7 @@ const Nav = (props) => {
       style={divStyle}
     >
       <div className="nav-container">
-        <div className="clubLogo">
+        <div className="clubLogo" style={{ cursor: "pointer" }} onClick={() => history.push('/')}>
           <span className="logo" style={{ backgroundImage: imageUrl }} />
           <h1 style={{ marginTop: 10 }}>WebClub</h1>
         </div>

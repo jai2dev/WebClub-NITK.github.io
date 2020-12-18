@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from "react";
 import "../../styles/nav.css";
 import imgUrl from "../../assets/images/webclub-logo-blue.png";
 import styled from "styled-components";
-import { Link, useHistory } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const StyledMenu = styled.nav`
     display: flex;
@@ -56,6 +56,9 @@ const Menu = ({ open, setOpen }) => {
             <Link to="/timeline" onClick={() => setOpen(!open)}>
                 Timeline
             </Link>
+            <Link to="/blogs" onClick={() => setOpen(!open)}>
+            Blogs
+          </Link>
         </StyledMenu>
     );
 };
@@ -95,7 +98,7 @@ const StyledBurger = styled.button`
         :nth-child(2) {
             opacity: ${({ open }) => (open ? "0" : "1")};
             transform: ${({ open }) =>
-        open ? "translateX(0px)" : "translateX(0)"};
+                open ? "translateX(0px)" : "translateX(0)"};
         }
 
         :nth-child(3) {
@@ -118,8 +121,6 @@ const MobileNav = (props) => {
     function classList(...classes) {
         return classes.filter((item) => !!item).join(" ");
     }
-
-    const history = useHistory();
     const imageUrl = `url(${imgUrl})`;
     const [open, setOpen] = React.useState(false);
     const node = React.useRef();
@@ -164,7 +165,7 @@ const MobileNav = (props) => {
                 <Burger open={open} setOpen={setOpen} />
                 <Menu open={open} setOpen={setOpen} />
             </div>
-            <span className="logo" style={{ backgroundImage: imageUrl, cursor: "pointer" }} onClick={() => history.push('/')} />
+            <span className="logo" style={{ backgroundImage: imageUrl }} />
         </div>
     );
 };

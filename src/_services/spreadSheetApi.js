@@ -29,7 +29,9 @@ class SpreadSheetApi {
 
       finalArray.push(json);
     });
+    console.log(finalArray[0].email)
     return finalArray;
+
   }
 }
 

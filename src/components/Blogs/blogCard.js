@@ -5,6 +5,7 @@ class BlogCard extends Component {
         super(props)
         this.htmlContent = React.createRef()
         this.htmlHeading = React.createRef()
+        this.headingFirstChar = React.createRef()
         this.state = {
             tagList:[],
             heading:''
@@ -16,18 +17,12 @@ class BlogCard extends Component {
         this.htmlHeading.current.innerHTML = this.props.heading;
         let counter=0;
         let htmlTagList=this.props.tagList.map(element=>{
-            return <li className="list-inline-item" key={counter++} style={{background:this.props.color}}><Link to={'/blogs/'+this.blogsid} className="color-reset">{element}</Link></li>
+            return <li className="list-inline-item" key={counter++} style={{background:this.props.color}}>{element}</li>
         })
         let temp_heading=this.props.heading;
-        
-        temp_heading=temp_heading.replace('<p>','');
-        temp_heading=temp_heading.replace(/<h[12]>/,'');
-        temp_heading=temp_heading.replace(/<\/h[12]>/,'');
-        temp_heading=temp_heading.replace('</p>','');
         temp_heading=temp_heading.replace(/\s+/g,' ');
-        temp_heading=temp_heading.replace(/\s/g,'-');
-
-        
+        temp_heading=temp_heading.replace(/\s/g,'-');  
+        this.headingFirstChar.current.innerHTML=temp_heading[0]
         this.setState({
             tagList:htmlTagList,
             heading:temp_heading
@@ -39,7 +34,7 @@ class BlogCard extends Component {
                 <div className="col-12 m-0 ">
                     <div className="blog-card my-2">
                         <div className="meta">
-                            <div className="photo" style={{background:this.props.color}}><span>M</span></div>
+                            <div className="photo" style={{background:this.props.color}}><span ref={this.headingFirstChar}></span></div>
                             <ul className="details">
                                 <li className="author py-3">{this.props.writer}</li>
                                 <li className="date">{this.props.date}</li>
@@ -61,5 +56,4 @@ class BlogCard extends Component {
         )
     }
 }
-
 export default BlogCard

@@ -5,10 +5,12 @@ import "../../styles/blog.css";
 import Nav from "../Nav/Nav";
 import { data } from 'jquery';
 import BlogApi from "../../_services/blogApi";
+import urlApi from "../../_services/urlApi";
 
 class Editor extends React.Component {
     constructor(props) {
         super(props)
+        this.publishButton=React.createRef();
         this.state = { 
             editorHtml: '', 
             theme: 'snow' ,
@@ -16,66 +18,22 @@ class Editor extends React.Component {
             userEmail:''
         }
         this.handleChange = this.handleChange.bind(this)
+        this.postBlog=this.postBlog.bind(this)
     }
 
     handleChange(html) {
-        this.setState({ editorHtml: html });
+        this.setState({ editorHtml: html }); //quill function to update editor html
     }
-
-    handleThemeChange(newTheme) {
-        if (newTheme === "core") newTheme = null;
-        this.setState({ theme: newTheme })
-    }
-    postBlog = () => {
+    async postBlog(){
         let data_to_send = this.state.editorHtml
-        let heading = '';
-        let sample_text = '';
-        let tag_list=[]
-        let headingpatt = /<p>\s*[*][*]\s*<\/p>.+<p>\s*[*][*]\s*<\/p>/;
-        let sample_textpatt = /<p>\s*[*][*][*]\s*<\/p>.+<p>\s*[*][*][*]\s*<\/p>/;
-
-        data_to_send = data_to_send.replace(headingpatt, function (x) {
-            heading = x;
-            return '';
-        })
-
-        data_to_send = data_to_send.replace(sample_textpatt, function (x) {
-            sample_text = x;
-            return '';
-        })
-        
-        data_to_send = data_to_send.replace(/#[a-zA-Z_-]+/g, function (x) {
-            tag_list.push(x.substr(1));
-            return '';
-        })
-        console.log(tag_list)
         console.log(data_to_send)
-        heading = heading.replace(/<p>\s*[*][*]\s*<\/p>/g, '');
-        sample_text = sample_text.replace(/<p>\s*[*][*][*]\s*<\/p>/g, '');
-        tag_list =tag_list.map(element=>{
-            return element.toLowerCase();
-        })
-        console.log(tag_list)
-        if(heading==""){
-            alert("Please include heading in **(both in new line)")
-            return ;
+        this.publishButton.current.style.display='none' //hiding publish button
+        let res = await BlogApi.postBlog(urlApi.backendDomain()+'/addblog', data_to_send);
+        console.log(res)
+        if(res==undefined){
+            this.publishButton.current.style.display='block'; //unhide publish button if failed to publish blog
         }
-        if(sample_text==""){
-            alert("Please include sample text in ***(both in new line)")
-            return ;
-        }
-        if(tag_list.length==0){
-            alert("Please include some topic tag with #(i.e #ml #dbms)")
-            return ;
-        }
-        BlogApi.postBlog('http://127.0.0.1:8000/addblog',{
-            content:data_to_send,
-            heading:heading,
-            sample_text:sample_text,
-            user_name:'Bharat singh',
-            user_email:'bharatsinghnitk@gmail.com',
-            tag_list:tag_list
-        });
+
     }
 
     render() {
@@ -92,8 +50,8 @@ class Editor extends React.Component {
                     placeholder={'Type here...'}
                 />
                 <div style={{ background: 'white' }} className="p-2">
-                    <div style={{ maxWidth: '800px' }} className="mx-auto">
-                        <button className="my-btn border-0" onClick={this.postBlog}>Publish</button>
+                    <div style={{ maxWidth: '800px' }} className="mx-auto"  >
+                        <button className="my-btn border-0" ref={this.publishButton} onClick={this.postBlog} >Publish</button>
                     </div>
                 </div>
             </>
@@ -112,7 +70,7 @@ Editor.modules = {
         [{ size: [] }],
         ['bold', 'italic', 'underline', 'strike', 'blockquote'],
         [{ 'list': 'ordered' }, { 'list': 'bullet' },
-        { 'indent': '-1' }, { 'indent': '+1' }, { 'color': ['#000000', 'red'] }],
+        { 'indent': '-1' }, { 'indent': '+1' }, { 'color': ['#000000', 'red','green','blue','pink','lightgrey','Tomato','MediumSeaGreen','Violet','SlateBlue'] }],
         ['link', 'image'],
         [{
             handlers: {

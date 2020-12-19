@@ -1,0 +1,101 @@
+#my-card-container {
+    position: relative;
+    max-width: 300px;
+    width: 100%;
+    height: 400px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.8), -5px -5px 5px rgba(0, 0, 0, 0.2);
+    border-radius: 15px;
+    margin: 30px auto;
+  }
+  #my-upcoming-container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    perspective: 900px;
+    padding: 50px 0 10px 0;
+  }
+  
+  #my-card-container:hover {
+    cursor: pointer;
+    transform: rotate(0deg) scale(1) translateY(10px);
+    transition: 0.5s all ease;
+    z-index: 400;
+  }
+  #my-card-container #my-box {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    bottom: 20px;
+    right: 20px;
+    background: #ebf5fc;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1), -5px -5px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    justify-content: center;
+    align-items: center;
+    transition: all 300ms ease-in-out;
+  }
+  
+  #my-card-container #my-box #my-content {
+    padding: 20px;
+    text-align: center;
+  }
+  
+  #my-card-container #my-box #my-content h2 {
+    position: absolute;
+    top: 10px;
+    right: 30px;
+    font-size: 8em;
+    color: rgba(0, 0, 0, 0.02);
+    transition: 0.5s;
+    z-index: 0;
+  }
+  
+  #my-card-container:hover #my-box #my-content h2 {
+    color: rgba(0, 0, 0, 0.05);
+  }
+  
+  #my-card-container #my-box #my-content h3 {
+    position: relative;
+    font-size: 32px;
+    color: #777;
+    z-index: 1;
+    transition: 0.5s;
+  }
+  
+  #my-card-container:hover #my-box #my-content p,
+  #my-card-container:hover #my-box #my-content h3 {
+    color: #fff;
+  }
+  
+  #my-card-container #my-box #my-content p {
+    font-size: 18px;
+    font-weight: 300;
+    color: #777;
+    z-index: 1;
+    transition: 0.5s;
+    max-height: 250px;
+  }
+  
+  #my-card-container #my-box #my-content a {
+    position: relative;
+    display: inline-block;
+    padding: 8px 20px;
+    background: #03a9f4;
+    
+    border-radius: 20px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 400;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  #my-card-container:hover #my-box #my-content a {
+    background: #ff568f;
+  }
+  
+  #my-card-container:hover #my-box {
+    transform: translateY(-50px);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+    background: linear-gradient(45deg, #71577e, #866be0);
+  }

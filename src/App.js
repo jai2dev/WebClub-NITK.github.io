@@ -5,6 +5,11 @@ import Members from "./components/members/member";
 import Footer from "./components/footer";
 import Events from "./components/Events/Event";
 import Timeline from "./components/Timeline/timeline";
+import Editor from "./components/Blogs/editor";
+import Blogs from "./components/Blogs/blogsHome";
+import Blog from "./components/Blogs/blogDisplay";
+// import Myproject from "./components/mystuff/project";
+
 class App extends React.Component {
   render() {
     return (
@@ -17,6 +22,9 @@ class App extends React.Component {
                 <Route exact path="/members" component={Members} />
                 <Route exact path="/events" component={Events} />
                 <Route exact path="/timeline" component={Timeline} />
+                <Route exact path="/blogs" component={Blogs} />
+                <Route exact path="/editor" component={Editor} />
+                <Route exact path="/blogs/:heading" component={Blog} />
               </Switch>
             </Router>
           </main>

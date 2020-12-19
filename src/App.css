@@ -1,1 +1,12 @@
 @import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
+.rounded_button{
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    border: none;
+    outline: none !important;
+}
+.list_item{
+    line-height: 1.5rem;
+    border-radius: 5px;
+}

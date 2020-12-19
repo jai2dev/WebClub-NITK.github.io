@@ -5,12 +5,13 @@ from django.http import JsonResponse
 from django.http import HttpResponseRedirect,HttpResponse
 import json
 import datetime
+import ast
 # Create your views here.
 def homepage(request):
 
     return HttpResponse('<h1>bharat singh</h1>')
 
-def searchBlogWithTag(request):
+def searchBlogWithTag(request): #this is of no use as sorting blogs is done on react side
     tagName=request.GET['tagName']
     print(tagName)
     blogwithtag=taginblog.objects.filter(tag__name=tagName).values('blog')
@@ -21,42 +22,30 @@ def searchBlogWithTag(request):
     print(blogwithtag)
     print(searchedBlogs)
     return JsonResponse({'searchedBlogs':searchedBlogs})
-def delete_all_blogs():
-    temp=blogs.objects.all()
-    print('deleting blogs')
-    for k in temp:
-        k.delete()
-def loadBlogs(request):
-    blog_obj=blogs.objects.values('heading','id','sample_text','date','user_name')
+
+def loadBlogs(request): #this will load all blogs on /blogs path 
+    blog_obj=blogs.objects.values('heading','id','sample_text','date','user_name').order_by('-id')
     data=[]
     for k in blog_obj:
         temp=dict()
         temp['blog']=k
-        # print(k['sample_text'])
         tag_list=[]
         for k in taginblog.objects.filter(blog_id=k['id']):
             tag_list+=[tag.objects.get(id=k.tag_id).name]
-        print(tag_list)
         temp['tags']=tag_list
-        
         data+=[temp]
-    # print(data)
     return JsonResponse({'blogs': data})
     
-def loadBlog(request,id):
-
-    print(id)
-    
+def loadBlog(request,id): #loads specific blog with blog id
     try:
         blog=blogs.objects.get(id=id)
     except blogs.DoesNotExist:    
         return HttpResponse(0)
-    print(blog)
-    print(type(blog))
     temp=dict()
     temp['id']=blog.id
     temp['heading']=blog.heading
     temp['content']=blog.content
+    temp['sample_text']=blog.sample_text
     temp['date']=blog.date
     temp['user_email']=blog.user_email
     temp['writer']=blog.user_name
@@ -65,11 +54,9 @@ def loadBlog(request,id):
 
 def postBlog(request):
     
-    data=request.body
-    # print(json.load(request.body))
-    # print(request.body.heading)
-    temp=json.loads(data.decode('utf-8'))
-    # print(temp)
+    a=request.body
+    temp=json.loads(a)
+    
     obj=blogs()
     obj.heading=temp['heading']
     obj.user_email=temp['user_email']

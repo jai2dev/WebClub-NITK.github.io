@@ -8,7 +8,7 @@ class blogs(models.Model):
     date = models.DateField()
     user_email = models.EmailField()
     user_name = models.CharField(max_length=100)
-class tag(models.Model):
+class tag(models.Model): #to avoid multiple copy of same tag
     name = models.CharField(max_length=100,unique=True)
     def __str__(self):
         return self.name

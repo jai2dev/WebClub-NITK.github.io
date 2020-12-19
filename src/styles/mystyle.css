@@ -1,0 +1,18 @@
+.rounded_button{
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    border: none;
+    outline: none !important;
+}
+.list_item{
+    border-radius: 5px;
+    
+}
+#textWrapper{
+    outline: none;
+    max-width: 1000px;
+}
+#textWrapper p{
+    background: pink !important;
+}

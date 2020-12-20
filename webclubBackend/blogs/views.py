@@ -1,12 +1,45 @@
 from django.shortcuts import render
-from .models import blogs,tag,taginblog
+from .models import blogs,tag,taginblog, webClubMembers,  writerDetails
+from .serializers import writerDetailSerializer
 from django.db import IntegrityError
 from django.http import JsonResponse
 from django.http import HttpResponseRedirect,HttpResponse
+
+# import rest framework
+from rest_framework.views import APIView
+from rest_framework.response import Response
+from rest_framework import status
+
 import json
 import datetime
 import ast
-# Create your views here.
+
+
+# Handles authentication
+# authentication mechanism is not entirely correct and secure, needs modification (token has the digital signature and the information but the system is yet not checking it, and hence any random token is allowed on the system as of now)
+class userDetails(APIView):
+    
+    def post(self, request, format=None):
+        json_data = json.loads(str(request.body, encoding='utf-8'))
+
+        user_email = json_data["email"]
+        user_token = json_data["token"]
+     
+        obj = webClubMembers.objects.filter(email = user_email)
+        # if valid web club member
+        if len(obj)>0:
+            # entering system for the first time
+            writer = writerDetails.objects.filter(token = user_token)
+            if(len(writer) <= 0):
+                # save the details in writerDetails table
+                serializer = writerDetailSerializer(data=json_data)
+                if serializer.is_valid():
+                    serializer.save()
+                
+            return Response(status=status.HTTP_201_CREATED)
+            
+        return Response("not authorized web club member ", status=status.HTTP_401_UNAUTHORIZED)
+
 def homepage(request):
 
     return HttpResponse('<h1>bharat singh</h1>')
@@ -84,3 +117,4 @@ def postBlog(request):
         
     print(temp['heading'])
     return HttpResponse('Success')
+

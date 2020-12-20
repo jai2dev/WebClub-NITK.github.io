@@ -93,6 +93,11 @@ class BlogApi {
     res = await res.json()
     return res;
   }
+  // make a post request to the server to see if the user is authenticated to write blogs
+  async check_authentication(user) {
+    let res = await axios.post(urlApi.backendDomain()+'/isAuthenticated/', user)
+    return res
+  }
 }
 
 var instance = new BlogApi();

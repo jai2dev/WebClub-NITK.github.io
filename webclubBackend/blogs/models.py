@@ -1,6 +1,19 @@
 from django.db import models
 
 # Create your models here.
+
+# stores the data of users who are authorized to write blogs (only web club members are allowed to write blogs)
+class writerDetails(models.Model):
+    token = models.CharField(max_length = 100)
+    name = models.CharField(max_length = 100)
+    email = models.CharField(max_length = 100)
+    profilePic =  models.CharField(max_length = 100)
+
+class webClubMembers(models.Model):
+    name = models.CharField(max_length = 100)
+    email = models.CharField(max_length = 100)
+ 
+
 class blogs(models.Model):
     heading = models.CharField(max_length=500)
     sample_text = models.CharField(max_length=500,default="none")

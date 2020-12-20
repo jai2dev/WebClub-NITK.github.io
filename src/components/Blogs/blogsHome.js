@@ -76,14 +76,33 @@ class Blogs extends React.Component {
             console.log(this.state.allBlogs)
         })
 
+    }
+    async authenticated(user, response){
+        try{
+            let res = await BlogApi.check_authentication(user);
+            // if authenticated then send to the editor to write blogs
+            window.location.href = urlApi.webDomain()+'/new#/editor?userName=' + response.profileObj.name + '&userEmail=' + response.profileObj.email;
+        }
+        catch (e){
+            // if not authenticated then don't sent to the editor
+            console.log(e)
+            console.log("error has been detected")
+            console.error(e);
+        }
 
     }
     responseGoogle = (response) => {
-        console.log(response)
-        console.log(response.profileObj)
-        console.log(response.profileObj.name)
-        console.log(response.profileObj.email)
-        window.location.href = urlApi.webDomain()+'/new#/editor?userName=' + response.profileObj.name + '&userEmail=' + response.profileObj.email;
+        
+        // store the token obtained from google authentication server for the authenticating to web club server
+        localStorage.setItem("token",response.profileObj.googleId)
+        let user = {
+            "email" : response.profileObj.email,
+            "token" : response.profileObj.googleId,
+            "name" : response.profileObj.name,
+            "profilePic" : response.profileObj.imageUrl
+        }
+        // check if user is authenticated to write blogs
+        this.authenticated(user,response)
 
     }
     handlePageClick = (k) => {

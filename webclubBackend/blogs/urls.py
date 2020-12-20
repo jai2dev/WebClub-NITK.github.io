@@ -6,5 +6,6 @@ urlpatterns = [
     path('searchBlogWithTag',views.searchBlogWithTag),
     path('getblogs',views.loadBlogs),
     path('getblogs/<id>',views.loadBlog),
-    path('addblog',views.postBlog)
+    path('addblog',views.postBlog),
+    path('isAuthenticated/',views.userDetails.as_view())
 ]

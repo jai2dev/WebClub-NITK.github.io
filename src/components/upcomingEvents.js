@@ -1,5 +1,5 @@
 import React from "react";
-// import "../styles/upcomingEvents.css";
+import "../styles/upcomingEvents.css";
 import EventCard from "./Events/EventCard.js";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
@@ -43,7 +43,7 @@ class UpcomingEvents extends React.Component {
       <div>
         <h1 className="heading">Upcoming Events</h1>
 
-        <div>
+        <div className="container upcoming-events-container">
           <Carousel
             swipeable={true}
             draggable={true}

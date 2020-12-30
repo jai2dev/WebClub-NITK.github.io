@@ -1,0 +1,5 @@
+@media screen and (max-width: 576px){
+    .upcoming-events-container{
+        padding: 0 !important;
+    }
+}

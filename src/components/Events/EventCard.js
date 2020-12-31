@@ -24,7 +24,7 @@ export default function EventCard(props) {
         <h3 className="detail">{props.date}</h3>
         <h3 className="detail"> {props.venue}</h3>
         {description}
-        {/* <p className="details">More Info</p> */}
+        {props.extras && <a className="details" target="_blank" href={props.extras} rel="noreferrer noopener">More Info</a>}
       </div>
     </article>
   );

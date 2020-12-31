@@ -71,6 +71,7 @@ class Event extends React.Component {
                     venue={value.venue}
                     image={value.image}
                     description={value.description}
+                    extras={value.extras}
                     key={value.title}
                   />
                 );
@@ -84,6 +85,7 @@ class Event extends React.Component {
                     venue={value.venue}
                     image={value.image}
                     description={value.description}
+                    extras={value.extras}
                     key={value.title}
                   />
                 );

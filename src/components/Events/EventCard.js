@@ -8,7 +8,16 @@ class EventCard extends React.Component {
     this.state = {};
   }
 
+  
   render() {
+    const description = (
+      <p className="txt">
+        {`${this.props.description}`
+          .split('\n')
+          .map(paragraph =>
+            <>{paragraph}<br/></>)}
+      </p>
+    )
     const imageUrl = `url(${this.props.image})`;
     return (
       <article className={"EventCard mix " + this.props.classs}>
@@ -20,7 +29,8 @@ class EventCard extends React.Component {
           </h2>
           <h3 className="detail">{this.props.date}</h3>
           <h3 className="detail"> {this.props.venue}</h3>
-          <p className="txt">{this.props.description}</p>
+          {/* <p className="txt">{this.props.description}</p> */}
+          {description}
         </div>
       </article>
     );

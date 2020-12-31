@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/new/static/css/main.9149a825.chunk.css",
-    "main.js": "/new/static/js/main.736ff47e.chunk.js",
-    "main.js.map": "/new/static/js/main.736ff47e.chunk.js.map",
+    "main.css": "/new/static/css/main.253f70f9.chunk.css",
+    "main.js": "/new/static/js/main.034da9c6.chunk.js",
+    "main.js.map": "/new/static/js/main.034da9c6.chunk.js.map",
     "runtime-main.js": "/new/static/js/runtime-main.659176c3.js",
     "runtime-main.js.map": "/new/static/js/runtime-main.659176c3.js.map",
     "static/css/2.381000e5.chunk.css": "/new/static/css/2.381000e5.chunk.css",
-    "static/js/2.e665ede5.chunk.js": "/new/static/js/2.e665ede5.chunk.js",
-    "static/js/2.e665ede5.chunk.js.map": "/new/static/js/2.e665ede5.chunk.js.map",
+    "static/js/2.1c84fb25.chunk.js": "/new/static/js/2.1c84fb25.chunk.js",
+    "static/js/2.1c84fb25.chunk.js.map": "/new/static/js/2.1c84fb25.chunk.js.map",
     "index.html": "/new/index.html",
-    "precache-manifest.f37fce788ca73f72243bdc48008b37d1.js": "/new/precache-manifest.f37fce788ca73f72243bdc48008b37d1.js",
+    "precache-manifest.b02408a282a4516a8f234e32ffea5788.js": "/new/precache-manifest.b02408a282a4516a8f234e32ffea5788.js",
     "service-worker.js": "/new/service-worker.js",
     "static/css/2.381000e5.chunk.css.map": "/new/static/css/2.381000e5.chunk.css.map",
-    "static/css/main.9149a825.chunk.css.map": "/new/static/css/main.9149a825.chunk.css.map",
-    "static/js/2.e665ede5.chunk.js.LICENSE": "/new/static/js/2.e665ede5.chunk.js.LICENSE",
+    "static/css/main.253f70f9.chunk.css.map": "/new/static/css/main.253f70f9.chunk.css.map",
+    "static/js/2.1c84fb25.chunk.js.LICENSE": "/new/static/js/2.1c84fb25.chunk.js.LICENSE",
     "static/media/16CO104.JPG": "/new/static/media/16CO104.a8a858c8.JPG",
     "static/media/16CO125.jpg": "/new/static/media/16CO125.068125ac.jpg",
     "static/media/16CO140.jpg": "/new/static/media/16CO140.c5edf7a4.jpg",
@@ -125,7 +125,6 @@
     "static/media/2019vilas.jpg": "/new/static/media/2019vilas.72110603.jpg",
     "static/media/algo.png": "/new/static/media/algo.0b87ff3e.png",
     "static/media/bg-002.png": "/new/static/media/bg-002.10c4b1d6.png",
-    "static/media/cd-icon-picture.svg": "/new/static/media/cd-icon-picture.f62517f9.svg",
     "static/media/default.jpg": "/new/static/media/default.39eb0bbf.jpg",
     "static/media/dev.jpg": "/new/static/media/dev.f2732e6e.jpg",
     "static/media/hackathon thin.cb3b05a1.svg": "/new/static/media/hackathon thin.cb3b05a1.svg",
@@ -133,7 +132,6 @@
     "static/media/mentorship thin.cf70e25d.svg": "/new/static/media/mentorship thin.cf70e25d.svg",
     "static/media/projects thin.52900959.svg": "/new/static/media/projects thin.52900959.svg",
     "static/media/styles.css": "/new/static/media/revicons.2feb69cc.eot",
-    "static/media/rocket.png": "/new/static/media/rocket.3de88b2a.png",
     "static/media/sap.jpg": "/new/static/media/sap.6bda8891.jpg",
     "static/media/systems.png": "/new/static/media/systems.86cbe9e5.png",
     "static/media/talks thin.98ac2265.svg": "/new/static/media/talks thin.98ac2265.svg",
@@ -142,8 +140,8 @@
   "entrypoints": [
     "static/js/runtime-main.659176c3.js",
     "static/css/2.381000e5.chunk.css",
-    "static/js/2.e665ede5.chunk.js",
-    "static/css/main.9149a825.chunk.css",
-    "static/js/main.736ff47e.chunk.js"
+    "static/js/2.1c84fb25.chunk.js",
+    "static/css/main.253f70f9.chunk.css",
+    "static/js/main.034da9c6.chunk.js"
   ]
 }

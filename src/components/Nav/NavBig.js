@@ -81,9 +81,9 @@ const Nav = (props) => {
           <Link to="/members" style={linkStyle}>
             Team
           </Link>
-          <Link to="/timeline" style={linkStyle}>
+          {/* <Link to="/timeline" style={linkStyle}>
             Timeline
-          </Link>
+          </Link> */}
         </div>
       </div>
     </div>

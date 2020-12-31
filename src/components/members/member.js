@@ -106,7 +106,7 @@ class Members extends React.Component {
     } else
       content = (
         <div className="MemberDetails">
-          <div class="controls">
+          <div className="controls">
             <Navbar />
           </div>
 

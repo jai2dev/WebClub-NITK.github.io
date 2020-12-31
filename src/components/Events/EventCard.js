@@ -1,40 +1,32 @@
-import React from "react";
+import React, { Fragment } from "react";
 import "../../styles/eventCard.css";
 
-class EventCard extends React.Component {
-  constructor(props) {
-    super(props);
-
-    this.state = {};
-  }
-
-  
-  render() {
-    const description = (
-      <p className="txt">
-        {`${this.props.description}`
-          .split('\n')
-          .map(paragraph =>
-            <>{paragraph}<br/></>)}
-      </p>
-    )
-    const imageUrl = `url(${this.props.image})`;
-    return (
-      <article className={"EventCard mix " + this.props.classs}>
-        <div className="thumb" style={{ backgroundImage: imageUrl }} />
-        <div className="infos">
-          <h2 className="title">
-            <span className="ellipss">{this.props.title}</span>
-            <span className="time">{this.props.time}</span>
-          </h2>
-          <h3 className="detail">{this.props.date}</h3>
-          <h3 className="detail"> {this.props.venue}</h3>
-          {/* <p className="txt">{this.props.description}</p> */}
-          {description}
-        </div>
-      </article>
-    );
-  }
+export default function EventCard(props) {
+  const description = (
+    <p className="txt">
+      {`${props.description}`
+        .split('\n')
+        .map((paragraph, idx) =>
+          <Fragment key={idx}>
+            {paragraph}<br />
+          </Fragment>)}
+    </p>
+  );
+  const imageUrl = `url(${props.image})`;
+  return (
+    <article className={"EventCard mix " + props.classs}>
+      <div className="thumb" style={{ backgroundImage: imageUrl }} />
+      <div className="infos">
+        <h2 className="title">
+          <span className="ellipss">{props.title}</span>
+          <span className="time">{props.time}</span>
+        </h2>
+        <h3 className="detail">{props.date}</h3>
+        <h3 className="detail"> {props.venue}</h3>
+        {description}
+        {/* <p className="details">More Info</p> */}
+      </div>
+    </article>
+  );
 }
 
-export default EventCard;

@@ -139,6 +139,9 @@
   .EventCard .infos .detail {
     font-size: 0.82rem;
   }
+  .EventCard .infos .txt {
+    font-size: 0.85rem;
+  }
 
   .EventCard:hover .infos {
     -webkit-transform: translateY(-280px);

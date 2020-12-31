@@ -7,44 +7,38 @@ import Helmet from "react-helmet";
 import WhatWeDo from "./whatwedo.js";
 import SIG from "./sig";
 
-class Home extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {};
-  }
-  render() {
-    return (
+function Home() {
+  return (
+    <div>
+      <Helmet>
+        <title>Web Club NITK</title>
+      </Helmet>
       <div>
-        <Helmet>
-          <title>Web Club NITK</title>
-        </Helmet>
         <div>
-          <div>
-            <Nav sticky="false" transp="true" />
-            <div className="main-image center-flex">
-              <div className="title-container">
-                <h2 className="main-text"> we are </h2>
-                <h1 className="main-title">
-                  Web
+          <Nav sticky="false" transp="true" />
+          <div className="main-image center-flex">
+            <div className="title-container">
+              <h2 className="main-text"> we are </h2>
+              <h1 className="main-title">
+                Web
                   <br />
                   Enthusiasts`
                   <br />
                   Club
                 </h1>
-                <h1 className="main-text">NITK</h1>
-              </div>
-              <img className="bg-image" width="700" src={imageUrl} alt="" />
+              <h1 className="main-text">NITK</h1>
             </div>
+            <img className="bg-image" width="700" src={imageUrl} alt="" />
           </div>
         </div>
-        <WhatWeDo />
-        <hr />
-        <SIG />
-        <hr />
-        <UpcomingEvents />
       </div>
-    );
-  }
+      <WhatWeDo />
+      <hr />
+      <SIG />
+      <hr />
+      <UpcomingEvents />
+    </div>
+  );
 }
 
 export default Home;

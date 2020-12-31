@@ -40,7 +40,7 @@ class UpcomingEvents extends React.Component {
       },
     };
     return (
-      <div>
+      <div id="home-section">
         <h1 className="heading">Upcoming Events</h1>
 
         <div className="container upcoming-events-container">

@@ -17,6 +17,10 @@ h1 {
     color: white;
 }
 
+#home-section{
+    margin: 50px auto;
+}
+
 .heading {
     text-align: center;
     margin: 20px;

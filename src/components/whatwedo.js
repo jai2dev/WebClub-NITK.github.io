@@ -20,7 +20,7 @@ function Card({ svg, text }) {
 
 export default function WhatWeDo() {
   return (
-    <section id="whatwedo">
+    <section id="home-section">
       <h1 className="heading">What we do</h1>
       <div className="container">
         <div className="row justify-content-center">

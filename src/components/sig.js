@@ -7,7 +7,7 @@ import "../styles/sig.css";
 
 export default function SIG() {
   return (
-    <section id="sigs">
+    <section id="home-section">
       <h1 className="heading">Our SIG's</h1>
       <div className="container">
         <div class="row no-gutters sigs mb-3">

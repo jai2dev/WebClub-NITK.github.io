@@ -4,6 +4,7 @@
   border-radius: 3px;
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
   overflow: hidden;
+  font-size: 16px;
 }
 .EventCard .thumb {
   width: auto;
@@ -29,7 +30,7 @@
   margin: 7px 0;
   letter-spacing: 2px;
   color: #152536;
-  font-size: 1rem;
+  font-size: 1em;
   font-weight: 700;
   text-transform: capitalize;
   text-shadow: 0 0 0px #32577f;
@@ -43,7 +44,7 @@
   /* width: 35px; */
   text-transform: none;
   height: 23px;
-  font-size: 0.9rem;
+  font-size: 0.9em;
   color: rgba(67, 83, 100, 0.7);
   background-size: 100% auto;
   display: inline-block;
@@ -51,14 +52,14 @@
 .EventCard .infos .detail {
   margin-bottom: 10px;
   text-transform: uppercase;
-  font-size: 0.85rem;
+  font-size: 0.85em;
   color: rgba(21, 37, 54, 0.7);
 }
 .EventCard .infos .txt {
   border-top: 1px solid rgba(0, 0, 0, 0.2);
   padding-top: 13px;
   line-height: 2;
-  font-size: 0.95rem;
+  font-size: 0.95em;
   color: rgba(21, 37, 54, 0.7);
   opacity: 0;
   transition: 0.5s 0.25s cubic-bezier(0.17, 0.67, 0.5, 1.03);
@@ -72,7 +73,7 @@
   padding: 20px 24px;
   letter-spacing: 1px;
   color: #4e958b;
-  font-size: 0.9rem;
+  font-size: 0.9em;
   text-transform: uppercase;
   cursor: pointer;
   opacity: 0;
@@ -120,6 +121,7 @@
   .EventCard {
     width: 300px;
     height: 420px;
+    font-size: 15px;
   }
   .EventCard .thumb {
     height: 280px;
@@ -130,17 +132,15 @@
   }
   .EventCard .infos .title {
     margin: 13px 0;
-
-    font-size: 0.9rem;
   }
   .EventCard .infos .time {
-    font-size: 0.83rem;
+    font-size: 0.83em;
   }
   .EventCard .infos .detail {
-    font-size: 0.82rem;
+    font-size: 0.82em;
   }
   .EventCard .infos .txt {
-    font-size: 0.85rem;
+    font-size: 0.85em;
   }
 
   .EventCard:hover .infos {

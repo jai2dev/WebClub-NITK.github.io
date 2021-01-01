@@ -2,7 +2,7 @@
     "name": "webclubwebsite",
     "version": "0.1.0",
     "private": true,
-    "homepage": "http://WebClub-NITK.github.io/new",
+    "homepage": "https://webclub.nitk.ac.in/",
     "dependencies": {
         "@fortawesome/fontawesome-svg-core": "^1.2.30",
         "@fortawesome/free-brands-svg-icons": "^5.14.0",

@@ -1,19 +1,17 @@
 {
   "files": {
     "main.css": "/static/css/main.ac5be135.chunk.css",
-    "main.js": "/static/js/main.43fe8068.chunk.js",
-    "main.js.map": "/static/js/main.43fe8068.chunk.js.map",
+    "main.js": "/static/js/main.f4fd3935.chunk.js",
+    "main.js.map": "/static/js/main.f4fd3935.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.2a277adf.js",
     "runtime-main.js.map": "/static/js/runtime-main.2a277adf.js.map",
-    "static/css/2.8f0d8aca.chunk.css": "/static/css/2.8f0d8aca.chunk.css",
-    "static/js/2.15a7ae83.chunk.js": "/static/js/2.15a7ae83.chunk.js",
-    "static/js/2.15a7ae83.chunk.js.map": "/static/js/2.15a7ae83.chunk.js.map",
+    "static/js/2.1e606ec6.chunk.js": "/static/js/2.1e606ec6.chunk.js",
+    "static/js/2.1e606ec6.chunk.js.map": "/static/js/2.1e606ec6.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.f39b28cfd8eb39bdbff0934b9ae655a0.js": "/precache-manifest.f39b28cfd8eb39bdbff0934b9ae655a0.js",
+    "precache-manifest.9d1b6955c57a5e23c77859016bc34d36.js": "/precache-manifest.9d1b6955c57a5e23c77859016bc34d36.js",
     "service-worker.js": "/service-worker.js",
-    "static/css/2.8f0d8aca.chunk.css.map": "/static/css/2.8f0d8aca.chunk.css.map",
     "static/css/main.ac5be135.chunk.css.map": "/static/css/main.ac5be135.chunk.css.map",
-    "static/js/2.15a7ae83.chunk.js.LICENSE": "/static/js/2.15a7ae83.chunk.js.LICENSE",
+    "static/js/2.1e606ec6.chunk.js.LICENSE": "/static/js/2.1e606ec6.chunk.js.LICENSE",
     "static/media/16CO104.JPG": "/static/media/16CO104.a8a858c8.JPG",
     "static/media/16CO125.jpg": "/static/media/16CO125.068125ac.jpg",
     "static/media/16CO140.jpg": "/static/media/16CO140.c5edf7a4.jpg",
@@ -131,7 +129,6 @@
     "static/media/intelligence.png": "/static/media/intelligence.f099642f.png",
     "static/media/mentorship thin.cf70e25d.svg": "/static/media/mentorship thin.cf70e25d.svg",
     "static/media/projects thin.52900959.svg": "/static/media/projects thin.52900959.svg",
-    "static/media/styles.css": "/static/media/revicons.2feb69cc.eot",
     "static/media/sap.jpg": "/static/media/sap.6bda8891.jpg",
     "static/media/systems.png": "/static/media/systems.86cbe9e5.png",
     "static/media/talks thin.98ac2265.svg": "/static/media/talks thin.98ac2265.svg",
@@ -139,9 +136,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.2a277adf.js",
-    "static/css/2.8f0d8aca.chunk.css",
-    "static/js/2.15a7ae83.chunk.js",
+    "static/js/2.1e606ec6.chunk.js",
     "static/css/main.ac5be135.chunk.css",
-    "static/js/main.43fe8068.chunk.js"
+    "static/js/main.f4fd3935.chunk.js"
   ]
 }

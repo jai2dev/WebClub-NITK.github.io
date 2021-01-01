@@ -18,6 +18,9 @@
   width: auto;
   height: 450px;
   position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   padding: 5px 24px;
   background: #fff;
   transition: 0.4s 0.15s cubic-bezier(0.17, 0.67, 0.5, 1.03);
@@ -65,12 +68,7 @@
   transition: 0.5s 0.25s cubic-bezier(0.17, 0.67, 0.5, 1.03);
 }
 .EventCard .infos .details {
-  /* position: absolute;
-  left: 0;
-  left: 0;
-  margin: 10px 0;
-  bottom: 0; */
-  padding: 20px 0;
+  padding-bottom: 19px;
   letter-spacing: 1px;
   color: #4e958b;
   font-size: 0.9em;

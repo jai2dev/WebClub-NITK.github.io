@@ -17,6 +17,7 @@ export default function EventCard(props) {
     <article className={"EventCard mix " + props.classs}>
       <div className="thumb" style={{ backgroundImage: imageUrl }} />
       <div className="infos">
+        <div>
         <h2 className="title">
           <span className="ellipss">{props.title}</span>
           <span className="time">{props.time}</span>
@@ -24,6 +25,7 @@ export default function EventCard(props) {
         <h3 className="detail">{props.date}</h3>
         <h3 className="detail"> {props.venue}</h3>
         {description}
+        </div>
         {props.extras && <a className="details" target="_blank" href={props.extras} rel="noreferrer noopener">More Info</a>}
       </div>
     </article>

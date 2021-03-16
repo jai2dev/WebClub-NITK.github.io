@@ -12,6 +12,12 @@ import { faChevronUp } from '@fortawesome/free-solid-svg-icons';
 import "../styles/footer.css";
 
 export default function footer() {
+  // scrollToTop() {
+  //   window.scrollTo({
+  //     top:0,
+  //     behavior:'smooth'
+  //   });
+  // }
   return (
     <footer
       className="white-text page-footer font-small pt-4"
@@ -19,7 +25,10 @@ export default function footer() {
     >
       
       <div className="container text-center text-md-left">
-      <div id="go-top"><a className="smoothscroll" title="Back to Top" href="#"><FontAwesomeIcon icon={faChevronUp} /></a></div>
+      <div id="go-top"><a className="smoothscroll" title="Back to Top" onClick={()=>window.scrollTo({
+      top:0,
+      behavior:'smooth'
+    })}><FontAwesomeIcon icon={faChevronUp} /></a></div>
         <div className="row">
           <div className="col-md-6 mx-auto">
             <h5 className="font-weight-bold text-uppercase mt-3 mb-4">

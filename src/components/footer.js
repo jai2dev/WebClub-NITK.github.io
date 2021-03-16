@@ -7,6 +7,8 @@ import {
   faLinkedinIn,
 } from "@fortawesome/free-brands-svg-icons";
 import { faHome, faEnvelope } from "@fortawesome/free-solid-svg-icons";
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faChevronUp } from '@fortawesome/free-solid-svg-icons';
 import "../styles/footer.css";
 
 export default function footer() {
@@ -15,7 +17,9 @@ export default function footer() {
       className="white-text page-footer font-small pt-4"
       style={{ backgroundColor: "#1d2f47" }}
     >
+      
       <div className="container text-center text-md-left">
+      <div id="go-top"><a className="smoothscroll" title="Back to Top" href="#"><FontAwesomeIcon icon={faChevronUp} /></a></div>
         <div className="row">
           <div className="col-md-6 mx-auto">
             <h5 className="font-weight-bold text-uppercase mt-3 mb-4">
@@ -87,6 +91,7 @@ export default function footer() {
             </div>
           </div>
         </div>
+        
       </div>
     </footer>
   );
